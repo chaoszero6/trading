@@ -1,2 +1,14 @@
+# Data & logs
+data/*.db
+data/*.log
+logs/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Generated data
 data/predictions.db
-data/predictions.db
+predictions_history.json
+*.html
