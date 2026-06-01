@@ -1,0 +1,197 @@
+[09:15:01] Watchdog started
+[09:15:01] Restarting monitor...
+[09:15:01] Monitor restarted in screen session
+[09:33:50] Watchdog started
+[09:33:50] Restarting monitor...
+[09:33:50] Monitor restarted in screen session
+[09:34:03] Watchdog started
+[09:34:03] Restarting monitor...
+[09:34:03] Monitor restarted in screen session
+[09:34:31] Watchdog started
+[09:34:31] Restarting monitor...
+[09:34:31] Monitor restarted in screen session
+[10:59:33] Monitor screen dead (fail #1)
+[10:59:33] Last log lines:   File "/root/trading/agents/realtime_monitor.py", line 979, in _main
+  File "/root/trading/agents/realtime_monitor.py", line 818, in run
+    for _ in range(int(sleep_secs // 30)):
+        ^^^^^^^^^^^^^^
+KeyboardInterrupt
+[10:59:33] Restarting monitor...
+[10:59:33] Monitor restarted in screen session
+[14:51:08] Watchdog started
+[14:51:08] Restarting monitor...
+[14:51:09] Monitor restarted in screen session
+[14:55:50] Watchdog started
+[14:55:50] Restarting monitor...
+[14:55:50] Monitor restarted in screen session
+[14:58:22] Watchdog started
+[14:58:22] Restarting monitor...
+[14:58:22] Monitor restarted in screen session
+[15:04:08] Watchdog started
+[15:04:08] Restarting monitor...
+[15:04:08] Monitor restarted in screen session
+[15:31:10] Monitor screen dead (fail #1)
+[15:31:10] Last log lines: [MON] **🏁 Monitor Session Complete** @ 15:30:26
+Duration: 26 min | Checks: 20
+Trades: 2 (0W/0L)
+P&L: ₹+0
+NIFTY: 23604.65 | BANKNIFTY: 53417.25
+[15:31:10] Restarting monitor...
+[15:31:10] Monitor restarted in screen session
+[09:00:24] Monitor screen dead (fail #1)
+[09:00:24] Last log lines: [MON] **🏁 Monitor Session Complete** @ 17:31:30
+Duration: 120 min | Checks: 92
+Trades: 2 (0W/0L)
+P&L: ₹+0
+NIFTY: 23618.0 | BANKNIFTY: 53409.15
+[09:00:24] Restarting monitor...
+[09:00:24] Monitor restarted in screen session
+[09:01:59] Watchdog started
+[09:01:59] Restarting monitor...
+[09:02:00] Monitor restarted in screen session
+[09:04:39] Watchdog started
+[09:04:39] Restarting monitor...
+[09:04:40] Monitor restarted in screen session
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session
+[09:25:24] Watchdog started
+[09:25:24] Restarting monitor...
+[09:25:24] Monitor restarted in screen session
+[10:19:49] Watchdog started
+[10:19:49] Restarting monitor...
+[10:19:50] Monitor restarted in screen session
+[15:30:55] Monitor screen dead (fail #1)
+[15:30:55] Last log lines: [MON] **🏁 Monitor Session Complete** @ 15:30:00
+Duration: 310 min | Checks: 306
+Trades: 1 (1W/0L)
+P&L: ₹+10,863
+NIFTY: 23666.75 | BANKNIFTY: 53582.0
+[15:30:55] Restarting monitor...
+[15:30:55] Monitor restarted in screen session
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session
+[12:00:53] Watchdog started
+[12:00:53] Restarting monitor...
+[12:00:53] Monitor restarted in screen session
+[14:30:58] Monitor screen dead (fail #1)
+[14:30:58] Last log lines: [MON] **🏁 Monitor Session Complete** @ 14:30:00
+Duration: 149 min | Checks: 162
+Trades: 1 (0W/1L)
+P&L: ₹-130
+NIFTY: 23652.5 | BANKNIFTY: 53355.1
+[14:30:58] Restarting monitor...
+[14:30:58] Monitor restarted in screen session
+[14:31:58] Monitor screen dead (fail #2)
+[14:31:58] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:31:00) — shutting down
+[14:31:58] Restarting monitor...
+[14:31:59] Monitor restarted in screen session
+[14:32:59] Monitor screen dead (fail #3)
+[14:32:59] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:32:00) — shutting down
+[14:32:59] Restarting monitor...
+[14:32:59] Monitor restarted in screen session
+[14:34:00] Monitor screen dead (fail #4)
+[14:34:00] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:33:03) — shutting down
+[14:34:00] Too many failures — giving up until next cycle
+[14:40:01] Monitor screen dead (fail #1)
+[14:40:01] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:33:03) — shutting down
+[14:40:01] Restarting monitor...
+[14:40:01] Monitor restarted in screen session
+[14:41:01] Monitor screen dead (fail #2)
+[14:41:01] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:40:03) — shutting down
+[14:41:01] Restarting monitor...
+[14:41:01] Monitor restarted in screen session
+[14:42:02] Monitor screen dead (fail #3)
+[14:42:02] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:41:04) — shutting down
+[14:42:02] Restarting monitor...
+[14:42:02] Monitor restarted in screen session
+[14:43:03] Monitor screen dead (fail #4)
+[14:43:03] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:42:04) — shutting down
+[14:43:03] Too many failures — giving up until next cycle
+[14:49:03] Monitor screen dead (fail #1)
+[14:49:03] Last log lines: [MON] Starting 2h monitor with 60s interval (Angel One only)
+[PT] Error loading positions: no such column: expiry
+[MON] Already past 14:30 (14:42:04) — shutting down
+[14:49:03] Restarting monitor...
+[14:49:03] Monitor restarted in screen session
+[09:15:01] Watchdog started
+[09:15:01] Restarting monitor...
+[09:15:01] Monitor restarted in screen session
+[14:30:05] Monitor screen dead (fail #1)
+[14:30:05] Last log lines: [MON] **🏁 Monitor Session Complete** @ 14:30:00
+Duration: 315 min | Checks: 324
+Trades: 9 (5W/4L)
+P&L: ₹+1,082
+NIFTY: 23739.3 | BANKNIFTY: 53981.15
+[14:30:05] Restarting monitor...
+[14:30:05] Monitor restarted in screen session
+[14:31:06] Market closed — watchdog exiting
+[19:59:24] Watchdog started
+[19:59:24] Restarting monitor...
+[19:59:24] Monitor restarted in screen session
+[19:59:25] Market closed — watchdog exiting
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session
+[09:46:22] Watchdog started
+[09:46:22] Restarting monitor...
+[09:46:22] Monitor restarted in screen session
+[15:00:27] Monitor screen dead (fail #1)
+[15:00:27] Last log lines: [MON] **🏁 Monitor Session Complete** @ 15:00:00
+Duration: 314 min | Checks: 360
+Trades: 2 (2W/0L)
+P&L: ₹+1,593
+NIFTY: 24034.8 | BANKNIFTY: 55240.7
+[15:00:27] Restarting monitor...
+[15:00:27] Monitor restarted in screen session
+[15:01:28] Market closed — watchdog exiting
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session
+[15:01:07] Market closed — watchdog exiting
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:03] Monitor restarted in screen session
+[15:00:09] Monitor screen dead (fail #1)
+[15:00:09] Last log lines: [MON] **🏁 Monitor Session Complete** @ 15:00:00
+Duration: 345 min | Checks: 429
+Trades: 10 (6W/4L)
+P&L: ₹-6,871
+NIFTY: 23896.55 | BANKNIFTY: 54798.3
+[15:00:09] Restarting monitor...
+[15:00:09] Monitor restarted in screen session
+[15:01:09] Market closed — watchdog exiting
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session
+[15:01:08] Market closed — watchdog exiting
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session
+[15:00:08] Monitor screen dead (fail #1)
+[15:00:08] Last log lines: [MON] **🏁 Monitor Session Complete** @ 15:00:00
+Duration: 345 min | Checks: 382
+Trades: 2 (2W/0L)
+P&L: ₹+800
+NIFTY: 23773.35 | BANKNIFTY: 54620.45
+[15:00:08] Restarting monitor...
+[15:00:08] Monitor restarted in screen session
+[15:01:09] Market closed — watchdog exiting
+[09:15:02] Watchdog started
+[09:15:02] Restarting monitor...
+[09:15:02] Monitor restarted in screen session

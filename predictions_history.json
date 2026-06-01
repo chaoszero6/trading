@@ -1,0 +1,3604 @@
+{
+  "runs": [
+    {
+      "time": "2026-05-19 11:25",
+      "nifty": 23713.45,
+      "banknifty": 53491.8,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-19 11:30",
+      "nifty": 23724.7,
+      "banknifty": 53529.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 08:00",
+      "nifty": 23618.0,
+      "banknifty": 53409.15,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:00",
+      "nifty": 22978.05,
+      "banknifty": 53409.15,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:05",
+      "nifty": 23453.75,
+      "banknifty": 53409.15,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:10",
+      "nifty": 23457.25,
+      "banknifty": 53015.7,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:15",
+      "nifty": 23409.45,
+      "banknifty": 52883.8,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:20",
+      "nifty": 23445.2,
+      "banknifty": 52902.6,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:25",
+      "nifty": 23453.75,
+      "banknifty": 52913.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:30",
+      "nifty": 23479.45,
+      "banknifty": 52951.8,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:35",
+      "nifty": 23520.55,
+      "banknifty": 53023.95,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:40",
+      "nifty": 23533.45,
+      "banknifty": 53002.65,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:45",
+      "nifty": 23519.55,
+      "banknifty": 52988.75,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:50",
+      "nifty": 23524.25,
+      "banknifty": 52969.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 09:55",
+      "nifty": 23526.4,
+      "banknifty": 52993.55,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:00",
+      "nifty": 23545.1,
+      "banknifty": 53058.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:05",
+      "nifty": 23504.4,
+      "banknifty": 52954.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:10",
+      "nifty": 23500.6,
+      "banknifty": 52952.3,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:15",
+      "nifty": 23497.45,
+      "banknifty": 52955.05,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:20",
+      "nifty": 23501.15,
+      "banknifty": 52962.25,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:25",
+      "nifty": 23478.1,
+      "banknifty": 52898.95,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:30",
+      "nifty": 23523.05,
+      "banknifty": 52991.45,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:35",
+      "nifty": 23563.7,
+      "banknifty": 53074.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:40",
+      "nifty": 23561.85,
+      "banknifty": 53079.65,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:45",
+      "nifty": 23533.6,
+      "banknifty": 53011.25,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:50",
+      "nifty": 23509.55,
+      "banknifty": 52938.95,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 10:55",
+      "nifty": 23547.3,
+      "banknifty": 53023.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:00",
+      "nifty": 23554.9,
+      "banknifty": 53103.75,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:05",
+      "nifty": 23566.45,
+      "banknifty": 53183.3,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:10",
+      "nifty": 23578.15,
+      "banknifty": 53233.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:15",
+      "nifty": 23561.7,
+      "banknifty": 53197.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:20",
+      "nifty": 23568.1,
+      "banknifty": 53205.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:25",
+      "nifty": 23586.5,
+      "banknifty": 53248.75,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-20 11:30",
+      "nifty": 23606.25,
+      "banknifty": 53329.9,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 08:00",
+      "nifty": 23659.0,
+      "banknifty": 53562.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:00",
+      "nifty": 23970.15,
+      "banknifty": 53562.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:05",
+      "nifty": 23811.7,
+      "banknifty": 53562.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:10",
+      "nifty": 23830.05,
+      "banknifty": 53963.1,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:15",
+      "nifty": 23854.35,
+      "banknifty": 54095.6,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:20",
+      "nifty": 23766.55,
+      "banknifty": 53827.6,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:25",
+      "nifty": 23778.45,
+      "banknifty": 53828.9,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:30",
+      "nifty": 23760.35,
+      "banknifty": 53820.55,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:35",
+      "nifty": 23740.1,
+      "banknifty": 53741.45,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:40",
+      "nifty": 23769.9,
+      "banknifty": 53815.65,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:45",
+      "nifty": 23796.6,
+      "banknifty": 53855.95,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:50",
+      "nifty": 23784.65,
+      "banknifty": 53832.0,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 09:55",
+      "nifty": 23807.2,
+      "banknifty": 53889.65,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:00",
+      "nifty": 23769.4,
+      "banknifty": 53823.15,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:05",
+      "nifty": 23783.55,
+      "banknifty": 53837.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:10",
+      "nifty": 23767.7,
+      "banknifty": 53792.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:15",
+      "nifty": 23770.2,
+      "banknifty": 53799.55,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:20",
+      "nifty": 23775.35,
+      "banknifty": 53823.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:25",
+      "nifty": null,
+      "banknifty": null,
+      "outlook": "No data available",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:30",
+      "nifty": 23781.45,
+      "banknifty": 53852.45,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:35",
+      "nifty": 23762.65,
+      "banknifty": 53840.6,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:40",
+      "nifty": 23736.55,
+      "banknifty": 53769.05,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:45",
+      "nifty": 23768.9,
+      "banknifty": 53835.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:50",
+      "nifty": 23751.65,
+      "banknifty": 53798.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 10:55",
+      "nifty": 23747.85,
+      "banknifty": 53786.6,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:00",
+      "nifty": 23721.0,
+      "banknifty": 53746.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:05",
+      "nifty": 23712.6,
+      "banknifty": 53698.75,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:10",
+      "nifty": 23714.1,
+      "banknifty": 53694.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:15",
+      "nifty": 23691.3,
+      "banknifty": 53648.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:20",
+      "nifty": 23678.7,
+      "banknifty": 53628.2,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:25",
+      "nifty": 23711.95,
+      "banknifty": 53703.8,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-21 11:30",
+      "nifty": 23740.7,
+      "banknifty": 53754.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 08:00",
+      "nifty": 23654.7,
+      "banknifty": 53439.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:00",
+      "nifty": 23777.3,
+      "banknifty": 53439.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:05",
+      "nifty": 23656.6,
+      "banknifty": 53439.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:10",
+      "nifty": 23671.2,
+      "banknifty": 53483.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:15",
+      "nifty": 23702.85,
+      "banknifty": 53666.25,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:20",
+      "nifty": 23708.35,
+      "banknifty": 53764.65,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:25",
+      "nifty": 23754.15,
+      "banknifty": 53897.7,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:30",
+      "nifty": 23741.25,
+      "banknifty": 53869.0,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:35",
+      "nifty": 23768.35,
+      "banknifty": 53979.9,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:40",
+      "nifty": 23751.05,
+      "banknifty": 53905.1,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:45",
+      "nifty": 23755.6,
+      "banknifty": 53964.1,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:50",
+      "nifty": 23743.85,
+      "banknifty": 53956.5,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 09:55",
+      "nifty": 23776.75,
+      "banknifty": 53974.85,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:00",
+      "nifty": 23774.3,
+      "banknifty": 53946.4,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:05",
+      "nifty": 23761.1,
+      "banknifty": 53968.9,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:10",
+      "nifty": 23791.5,
+      "banknifty": 54061.15,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:15",
+      "nifty": 23793.8,
+      "banknifty": 54095.15,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:20",
+      "nifty": 23764.6,
+      "banknifty": 54050.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:25",
+      "nifty": 23765.05,
+      "banknifty": 54009.8,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:30",
+      "nifty": 23763.4,
+      "banknifty": 54028.7,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:35",
+      "nifty": 23781.45,
+      "banknifty": 54022.9,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:40",
+      "nifty": 23776.65,
+      "banknifty": 53996.55,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:45",
+      "nifty": 23793.95,
+      "banknifty": 54054.7,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:50",
+      "nifty": 23783.15,
+      "banknifty": 54033.0,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 10:55",
+      "nifty": 23782.95,
+      "banknifty": 54040.0,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:00",
+      "nifty": 23778.7,
+      "banknifty": 54021.8,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:05",
+      "nifty": 23780.4,
+      "banknifty": 54023.0,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:10",
+      "nifty": 23775.95,
+      "banknifty": 53998.1,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:15",
+      "nifty": 23770.15,
+      "banknifty": 53976.9,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:20",
+      "nifty": 23765.6,
+      "banknifty": 53947.1,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:25",
+      "nifty": 23784.85,
+      "banknifty": 54026.3,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-22 11:30",
+      "nifty": 23757.45,
+      "banknifty": 53925.5,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-25 08:00",
+      "nifty": 23719.3,
+      "banknifty": 54055.35,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "positive",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-26 12:56",
+      "nifty": 23997.55078125,
+      "banknifty": 55126.0,
+      "outlook": "NEUTRAL/SIDEWAYS",
+      "sentiment": "neutral",
+      "suggestions": [
+        {
+          "name": "Iron Condor",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Short Straddle",
+          "direction": "bullish",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        },
+        {
+          "name": "Earnings Play",
+          "direction": "neutral",
+          "entry": null,
+          "stop_loss": null,
+          "target": null,
+          "strike": 0,
+          "instrument": "BANKNIFTY"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+2026-06-01 09:15:03,326 [WARNING] PyNaCl is not installed, voice will NOT be supported
+2026-06-01 09:15:03,326 [WARNING] davey is not installed, voice will NOT be supported
+[+] Starting Discord trading bot...
+[2026-06-01 09:15:03] [INFO    ] discord.client: logging in using static token
+2026-06-01 09:15:03,328 [INFO] logging in using static token
+[2026-06-01 09:15:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c3e7aa29546d90cc440d4b0532e6f621).
+2026-06-01 09:15:05,055 [INFO] Shard ID None has connected to Gateway (Session ID: c3e7aa29546d90cc440d4b0532e6f621).
+2026-06-01 09:15:07,061 [INFO] Bot ready: Trader#2297
+2026-06-01 09:15:07,517 [INFO] Sent startup message to channel 1504547627700719678
+[2026-06-01 09:45:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session c3e7aa29546d90cc440d4b0532e6f621.
+2026-06-01 09:45:59,184 [INFO] Shard ID None has successfully RESUMED session c3e7aa29546d90cc440d4b0532e6f621.
+2026-06-01 10:44:18,416 [INFO] Msg from chaoszero6: !pnl
+2026-06-01 11:37:54,140 [INFO] Msg from chaoszero6: !pnl
+2026-06-01 11:53:14,441 [INFO] Msg from chaoszero6: @everyone can someone analyze what two strategies triggered this booking?
+2026-06-01 11:56:05,919 [INFO] Msg from chaoszero6: !pnl
+[2026-06-01 12:03:02] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session c3e7aa29546d90cc440d4b0532e6f621.
+2026-06-01 12:03:02,349 [INFO] Shard ID None has successfully RESUMED session c3e7aa29546d90cc440d4b0532e6f621.
+2026-06-01 12:06:59,906 [INFO] Msg from chaoszero6: <@1504659814230261763>

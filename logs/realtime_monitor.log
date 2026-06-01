@@ -1,0 +1,3307 @@
+[MON] Starting 2h monitor with 60s interval (Angel One only)
+[MON] Starting real-time monitor (5.7h until EOD, interval=60s)
+[MON] End time: 15:00:00
+[MON] Building initial tick history...
+[MON] Spot: NIFTY=23669.0 BANKNIFTY=54384.1
+[MON] Discord: sending (226 chars)...
+[MON] Discord: OK (204)
+
+[MON] === Check #0 @ 09:15:28 ===
+[MON] NIFTY=23673.95 BANKNIFTY=54398.4
+[DBG] BANKNIFTY prices=11 ema10=54450.4 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54398
+[DBG] NIFTY prices=11 ema10=23684.8 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23674
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #1 @ 09:16:29 ===
+[MON] NIFTY=23619.1 BANKNIFTY=54178.5
+[DBG] BANKNIFTY prices=12 ema10=54400.9 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54178
+[DBG] NIFTY prices=12 ema10=23672.9 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23619
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #2 @ 09:17:30 ===
+[MON] NIFTY=23631.3 BANKNIFTY=54309.45
+[DBG] BANKNIFTY prices=13 ema10=54384.3 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54309
+[DBG] NIFTY prices=13 ema10=23665.3 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23631
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #3 @ 09:18:30 ===
+[MON] NIFTY=23642.1 BANKNIFTY=54365.0
+[GPU] Sentiment: N_RSI=17.5 | BN_RSI=28.9
+[DBG] BANKNIFTY prices=14 ema10=54380.8 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54365
+[DBG] NIFTY prices=14 ema10=23661.1 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23642
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #4 @ 09:19:31 ===
+[MON] NIFTY=23646.75 BANKNIFTY=54446.5
+[GPU] Sentiment: N_RSI=23.8 | BN_RSI=35.1
+[DBG] BANKNIFTY prices=15 ema10=54392.7 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54446
+[DBG] NIFTY prices=15 ema10=23658.5 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23647
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #5 @ 09:20:31 ===
+[MON] NIFTY=23641.75 BANKNIFTY=54441.75
+[GPU] Sentiment: N_RSI=26.1 | BN_RSI=42.5
+[DBG] BANKNIFTY prices=16 ema10=54401.6 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54442
+[DBG] NIFTY prices=16 ema10=23655.4 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23642
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #6 @ 09:21:31 ===
+[MON] NIFTY=23619.9 BANKNIFTY=54407.6
+[GPU] Sentiment: N_RSI=27.0 | BN_RSI=42.6
+[DBG] BANKNIFTY prices=17 ema10=54402.7 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54408
+[DBG] NIFTY prices=17 ema10=23649.0 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23620
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #7 @ 09:22:32 ===
+[MON] NIFTY=23617.9 BANKNIFTY=54423.35
+[GPU] Sentiment: N_RSI=24.0 | BN_RSI=40.8
+[DBG] BANKNIFTY prices=18 ema10=54406.5 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54423
+[DBG] NIFTY prices=18 ema10=23643.3 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23618
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #8 @ 09:23:32 ===
+[MON] NIFTY=23608.75 BANKNIFTY=54392.65
+[GPU] Sentiment: N_RSI=24.9 | BN_RSI=43.3
+[DBG] BANKNIFTY prices=19 ema10=54404.0 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54393
+[DBG] NIFTY prices=19 ema10=23637.0 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23609
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #9 @ 09:24:32 ===
+[MON] NIFTY=23590.6 BANKNIFTY=54330.9
+[GPU] Sentiment: N_RSI=24.5 | BN_RSI=44.8
+[DBG] BANKNIFTY prices=20 ema10=54390.7 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54331
+[DBG] NIFTY prices=20 ema10=23628.6 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23591
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #10 @ 09:25:32 ===
+[MON] NIFTY=23597.9 BANKNIFTY=54360.4
+[GPU] Sentiment: N_RSI=21.3 | BN_RSI=39.5
+[DBG] BANKNIFTY prices=21 ema10=54385.2 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54360
+[DBG] NIFTY prices=21 ema10=23623.0 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23598
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #11 @ 09:26:33 ===
+[MON] NIFTY=23607.95 BANKNIFTY=54384.0
+[GPU] Sentiment: N_RSI=23.2 | BN_RSI=42.1
+[DBG] BANKNIFTY prices=22 ema10=54385.0 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54384
+[DBG] NIFTY prices=22 ema10=23620.3 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23608
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #12 @ 09:27:33 ===
+[MON] NIFTY=23606.3 BANKNIFTY=54392.8
+[GPU] Sentiment: N_RSI=31.4 | BN_RSI=48.1
+[DBG] BANKNIFTY prices=23 ema10=54386.4 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54393
+[DBG] NIFTY prices=23 ema10=23617.7 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23606
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #13 @ 09:28:33 ===
+[MON] NIFTY=23602.1 BANKNIFTY=54362.1
+[GPU] Sentiment: N_RSI=30.4 | BN_RSI=49.7
+[DBG] BANKNIFTY prices=24 ema10=54382.0 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54362
+[DBG] NIFTY prices=24 ema10=23614.9 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23602
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #14 @ 09:29:34 ===
+[MON] NIFTY=23589.65 BANKNIFTY=54322.85
+[GPU] Sentiment: N_RSI=29.9 | BN_RSI=48.5
+[DBG] BANKNIFTY prices=25 ema10=54371.2 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54323
+[DBG] NIFTY prices=25 ema10=23610.3 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23590
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Before 9:30 — skipping all entries
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #15 @ 09:30:34 ===
+[MON] NIFTY=23592.55 BANKNIFTY=54337.8
+[GPU] Sentiment: N_RSI=25.8 | BN_RSI=45.1 | N_MACDh=0.0 | BN_MACDh=0.0
+[DBG] BANKNIFTY prices=26 ema10=54365.1 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54338
+[DBG] NIFTY prices=26 ema10=23607.1 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23593
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #16 @ 09:31:35 ===
+[MON] NIFTY=23608.9 BANKNIFTY=54401.6
+[GPU] Sentiment: N_RSI=39.1 | BN_RSI=64.2 | N_MACDh=-19.7 | BN_MACDh=-25.4
+[DBG] BANKNIFTY prices=27 ema10=54371.8 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54402
+[DBG] NIFTY prices=27 ema10=23607.4 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23609
+[MON] Signals: 2
+  GPU_MACD: BUY_PE (HIGH) macd_h=-25.4
+  GPU_MACD: BUY_PE (HIGH) macd_h=-19.7
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #17 @ 09:32:36 ===
+[MON] NIFTY=23609.35 BANKNIFTY=54363.75
+[GPU] Sentiment: N_RSI=41.1 | BN_RSI=59.3 | N_MACDh=-14.4 | BN_MACDh=-19.1
+[DBG] BANKNIFTY prices=28 ema10=54370.3 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=54364
+[DBG] NIFTY prices=28 ema10=23607.8 ema30=0.0 ema_bull=False st=up st_bull=True rsi=N/A rsi_bull=False spot=23609
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #18 @ 09:33:36 ===
+[MON] NIFTY=23611.85 BANKNIFTY=54340.25
+[GPU] Sentiment: N_RSI=35.9 | BN_RSI=49.9 | N_MACDh=-10.1 | BN_MACDh=-15.6
+[DBG] BANKNIFTY prices=29 ema10=54364.8 ema30=0.0 ema_bull=False st=up st_bull=True rsi=40.7 rsi_sma=40.3 rsi_bull=False spot=54340
+[DBG] NIFTY prices=29 ema10=23608.5 ema30=0.0 ema_bull=False st=up st_bull=True rsi=35.8 rsi_sma=25.7 rsi_bull=False spot=23612
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (296 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #19 @ 09:34:37 ===
+[MON] NIFTY=23609.2 BANKNIFTY=54313.5
+[GPU] Sentiment: N_RSI=34.7 | BN_RSI=37.3 | N_MACDh=-6.9 | BN_MACDh=-14.2
+[DBG] BANKNIFTY prices=30 ema10=54355.5 ema30=54401.5 ema_bull=False st=up st_bull=True rsi=38.6 rsi_sma=40.1 rsi_bull=False spot=54314
+[DBG] NIFTY prices=30 ema10=23608.6 ema30=23635.7 ema_bull=False st=up st_bull=True rsi=34.9 rsi_sma=26.4 rsi_bull=False spot=23609
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #20 @ 09:35:37 ===
+[MON] NIFTY=23594.9 BANKNIFTY=54260.4
+[GPU] Sentiment: N_RSI=35.4 | BN_RSI=35.5 | N_MACDh=-5.4 | BN_MACDh=-15.7
+[DBG] BANKNIFTY prices=31 ema10=54338.2 ema30=54392.4 ema_bull=False st=up st_bull=True rsi=34.8 rsi_sma=39.7 rsi_bull=False spot=54260
+[DBG] NIFTY prices=31 ema10=23606.1 ema30=23633.0 ema_bull=False st=up st_bull=True rsi=30.8 rsi_sma=27.1 rsi_bull=False spot=23595
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #21 @ 09:36:38 ===
+[MON] NIFTY=23575.15 BANKNIFTY=54226.95
+[GPU] Sentiment: N_RSI=38.0 | BN_RSI=34.0 | N_MACDh=-5.3 | BN_MACDh=-17.8
+[DBG] BANKNIFTY prices=32 ema10=54318.0 ema30=54381.7 ema_bull=False st=up st_bull=True rsi=32.7 rsi_sma=39.1 rsi_bull=False spot=54227
+[DBG] NIFTY prices=32 ema10=23600.5 ema30=23629.3 ema_bull=False st=up st_bull=True rsi=26.2 rsi_sma=27.4 rsi_bull=False spot=23575
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #22 @ 09:37:38 ===
+[MON] NIFTY=23569.15 BANKNIFTY=54188.45
+[GPU] Sentiment: N_RSI=32.5 | BN_RSI=29.4 | N_MACDh=-5.1 | BN_MACDh=-20.4
+[DBG] BANKNIFTY prices=33 ema10=54294.4 ema30=54369.2 ema_bull=False st=up st_bull=True rsi=30.3 rsi_sma=38.4 rsi_bull=False spot=54188
+[DBG] NIFTY prices=33 ema10=23594.8 ema30=23625.4 ema_bull=False st=up st_bull=True rsi=24.9 rsi_sma=27.8 rsi_bull=False spot=23569
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (295 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #23 @ 09:38:39 ===
+[MON] NIFTY=23586.3 BANKNIFTY=54262.85
+[GPU] Sentiment: N_RSI=33.3 | BN_RSI=29.0 | N_MACDh=-3.6 | BN_MACDh=-15.9
+[DBG] BANKNIFTY prices=34 ema10=54288.7 ema30=54362.4 ema_bull=False st=up st_bull=True rsi=39.4 rsi_sma=38.7 rsi_bull=False spot=54263
+[DBG] NIFTY prices=34 ema10=23593.3 ema30=23622.9 ema_bull=False st=up st_bull=True rsi=34.4 rsi_sma=29.0 rsi_bull=False spot=23586
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #24 @ 09:39:39 ===
+[MON] NIFTY=23609.25 BANKNIFTY=54338.35
+[GPU] Sentiment: N_RSI=48.2 | BN_RSI=43.2 | N_MACDh=-0.8 | BN_MACDh=-7.1
+[DBG] BANKNIFTY prices=35 ema10=54297.7 ema30=54360.8 ema_bull=False st=up st_bull=True rsi=46.9 rsi_sma=39.3 rsi_bull=False spot=54338
+[DBG] NIFTY prices=35 ema10=23596.2 ema30=23622.0 ema_bull=False st=up st_bull=True rsi=44.5 rsi_sma=30.6 rsi_bull=False spot=23609
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #25 @ 09:40:40 ===
+[MON] NIFTY=23615.5 BANKNIFTY=54369.25
+[GPU] Sentiment: N_RSI=54.3 | BN_RSI=48.0 | N_MACDh=1.6 | BN_MACDh=1.1
+[DBG] BANKNIFTY prices=36 ema10=54310.7 ema30=54361.4 ema_bull=False st=up st_bull=True rsi=49.7 rsi_sma=39.9 rsi_bull=False spot=54369
+[DBG] NIFTY prices=36 ema10=23599.7 ema30=23621.6 ema_bull=False st=up st_bull=True rsi=46.9 rsi_sma=32.0 rsi_bull=False spot=23616
+[MON] Signals: 2
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=1.1
+  GPU_MACD: BUY_CE (HIGH) macd_h=1.6
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #26 @ 09:41:40 ===
+[MON] NIFTY=23609.55 BANKNIFTY=54370.55
+[GPU] Sentiment: N_RSI=52.9 | BN_RSI=48.7 | N_MACDh=2.8 | BN_MACDh=6.6
+[DBG] BANKNIFTY prices=37 ema10=54321.6 ema30=54362.0 ema_bull=False st=up st_bull=True rsi=49.8 rsi_sma=40.5 rsi_bull=False spot=54371
+[DBG] NIFTY prices=37 ema10=23601.5 ema30=23620.8 ema_bull=False st=up st_bull=True rsi=44.9 rsi_sma=33.3 rsi_bull=False spot=23610
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #27 @ 09:42:41 ===
+[MON] NIFTY=23596.55 BANKNIFTY=54280.65
+[GPU] Sentiment: N_RSI=51.2 | BN_RSI=48.0 | N_MACDh=2.7 | BN_MACDh=4.3
+[DBG] BANKNIFTY prices=38 ema10=54314.2 ema30=54356.7 ema_bull=False st=up st_bull=True rsi=42.4 rsi_sma=40.7 rsi_bull=False spot=54281
+[DBG] NIFTY prices=38 ema10=23600.6 ema30=23619.2 ema_bull=False st=up st_bull=True rsi=40.8 rsi_sma=34.4 rsi_bull=False spot=23597
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #28 @ 09:43:42 ===
+[MON] NIFTY=23592.55 BANKNIFTY=54270.9
+[GPU] Sentiment: N_RSI=48.1 | BN_RSI=43.2 | N_MACDh=2.4 | BN_MACDh=2.3
+[DBG] BANKNIFTY prices=39 ema10=54306.3 ema30=54351.2 ema_bull=False st=up st_bull=True rsi=41.7 rsi_sma=41.0 rsi_bull=False spot=54271
+[DBG] NIFTY prices=39 ema10=23599.1 ema30=23617.5 ema_bull=False st=up st_bull=True rsi=39.6 rsi_sma=35.5 rsi_bull=False spot=23593
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #29 @ 09:44:43 ===
+[MON] NIFTY=23574.65 BANKNIFTY=54196.4
+[GPU] Sentiment: N_RSI=51.1 | BN_RSI=45.5 | N_MACDh=1.1 | BN_MACDh=-3.5
+[DBG] BANKNIFTY prices=40 ema10=54286.3 ema30=54341.2 ema_bull=False st=up st_bull=True rsi=36.5 rsi_sma=40.8 rsi_bull=False spot=54196
+[DBG] NIFTY prices=40 ema10=23594.7 ema30=23614.8 ema_bull=False st=up st_bull=True rsi=34.7 rsi_sma=36.2 rsi_bull=False spot=23575
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-3.5
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #30 @ 09:45:43 ===
+[MON] NIFTY=23585.1 BANKNIFTY=54246.0
+[GPU] Sentiment: N_RSI=44.0 | BN_RSI=38.8 | N_MACDh=1.0 | BN_MACDh=-3.5
+[DBG] BANKNIFTY prices=41 ema10=54279.0 ema30=54335.0 ema_bull=False st=up st_bull=True rsi=41.7 rsi_sma=40.6 rsi_bull=False spot=54246
+[DBG] NIFTY prices=41 ema10=23592.9 ema30=23612.8 ema_bull=False st=up st_bull=True rsi=39.4 rsi_sma=36.6 rsi_bull=False spot=23585
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #31 @ 09:46:44 ===
+[MON] NIFTY=23588.1 BANKNIFTY=54240.45
+[GPU] Sentiment: N_RSI=41.7 | BN_RSI=37.4 | N_MACDh=1.2 | BN_MACDh=-3.3
+[DBG] BANKNIFTY prices=42 ema10=54272.0 ema30=54328.9 ema_bull=False st=up st_bull=True rsi=41.3 rsi_sma=40.5 rsi_bull=False spot=54240
+[DBG] NIFTY prices=42 ema10=23592.1 ema30=23611.2 ema_bull=False st=up st_bull=True rsi=40.7 rsi_sma=37.0 rsi_bull=False spot=23588
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #32 @ 09:47:44 ===
+[MON] NIFTY=23573.55 BANKNIFTY=54168.4
+[GPU] Sentiment: N_RSI=42.7 | BN_RSI=39.5 | N_MACDh=0.5 | BN_MACDh=-7.3
+[DBG] BANKNIFTY prices=43 ema10=54253.1 ema30=54318.6 ema_bull=False st=up st_bull=True rsi=36.3 rsi_sma=40.2 rsi_bull=False spot=54168
+[DBG] NIFTY prices=43 ema10=23588.7 ema30=23608.8 ema_bull=False st=up st_bull=True rsi=36.6 rsi_sma=37.1 rsi_bull=False spot=23574
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #33 @ 09:48:45 ===
+[MON] NIFTY=23574.95 BANKNIFTY=54178.35
+[GPU] Sentiment: N_RSI=37.9 | BN_RSI=36.5 | N_MACDh=0.3 | BN_MACDh=-8.4
+[DBG] BANKNIFTY prices=44 ema10=54239.5 ema30=54309.5 ema_bull=False st=up st_bull=True rsi=37.5 rsi_sma=40.1 rsi_bull=False spot=54178
+[DBG] NIFTY prices=44 ema10=23586.2 ema30=23606.6 ema_bull=False st=up st_bull=True rsi=37.3 rsi_sma=37.3 rsi_bull=False spot=23575
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #34 @ 09:49:45 ===
+[MON] NIFTY=23569.85 BANKNIFTY=54162.6
+[GPU] Sentiment: N_RSI=39.1 | BN_RSI=39.1 | N_MACDh=-0.1 | BN_MACDh=-9.3
+[DBG] BANKNIFTY prices=45 ema10=54225.6 ema30=54300.1 ema_bull=False st=up st_bull=True rsi=36.4 rsi_sma=40.2 rsi_bull=False spot=54163
+[DBG] NIFTY prices=45 ema10=23583.2 ema30=23604.3 ema_bull=False st=up st_bull=True rsi=35.8 rsi_sma=37.6 rsi_bull=False spot=23570
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.1
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #35 @ 09:50:46 ===
+[MON] NIFTY=23581.6 BANKNIFTY=54204.85
+[GPU] Sentiment: N_RSI=41.5 | BN_RSI=41.6 | N_MACDh=0.5 | BN_MACDh=-6.3
+[DBG] BANKNIFTY prices=46 ema10=54221.8 ema30=54293.9 ema_bull=False st=up st_bull=True rsi=41.3 rsi_sma=40.8 rsi_bull=False spot=54205
+[DBG] NIFTY prices=46 ema10=23582.9 ema30=23602.8 ema_bull=False st=up st_bull=True rsi=41.5 rsi_sma=38.7 rsi_bull=False spot=23582
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (HIGH) macd_h=0.5
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #36 @ 09:51:46 ===
+[MON] NIFTY=23579.15 BANKNIFTY=54190.6
+[GPU] Sentiment: N_RSI=52.3 | BN_RSI=48.1 | N_MACDh=0.9 | BN_MACDh=-4.6
+[DBG] BANKNIFTY prices=47 ema10=54216.1 ema30=54287.2 ema_bull=False st=up st_bull=True rsi=40.2 rsi_sma=41.5 rsi_bull=False spot=54191
+[DBG] NIFTY prices=47 ema10=23582.2 ema30=23601.3 ema_bull=False st=up st_bull=True rsi=40.7 rsi_sma=39.8 rsi_bull=False spot=23579
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #37 @ 09:52:47 ===
+[MON] NIFTY=23572.35 BANKNIFTY=54157.3
+[GPU] Sentiment: N_RSI=53.7 | BN_RSI=50.2 | N_MACDh=0.8 | BN_MACDh=-5.0
+[DBG] BANKNIFTY prices=48 ema10=54205.4 ema30=54278.9 ema_bull=False st=up st_bull=True rsi=37.6 rsi_sma=41.4 rsi_bull=False spot=54157
+[DBG] NIFTY prices=48 ema10=23580.4 ema30=23599.4 ema_bull=False st=up st_bull=True rsi=38.4 rsi_sma=40.1 rsi_bull=False spot=23572
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #38 @ 09:53:47 ===
+[MON] NIFTY=23590.35 BANKNIFTY=54194.1
+[GPU] Sentiment: N_RSI=44.4 | BN_RSI=39.9 | N_MACDh=1.9 | BN_MACDh=-2.2
+[DBG] BANKNIFTY prices=49 ema10=54203.4 ema30=54273.4 ema_bull=False st=up st_bull=True rsi=42.0 rsi_sma=41.0 rsi_bull=False spot=54194
+[DBG] NIFTY prices=49 ema10=23582.2 ema30=23598.8 ema_bull=False st=up st_bull=True rsi=46.8 rsi_sma=40.3 rsi_bull=False spot=23590
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #39 @ 09:54:48 ===
+[MON] NIFTY=23586.7 BANKNIFTY=54159.25
+[GPU] Sentiment: N_RSI=42.2 | BN_RSI=35.2 | N_MACDh=2.4 | BN_MACDh=-2.1
+[DBG] BANKNIFTY prices=50 ema10=54195.3 ema30=54266.0 ema_bull=False st=up st_bull=True rsi=39.2 rsi_sma=40.3 rsi_bull=False spot=54159
+[DBG] NIFTY prices=50 ema10=23583.1 ema30=23598.0 ema_bull=False st=up st_bull=True rsi=45.5 rsi_sma=40.2 rsi_bull=False spot=23587
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #40 @ 09:55:48 ===
+[MON] NIFTY=23579.2 BANKNIFTY=54126.35
+[GPU] Sentiment: N_RSI=37.8 | BN_RSI=28.6 | N_MACDh=2.3 | BN_MACDh=-3.6
+[DBG] BANKNIFTY prices=51 ema10=54182.8 ema30=54257.0 ema_bull=False st=up st_bull=True rsi=36.7 rsi_sma=39.3 rsi_bull=False spot=54126
+[DBG] NIFTY prices=51 ema10=23582.4 ema30=23596.8 ema_bull=False st=up st_bull=True rsi=42.7 rsi_sma=40.0 rsi_bull=False spot=23579
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #41 @ 09:56:49 ===
+[MON] NIFTY=23573.35 BANKNIFTY=54115.3
+[GPU] Sentiment: N_RSI=37.3 | BN_RSI=26.6 | N_MACDh=1.8 | BN_MACDh=-4.6
+[DBG] BANKNIFTY prices=52 ema10=54170.5 ema30=54247.9 ema_bull=False st=up st_bull=True rsi=35.8 rsi_sma=38.9 rsi_bull=False spot=54115
+[DBG] NIFTY prices=52 ema10=23580.7 ema30=23595.3 ema_bull=False st=up st_bull=True rsi=40.7 rsi_sma=40.0 rsi_bull=False spot=23573
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #42 @ 09:57:50 ===
+[MON] NIFTY=23576.3 BANKNIFTY=54122.7
+[GPU] Sentiment: N_RSI=39.7 | BN_RSI=31.3 | N_MACDh=1.7 | BN_MACDh=-4.1
+[DBG] BANKNIFTY prices=53 ema10=54161.8 ema30=54239.8 ema_bull=False st=up st_bull=True rsi=36.9 rsi_sma=38.5 rsi_bull=False spot=54123
+[DBG] NIFTY prices=53 ema10=23579.9 ema30=23594.1 ema_bull=False st=up st_bull=True rsi=42.2 rsi_sma=40.2 rsi_bull=False spot=23576
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #43 @ 09:58:50 ===
+[MON] NIFTY=23571.3 BANKNIFTY=54107.25
+[GPU] Sentiment: N_RSI=42.7 | BN_RSI=33.2 | N_MACDh=1.3 | BN_MACDh=-4.1
+[DBG] BANKNIFTY prices=54 ema10=54151.9 ema30=54231.2 ema_bull=False st=up st_bull=True rsi=35.6 rsi_sma=38.4 rsi_bull=False spot=54107
+[DBG] NIFTY prices=54 ema10=23578.3 ema30=23592.6 ema_bull=False st=up st_bull=True rsi=40.3 rsi_sma=40.6 rsi_bull=False spot=23571
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #44 @ 09:59:51 ===
+[MON] NIFTY=23559.15 BANKNIFTY=54070.75
+[GPU] Sentiment: N_RSI=48.3 | BN_RSI=38.3 | N_MACDh=0.3 | BN_MACDh=-5.7
+[DBG] BANKNIFTY prices=55 ema10=54137.2 ema30=54220.9 ema_bull=False st=up st_bull=True rsi=32.7 rsi_sma=37.8 rsi_bull=False spot=54071
+[DBG] NIFTY prices=55 ema10=23574.9 ema30=23590.5 ema_bull=False st=up st_bull=True rsi=36.1 rsi_sma=40.4 rsi_bull=False spot=23559
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #45 @ 10:00:51 ===
+[MON] NIFTY=23563.65 BANKNIFTY=54083.35
+[GPU] Sentiment: N_RSI=37.0 | BN_RSI=26.2 | N_MACDh=0.1 | BN_MACDh=-5.1
+[DBG] BANKNIFTY prices=56 ema10=54127.4 ema30=54212.0 ema_bull=False st=up st_bull=True rsi=34.7 rsi_sma=37.3 rsi_bull=False spot=54083
+[DBG] NIFTY prices=56 ema10=23572.8 ema30=23588.7 ema_bull=False st=up st_bull=True rsi=38.7 rsi_sma=40.2 rsi_bull=False spot=23564
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #46 @ 10:01:52 ===
+[MON] NIFTY=23556.15 BANKNIFTY=54043.2
+[GPU] Sentiment: N_RSI=38.0 | BN_RSI=29.1 | N_MACDh=-0.4 | BN_MACDh=-6.5
+[DBG] BANKNIFTY prices=57 ema10=54112.1 ema30=54201.1 ema_bull=False st=up st_bull=True rsi=31.5 rsi_sma=37.0 rsi_bull=False spot=54043
+[DBG] NIFTY prices=57 ema10=23569.8 ema30=23586.6 ema_bull=False st=up st_bull=True rsi=36.1 rsi_sma=40.2 rsi_bull=False spot=23556
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-0.4
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #47 @ 10:02:52 ===
+[MON] NIFTY=23554.7 BANKNIFTY=54069.0
+[GPU] Sentiment: N_RSI=40.8 | BN_RSI=31.8 | N_MACDh=-0.7 | BN_MACDh=-4.9
+[DBG] BANKNIFTY prices=58 ema10=54104.2 ema30=54192.6 ema_bull=False st=up st_bull=True rsi=35.6 rsi_sma=36.8 rsi_bull=False spot=54069
+[DBG] NIFTY prices=58 ema10=23567.0 ema30=23584.6 ema_bull=False st=up st_bull=True rsi=35.6 rsi_sma=40.1 rsi_bull=False spot=23555
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #48 @ 10:03:53 ===
+[MON] NIFTY=23538.0 BANKNIFTY=53997.1
+[GPU] Sentiment: N_RSI=39.3 | BN_RSI=34.8 | N_MACDh=-1.9 | BN_MACDh=-7.7
+[DBG] BANKNIFTY prices=59 ema10=54084.8 ema30=54180.0 ema_bull=False st=up st_bull=True rsi=30.2 rsi_sma=36.4 rsi_bull=False spot=53997
+[DBG] NIFTY prices=59 ema10=23561.8 ema30=23581.6 ema_bull=False st=up st_bull=True rsi=30.4 rsi_sma=39.7 rsi_bull=False spot=23538
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #49 @ 10:04:54 ===
+[MON] NIFTY=23543.45 BANKNIFTY=54012.1
+[GPU] Sentiment: N_RSI=35.0 | BN_RSI=30.1 | N_MACDh=-2.0 | BN_MACDh=-7.6
+[DBG] BANKNIFTY prices=60 ema10=54071.5 ema30=54169.2 ema_bull=False st=up st_bull=True rsi=32.5 rsi_sma=35.8 rsi_bull=False spot=54012
+[DBG] NIFTY prices=60 ema10=23558.4 ema30=23579.1 ema_bull=False st=up st_bull=True rsi=33.8 rsi_sma=39.2 rsi_bull=False spot=23543
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #50 @ 10:05:54 ===
+[MON] NIFTY=23544.3 BANKNIFTY=54029.05
+[GPU] Sentiment: N_RSI=30.9 | BN_RSI=25.2 | N_MACDh=-1.8 | BN_MACDh=-5.4
+[DBG] BANKNIFTY prices=61 ema10=54063.8 ema30=54160.1 ema_bull=False st=up st_bull=True rsi=35.1 rsi_sma=35.4 rsi_bull=False spot=54029
+[DBG] NIFTY prices=61 ema10=23555.9 ema30=23576.9 ema_bull=False st=up st_bull=True rsi=34.3 rsi_sma=38.7 rsi_bull=False spot=23544
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #51 @ 10:06:55 ===
+[MON] NIFTY=23550.45 BANKNIFTY=54034.1
+[GPU] Sentiment: N_RSI=32.3 | BN_RSI=29.3 | N_MACDh=-1.1 | BN_MACDh=-2.9
+[DBG] BANKNIFTY prices=62 ema10=54058.4 ema30=54152.0 ema_bull=False st=up st_bull=True rsi=35.9 rsi_sma=35.3 rsi_bull=False spot=54034
+[DBG] NIFTY prices=62 ema10=23554.9 ema30=23575.2 ema_bull=False st=up st_bull=True rsi=38.2 rsi_sma=38.7 rsi_bull=False spot=23550
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #52 @ 10:07:55 ===
+[MON] NIFTY=23557.45 BANKNIFTY=54037.15
+[GPU] Sentiment: N_RSI=38.8 | BN_RSI=33.0 | N_MACDh=-0.0 | BN_MACDh=-0.4
+[DBG] BANKNIFTY prices=63 ema10=54054.5 ema30=54144.6 ema_bull=False st=up st_bull=True rsi=36.4 rsi_sma=34.9 rsi_bull=False spot=54037
+[DBG] NIFTY prices=63 ema10=23555.3 ema30=23574.0 ema_bull=False st=up st_bull=True rsi=42.4 rsi_sma=38.4 rsi_bull=False spot=23557
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #53 @ 10:08:56 ===
+[MON] NIFTY=23560.75 BANKNIFTY=54046.05
+[GPU] Sentiment: N_RSI=31.0 | BN_RSI=26.1 | N_MACDh=1.0 | BN_MACDh=2.3
+[DBG] BANKNIFTY prices=64 ema10=54053.0 ema30=54138.2 ema_bull=False st=up st_bull=True rsi=37.9 rsi_sma=34.8 rsi_bull=False spot=54046
+[DBG] NIFTY prices=64 ema10=23556.3 ema30=23573.2 ema_bull=False st=up st_bull=True rsi=44.3 rsi_sma=38.3 rsi_bull=False spot=23561
+[MON] Signals: 2
+  GPU_MACD: BUY_CE (HIGH) macd_h=2.3
+  GPU_MACD: BUY_CE (HIGH) macd_h=1.0
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #54 @ 10:09:56 ===
+[MON] NIFTY=23568.9 BANKNIFTY=54088.9
+[GPU] Sentiment: N_RSI=35.0 | BN_RSI=31.3 | N_MACDh=-8.0 | BN_MACDh=7.2
+[DBG] BANKNIFTY prices=65 ema10=54059.5 ema30=54135.0 ema_bull=False st=up st_bull=True rsi=44.8 rsi_sma=35.4 rsi_bull=False spot=54089
+[DBG] NIFTY prices=65 ema10=23558.6 ema30=23572.9 ema_bull=False st=up st_bull=True rsi=48.9 rsi_sma=38.7 rsi_bull=False spot=23569
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-43.3
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #55 @ 10:10:57 ===
+[MON] NIFTY=23563.65 BANKNIFTY=54065.15
+[GPU] Sentiment: N_RSI=44.1 | BN_RSI=44.0 | N_MACDh=-5.5 | BN_MACDh=9.0
+[DBG] BANKNIFTY prices=66 ema10=54060.6 ema30=54130.5 ema_bull=False st=up st_bull=True rsi=42.0 rsi_sma=35.8 rsi_bull=False spot=54065
+[DBG] NIFTY prices=66 ema10=23559.5 ema30=23572.3 ema_bull=False st=up st_bull=True rsi=46.3 rsi_sma=39.1 rsi_bull=False spot=23564
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #56 @ 10:11:57 ===
+[MON] NIFTY=23553.5 BANKNIFTY=54058.3
+[GPU] Sentiment: N_RSI=44.4 | BN_RSI=42.3 | N_MACDh=-4.3 | BN_MACDh=9.7
+[DBG] BANKNIFTY prices=67 ema10=54060.1 ema30=54125.9 ema_bull=False st=up st_bull=True rsi=41.2 rsi_sma=36.1 rsi_bull=False spot=54058
+[DBG] NIFTY prices=67 ema10=23558.4 ema30=23571.1 ema_bull=False st=up st_bull=True rsi=41.6 rsi_sma=39.1 rsi_bull=False spot=23554
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #57 @ 10:12:58 ===
+[MON] NIFTY=23560.35 BANKNIFTY=54068.7
+[GPU] Sentiment: N_RSI=37.8 | BN_RSI=40.1 | N_MACDh=-2.9 | BN_MACDh=10.8
+[DBG] BANKNIFTY prices=68 ema10=54061.7 ema30=54122.2 ema_bull=False st=up st_bull=True rsi=43.0 rsi_sma=36.7 rsi_bull=False spot=54069
+[DBG] NIFTY prices=68 ema10=23558.8 ema30=23570.4 ema_bull=False st=up st_bull=True rsi=45.6 rsi_sma=39.5 rsi_bull=False spot=23560
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #58 @ 10:13:58 ===
+[MON] NIFTY=23559.3 BANKNIFTY=54061.35
+[GPU] Sentiment: N_RSI=44.3 | BN_RSI=44.0 | N_MACDh=-1.8 | BN_MACDh=11.0
+[DBG] BANKNIFTY prices=69 ema10=54061.6 ema30=54118.3 ema_bull=False st=up st_bull=True rsi=42.1 rsi_sma=37.3 rsi_bull=False spot=54061
+[DBG] NIFTY prices=69 ema10=23558.9 ema30=23569.7 ema_bull=False st=up st_bull=True rsi=45.1 rsi_sma=40.1 rsi_bull=False spot=23559
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #59 @ 10:14:59 ===
+[MON] NIFTY=23553.55 BANKNIFTY=54032.8
+[GPU] Sentiment: N_RSI=50.1 | BN_RSI=48.4 | N_MACDh=-1.4 | BN_MACDh=9.2
+[DBG] BANKNIFTY prices=70 ema10=54056.4 ema30=54112.7 ema_bull=False st=up st_bull=True rsi=38.4 rsi_sma=37.6 rsi_bull=False spot=54033
+[DBG] NIFTY prices=70 ema10=23557.9 ema30=23568.6 ema_bull=False st=up st_bull=True rsi=42.3 rsi_sma=40.4 rsi_bull=False spot=23554
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #60 @ 10:15:59 ===
+[MON] NIFTY=23548.05 BANKNIFTY=54038.2
+[GPU] Sentiment: N_RSI=44.1 | BN_RSI=41.8 | N_MACDh=-1.3 | BN_MACDh=8.3
+[DBG] BANKNIFTY prices=71 ema10=54053.1 ema30=54107.9 ema_bull=False st=up st_bull=True rsi=39.5 rsi_sma=38.2 rsi_bull=False spot=54038
+[DBG] NIFTY prices=71 ema10=23556.1 ema30=23567.3 ema_bull=False st=up st_bull=True rsi=39.8 rsi_sma=40.6 rsi_bull=False spot=23548
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #61 @ 10:17:00 ===
+[MON] NIFTY=23549.6 BANKNIFTY=54043.1
+[GPU] Sentiment: N_RSI=45.2 | BN_RSI=49.1 | N_MACDh=-1.1 | BN_MACDh=8.1
+[DBG] BANKNIFTY prices=72 ema10=54051.3 ema30=54103.8 ema_bull=False st=up st_bull=True rsi=40.5 rsi_sma=38.5 rsi_bull=False spot=54043
+[DBG] NIFTY prices=72 ema10=23554.9 ema30=23566.2 ema_bull=False st=up st_bull=True rsi=40.9 rsi_sma=41.0 rsi_bull=False spot=23550
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #62 @ 10:18:00 ===
+[MON] NIFTY=23563.0 BANKNIFTY=54068.45
+[GPU] Sentiment: N_RSI=47.0 | BN_RSI=44.8 | N_MACDh=0.1 | BN_MACDh=9.6
+[DBG] BANKNIFTY prices=73 ema10=54054.4 ema30=54101.5 ema_bull=False st=up st_bull=True rsi=45.5 rsi_sma=39.6 rsi_bull=False spot=54068
+[DBG] NIFTY prices=73 ema10=23556.4 ema30=23566.0 ema_bull=False st=up st_bull=True rsi=49.2 rsi_sma=42.3 rsi_bull=False spot=23563
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=1.1
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #63 @ 10:19:01 ===
+[MON] NIFTY=23557.85 BANKNIFTY=54041.3
+[GPU] Sentiment: N_RSI=65.5 | BN_RSI=67.5 | N_MACDh=0.5 | BN_MACDh=8.6
+[DBG] BANKNIFTY prices=74 ema10=54052.0 ema30=54097.6 ema_bull=False st=up st_bull=True rsi=41.5 rsi_sma=40.3 rsi_bull=False spot=54041
+[DBG] NIFTY prices=74 ema10=23556.7 ema30=23565.4 ema_bull=False st=up st_bull=True rsi=46.5 rsi_sma=43.2 rsi_bull=False spot=23558
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #64 @ 10:20:02 ===
+[MON] NIFTY=23556.3 BANKNIFTY=54023.65
+[GPU] Sentiment: N_RSI=59.0 | BN_RSI=56.7 | N_MACDh=0.7 | BN_MACDh=6.8
+[DBG] BANKNIFTY prices=75 ema10=54046.9 ema30=54092.8 ema_bull=False st=up st_bull=True rsi=39.1 rsi_sma=40.6 rsi_bull=False spot=54024
+[DBG] NIFTY prices=75 ema10=23556.6 ema30=23564.8 ema_bull=False st=up st_bull=True rsi=45.7 rsi_sma=44.1 rsi_bull=False spot=23556
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #65 @ 10:21:03 ===
+[MON] NIFTY=23555.5 BANKNIFTY=54007.05
+[GPU] Sentiment: N_RSI=57.4 | BN_RSI=48.8 | N_MACDh=0.8 | BN_MACDh=4.6
+[DBG] BANKNIFTY prices=76 ema10=54039.6 ema30=54087.3 ema_bull=False st=up st_bull=True rsi=36.9 rsi_sma=40.6 rsi_bull=False spot=54007
+[DBG] NIFTY prices=76 ema10=23556.4 ema30=23564.2 ema_bull=False st=up st_bull=True rsi=45.2 rsi_sma=44.6 rsi_bull=False spot=23556
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #66 @ 10:22:03 ===
+[MON] NIFTY=23558.15 BANKNIFTY=53988.65
+[GPU] Sentiment: N_RSI=53.3 | BN_RSI=44.1 | N_MACDh=1.1 | BN_MACDh=2.2
+[DBG] BANKNIFTY prices=77 ema10=54030.4 ema30=54080.9 ema_bull=False st=up st_bull=True rsi=34.6 rsi_sma=40.5 rsi_bull=False spot=53989
+[DBG] NIFTY prices=77 ema10=23556.7 ema30=23563.8 ema_bull=False st=up st_bull=True rsi=47.1 rsi_sma=44.9 rsi_bull=False spot=23558
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-1.3
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #67 @ 10:23:04 ===
+[MON] NIFTY=23565.9 BANKNIFTY=54014.0
+[GPU] Sentiment: N_RSI=50.5 | BN_RSI=40.1 | N_MACDh=1.7 | BN_MACDh=2.5
+[DBG] BANKNIFTY prices=78 ema10=54027.4 ema30=54076.6 ema_bull=False st=up st_bull=True rsi=40.1 rsi_sma=40.7 rsi_bull=False spot=54014
+[DBG] NIFTY prices=78 ema10=23558.4 ema30=23564.0 ema_bull=False st=up st_bull=True rsi=52.1 rsi_sma=45.4 rsi_bull=True spot=23566
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #68 @ 10:24:04 ===
+[MON] NIFTY=23560.65 BANKNIFTY=53994.6
+[GPU] Sentiment: N_RSI=53.4 | BN_RSI=43.8 | N_MACDh=1.7 | BN_MACDh=1.7
+[DBG] BANKNIFTY prices=79 ema10=54021.4 ema30=54071.3 ema_bull=False st=up st_bull=True rsi=37.5 rsi_sma=40.1 rsi_bull=False spot=53995
+[DBG] NIFTY prices=79 ema10=23558.8 ema30=23563.8 ema_bull=False st=up st_bull=True rsi=48.7 rsi_sma=45.4 rsi_bull=False spot=23561
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #69 @ 10:25:05 ===
+[MON] NIFTY=23552.0 BANKNIFTY=53964.15
+[GPU] Sentiment: N_RSI=44.3 | BN_RSI=30.1 | N_MACDh=1.1 | BN_MACDh=-0.6
+[DBG] BANKNIFTY prices=80 ema10=54011.0 ema30=54064.4 ema_bull=False st=up st_bull=True rsi=33.8 rsi_sma=39.5 rsi_bull=False spot=53964
+[DBG] NIFTY prices=80 ema10=23557.6 ema30=23563.0 ema_bull=False st=up st_bull=True rsi=43.7 rsi_sma=45.3 rsi_bull=False spot=23552
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #70 @ 10:26:05 ===
+[MON] NIFTY=23553.85 BANKNIFTY=53977.3
+[GPU] Sentiment: N_RSI=42.3 | BN_RSI=29.3 | N_MACDh=1.2 | BN_MACDh=-0.8
+[DBG] BANKNIFTY prices=81 ema10=54004.9 ema30=54058.8 ema_bull=False st=up st_bull=True rsi=36.7 rsi_sma=39.2 rsi_bull=False spot=53977
+[DBG] NIFTY prices=81 ema10=23556.9 ema30=23562.4 ema_bull=False st=up st_bull=True rsi=45.0 rsi_sma=45.5 rsi_bull=False spot=23554
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #71 @ 10:27:06 ===
+[MON] NIFTY=23550.55 BANKNIFTY=53953.85
+[GPU] Sentiment: N_RSI=50.3 | BN_RSI=33.8 | N_MACDh=0.7 | BN_MACDh=-2.0
+[DBG] BANKNIFTY prices=82 ema10=53995.6 ema30=54052.0 ema_bull=False st=up st_bull=True rsi=33.8 rsi_sma=38.6 rsi_bull=False spot=53954
+[DBG] NIFTY prices=82 ema10=23555.7 ema30=23561.6 ema_bull=False st=up st_bull=True rsi=43.1 rsi_sma=45.3 rsi_bull=False spot=23551
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #72 @ 10:28:07 ===
+[MON] NIFTY=23540.9 BANKNIFTY=53893.85
+[GPU] Sentiment: N_RSI=42.4 | BN_RSI=28.2 | N_MACDh=-0.2 | BN_MACDh=-6.2
+[DBG] BANKNIFTY prices=83 ema10=53977.1 ema30=54041.8 ema_bull=False st=up st_bull=True rsi=27.8 rsi_sma=37.5 rsi_bull=False spot=53894
+[DBG] NIFTY prices=83 ema10=23553.0 ema30=23560.3 ema_bull=False st=up st_bull=True rsi=38.0 rsi_sma=44.8 rsi_bull=False spot=23541
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.2
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #73 @ 10:29:07 ===
+[MON] NIFTY=23545.15 BANKNIFTY=53911.65
+[GPU] Sentiment: N_RSI=37.4 | BN_RSI=23.5 | N_MACDh=-0.4 | BN_MACDh=-7.0
+[DBG] BANKNIFTY prices=84 ema10=53965.2 ema30=54033.4 ema_bull=False st=up st_bull=True rsi=31.7 rsi_sma=37.1 rsi_bull=False spot=53912
+[DBG] NIFTY prices=84 ema10=23551.6 ema30=23559.3 ema_bull=False st=up st_bull=True rsi=41.3 rsi_sma=44.7 rsi_bull=False spot=23545
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #74 @ 10:30:08 ===
+[MON] NIFTY=23535.15 BANKNIFTY=53868.15
+[GPU] Sentiment: N_RSI=44.1 | BN_RSI=30.1 | N_MACDh=-1.1 | BN_MACDh=-9.6
+[DBG] BANKNIFTY prices=85 ema10=53947.6 ema30=54022.7 ema_bull=False st=up st_bull=True rsi=27.8 rsi_sma=36.2 rsi_bull=False spot=53868
+[DBG] NIFTY prices=85 ema10=23548.6 ema30=23557.8 ema_bull=False st=up st_bull=True rsi=36.4 rsi_sma=44.5 rsi_bull=False spot=23535
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #75 @ 10:31:08 ===
+[MON] NIFTY=23536.3 BANKNIFTY=53875.7
+[GPU] Sentiment: N_RSI=41.5 | BN_RSI=25.2 | N_MACDh=-1.4 | BN_MACDh=-9.8
+[DBG] BANKNIFTY prices=86 ema10=53934.5 ema30=54013.3 ema_bull=False st=up st_bull=True rsi=29.4 rsi_sma=35.4 rsi_bull=False spot=53876
+[DBG] NIFTY prices=86 ema10=23546.4 ema30=23556.4 ema_bull=False st=up st_bull=True rsi=37.3 rsi_sma=44.2 rsi_bull=False spot=23536
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #76 @ 10:32:09 ===
+[MON] NIFTY=23539.15 BANKNIFTY=53881.45
+[GPU] Sentiment: N_RSI=41.2 | BN_RSI=25.8 | N_MACDh=-1.3 | BN_MACDh=-8.6
+[DBG] BANKNIFTY prices=87 ema10=53924.8 ema30=54004.8 ema_bull=False st=up st_bull=True rsi=30.7 rsi_sma=34.4 rsi_bull=False spot=53881
+[DBG] NIFTY prices=87 ema10=23545.1 ema30=23555.3 ema_bull=False st=up st_bull=True rsi=39.6 rsi_sma=43.5 rsi_bull=False spot=23539
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #77 @ 10:33:10 ===
+[MON] NIFTY=23536.95 BANKNIFTY=53880.6
+[GPU] Sentiment: N_RSI=31.6 | BN_RSI=21.3 | N_MACDh=-1.2 | BN_MACDh=-7.1
+[DBG] BANKNIFTY prices=88 ema10=53916.8 ema30=53996.7 ema_bull=False st=up st_bull=True rsi=30.6 rsi_sma=33.6 rsi_bull=False spot=53881
+[DBG] NIFTY prices=88 ema10=23543.6 ema30=23554.1 ema_bull=False st=up st_bull=True rsi=38.4 rsi_sma=43.0 rsi_bull=False spot=23537
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #78 @ 10:34:10 ===
+[MON] NIFTY=23520.15 BANKNIFTY=53846.0
+[GPU] Sentiment: N_RSI=33.1 | BN_RSI=23.2 | N_MACDh=-2.1 | BN_MACDh=-7.5
+[DBG] BANKNIFTY prices=89 ema10=53903.9 ema30=53987.0 ema_bull=False st=up st_bull=True rsi=27.2 rsi_sma=32.8 rsi_bull=False spot=53846
+[DBG] NIFTY prices=89 ema10=23539.3 ema30=23551.9 ema_bull=False st=up st_bull=True rsi=30.8 rsi_sma=41.9 rsi_bull=False spot=23520
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #79 @ 10:35:11 ===
+[MON] NIFTY=23533.25 BANKNIFTY=53878.8
+[GPU] Sentiment: N_RSI=26.6 | BN_RSI=22.0 | N_MACDh=-1.7 | BN_MACDh=-4.8
+[DBG] BANKNIFTY prices=90 ema10=53899.4 ema30=53980.0 ema_bull=False st=up st_bull=True rsi=34.7 rsi_sma=32.6 rsi_bull=False spot=53879
+[DBG] NIFTY prices=90 ema10=23538.2 ema30=23550.7 ema_bull=False st=up st_bull=True rsi=40.7 rsi_sma=41.6 rsi_bull=False spot=23533
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #80 @ 10:36:11 ===
+[MON] NIFTY=23524.8 BANKNIFTY=53869.4
+[GPU] Sentiment: N_RSI=37.6 | BN_RSI=30.7 | N_MACDh=-1.8 | BN_MACDh=-3.0
+[DBG] BANKNIFTY prices=91 ema10=53893.9 ema30=53972.9 ema_bull=False st=up st_bull=True rsi=33.6 rsi_sma=32.5 rsi_bull=False spot=53869
+[DBG] NIFTY prices=91 ema10=23535.8 ema30=23549.0 ema_bull=False st=up st_bull=True rsi=37.0 rsi_sma=40.9 rsi_bull=False spot=23525
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #81 @ 10:37:12 ===
+[MON] NIFTY=23530.0 BANKNIFTY=53891.35
+[GPU] Sentiment: N_RSI=32.5 | BN_RSI=31.6 | N_MACDh=-1.4 | BN_MACDh=0.1
+[DBG] BANKNIFTY prices=92 ema10=53893.4 ema30=53967.6 ema_bull=False st=up st_bull=True rsi=38.4 rsi_sma=32.4 rsi_bull=False spot=53891
+[DBG] NIFTY prices=92 ema10=23534.7 ema30=23547.8 ema_bull=False st=up st_bull=True rsi=40.6 rsi_sma=40.0 rsi_bull=False spot=23530
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.1
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #82 @ 10:38:12 ===
+[MON] NIFTY=23543.25 BANKNIFTY=53921.7
+[GPU] Sentiment: N_RSI=30.6 | BN_RSI=30.9 | N_MACDh=-0.1 | BN_MACDh=4.5
+[DBG] BANKNIFTY prices=93 ema10=53898.6 ema30=53964.7 ema_bull=False st=up st_bull=True rsi=44.3 rsi_sma=32.9 rsi_bull=False spot=53922
+[DBG] NIFTY prices=93 ema10=23536.3 ema30=23547.5 ema_bull=False st=up st_bull=True rsi=48.5 rsi_sma=40.0 rsi_bull=False spot=23543
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #83 @ 10:39:13 ===
+[MON] NIFTY=23542.4 BANKNIFTY=53912.8
+[GPU] Sentiment: N_RSI=41.4 | BN_RSI=39.0 | N_MACDh=0.7 | BN_MACDh=7.0
+[DBG] BANKNIFTY prices=94 ema10=53901.2 ema30=53961.3 ema_bull=False st=up st_bull=True rsi=43.0 rsi_sma=33.5 rsi_bull=False spot=53913
+[DBG] NIFTY prices=94 ema10=23537.4 ema30=23547.2 ema_bull=False st=up st_bull=True rsi=48.1 rsi_sma=40.3 rsi_bull=False spot=23542
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (HIGH) macd_h=0.7
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #84 @ 10:40:14 ===
+[MON] NIFTY=23545.5 BANKNIFTY=53931.1
+[GPU] Sentiment: N_RSI=44.8 | BN_RSI=41.7 | N_MACDh=1.4 | BN_MACDh=9.7
+[DBG] BANKNIFTY prices=95 ema10=53906.6 ema30=53959.4 ema_bull=False st=up st_bull=True rsi=46.5 rsi_sma=34.2 rsi_bull=False spot=53931
+[DBG] NIFTY prices=95 ema10=23538.9 ema30=23547.1 ema_bull=False st=up st_bull=True rsi=49.9 rsi_sma=40.7 rsi_bull=False spot=23546
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (290 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #85 @ 10:41:15 ===
+[MON] NIFTY=23540.0 BANKNIFTY=53917.4
+[GPU] Sentiment: N_RSI=45.6 | BN_RSI=42.7 | N_MACDh=1.5 | BN_MACDh=10.5
+[DBG] BANKNIFTY prices=96 ema10=53908.6 ema30=53956.7 ema_bull=False st=up st_bull=True rsi=44.3 rsi_sma=35.0 rsi_bull=False spot=53917
+[DBG] NIFTY prices=96 ema10=23539.1 ema30=23546.6 ema_bull=False st=up st_bull=True rsi=46.8 rsi_sma=41.0 rsi_bull=False spot=23540
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #86 @ 10:42:15 ===
+[MON] NIFTY=23547.2 BANKNIFTY=53932.4
+[GPU] Sentiment: N_RSI=44.5 | BN_RSI=44.0 | N_MACDh=2.0 | BN_MACDh=11.8
+[DBG] BANKNIFTY prices=97 ema10=53912.9 ema30=53955.1 ema_bull=False st=up st_bull=True rsi=47.3 rsi_sma=36.4 rsi_bull=False spot=53932
+[DBG] NIFTY prices=97 ema10=23540.5 ema30=23546.7 ema_bull=False st=up st_bull=True rsi=51.1 rsi_sma=41.9 rsi_bull=True spot=23547
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #87 @ 10:43:16 ===
+[MON] NIFTY=23547.1 BANKNIFTY=53954.9
+[GPU] Sentiment: N_RSI=53.4 | BN_RSI=57.4 | N_MACDh=2.3 | BN_MACDh=13.8
+[DBG] BANKNIFTY prices=98 ema10=53920.5 ema30=53955.1 ema_bull=False st=up st_bull=True rsi=51.4 rsi_sma=37.8 rsi_bull=True spot=53955
+[DBG] NIFTY prices=98 ema10=23541.7 ema30=23546.7 ema_bull=False st=up st_bull=True rsi=51.0 rsi_sma=42.6 rsi_bull=True spot=23547
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #88 @ 10:44:16 ===
+[MON] NIFTY=23541.85 BANKNIFTY=53926.1
+[GPU] Sentiment: N_RSI=51.1 | BN_RSI=58.2 | N_MACDh=2.0 | BN_MACDh=12.9
+[DBG] BANKNIFTY prices=99 ema10=53921.6 ema30=53953.2 ema_bull=False st=up st_bull=True rsi=46.4 rsi_sma=39.1 rsi_bull=False spot=53926
+[DBG] NIFTY prices=99 ema10=23541.8 ema30=23546.4 ema_bull=False st=up st_bull=True rsi=47.8 rsi_sma=43.4 rsi_bull=False spot=23542
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #89 @ 10:45:17 ===
+[MON] NIFTY=23540.95 BANKNIFTY=53924.3
+[GPU] Sentiment: N_RSI=53.9 | BN_RSI=61.6 | N_MACDh=1.8 | BN_MACDh=11.8
+[DBG] BANKNIFTY prices=100 ema10=53922.1 ema30=53951.4 ema_bull=False st=up st_bull=True rsi=46.1 rsi_sma=40.3 rsi_bull=False spot=53924
+[DBG] NIFTY prices=100 ema10=23541.6 ema30=23546.0 ema_bull=False st=up st_bull=True rsi=47.2 rsi_sma=44.1 rsi_bull=False spot=23541
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #90 @ 10:46:17 ===
+[MON] NIFTY=23550.3 BANKNIFTY=53969.55
+[GPU] Sentiment: N_RSI=52.7 | BN_RSI=59.9 | N_MACDh=2.2 | BN_MACDh=13.7
+[DBG] BANKNIFTY prices=101 ema10=53930.7 ema30=53952.5 ema_bull=False st=up st_bull=True rsi=54.2 rsi_sma=42.0 rsi_bull=True spot=53970
+[DBG] NIFTY prices=101 ema10=23543.2 ema30=23546.3 ema_bull=False st=up st_bull=True rsi=53.3 rsi_sma=45.1 rsi_bull=True spot=23550
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #91 @ 10:47:20 ===
+[MON] NIFTY=23556.5 BANKNIFTY=53994.6
+[GPU] Sentiment: N_RSI=56.1 | BN_RSI=65.5 | N_MACDh=2.7 | BN_MACDh=16.0
+[DBG] BANKNIFTY prices=102 ema10=53942.3 ema30=53955.2 ema_bull=False st=up st_bull=True rsi=58.0 rsi_sma=43.9 rsi_bull=True spot=53995
+[DBG] NIFTY prices=102 ema10=23545.6 ema30=23547.0 ema_bull=False st=up st_bull=True rsi=56.9 rsi_sma=46.4 rsi_bull=True spot=23556
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #92 @ 10:48:20 ===
+[MON] NIFTY=23560.1 BANKNIFTY=53995.7
+[GPU] Sentiment: N_RSI=60.3 | BN_RSI=68.5 | N_MACDh=3.2 | BN_MACDh=16.9
+[DBG] BANKNIFTY prices=103 ema10=53952.0 ema30=53957.9 ema_bull=False st=up st_bull=True rsi=58.1 rsi_sma=46.2 rsi_bull=True spot=53996
+[DBG] NIFTY prices=103 ema10=23548.2 ema30=23547.8 ema_bull=True st=up st_bull=True rsi=58.8 rsi_sma=48.4 rsi_bull=True spot=23560
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #93 @ 10:49:21 ===
+[MON] NIFTY=23573.95 BANKNIFTY=54043.6
+[GPU] Sentiment: N_RSI=74.3 | BN_RSI=77.2 | N_MACDh=4.2 | BN_MACDh=19.9
+[DBG] BANKNIFTY prices=104 ema10=53968.7 ema30=53963.4 ema_bull=True st=up st_bull=True rsi=64.6 rsi_sma=48.3 rsi_bull=True spot=54044
+[DBG] NIFTY prices=104 ema10=23552.9 ema30=23549.5 ema_bull=True st=up st_bull=True rsi=65.3 rsi_sma=50.2 rsi_bull=True spot=23574
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #94 @ 10:50:21 ===
+[MON] NIFTY=23572.45 BANKNIFTY=54022.65
+[GPU] Sentiment: N_RSI=74.6 | BN_RSI=78.4 | N_MACDh=4.6 | BN_MACDh=19.5
+[DBG] BANKNIFTY prices=105 ema10=53978.5 ema30=53967.2 ema_bull=True st=up st_bull=True rsi=60.2 rsi_sma=50.2 rsi_bull=True spot=54023
+[DBG] NIFTY prices=105 ema10=23556.5 ema30=23551.0 ema_bull=True st=up st_bull=True rsi=64.2 rsi_sma=52.1 rsi_bull=True spot=23572
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #95 @ 10:51:22 ===
+[MON] NIFTY=23572.15 BANKNIFTY=54006.3
+[GPU] Sentiment: N_RSI=81.4 | BN_RSI=75.4 | N_MACDh=4.5 | BN_MACDh=17.2
+[DBG] BANKNIFTY prices=106 ema10=53983.5 ema30=53969.7 ema_bull=True st=up st_bull=True rsi=57.0 rsi_sma=51.5 rsi_bull=True spot=54006
+[DBG] NIFTY prices=106 ema10=23559.3 ema30=23552.3 ema_bull=True st=up st_bull=True rsi=63.9 rsi_sma=53.8 rsi_bull=True spot=23572
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #96 @ 10:52:22 ===
+[MON] NIFTY=23582.9 BANKNIFTY=54041.0
+[GPU] Sentiment: N_RSI=79.7 | BN_RSI=69.4 | N_MACDh=5.0 | BN_MACDh=17.2
+[DBG] BANKNIFTY prices=107 ema10=53994.0 ema30=53974.3 ema_bull=True st=up st_bull=True rsi=61.7 rsi_sma=52.8 rsi_bull=True spot=54041
+[DBG] NIFTY prices=107 ema10=23563.6 ema30=23554.3 ema_bull=True st=up st_bull=True rsi=68.6 rsi_sma=55.2 rsi_bull=True spot=23583
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (291 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #97 @ 10:53:23 ===
+[MON] NIFTY=23588.2 BANKNIFTY=54043.45
+[GPU] Sentiment: N_RSI=79.0 | BN_RSI=69.9 | N_MACDh=5.3 | BN_MACDh=16.5
+[DBG] BANKNIFTY prices=108 ema10=54003.0 ema30=53978.8 ema_bull=True st=up st_bull=True rsi=62.0 rsi_sma=54.1 rsi_bull=True spot=54043
+[DBG] NIFTY prices=108 ema10=23568.1 ema30=23556.5 ema_bull=True st=up st_bull=True rsi=70.6 rsi_sma=56.8 rsi_bull=False spot=23588
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #98 @ 10:54:23 ===
+[MON] NIFTY=23589.15 BANKNIFTY=54062.45
+[GPU] Sentiment: N_RSI=81.4 | BN_RSI=72.2 | N_MACDh=5.2 | BN_MACDh=16.3
+[DBG] BANKNIFTY prices=109 ema10=54013.8 ema30=53984.2 ema_bull=True st=up st_bull=True rsi=64.4 rsi_sma=55.4 rsi_bull=True spot=54062
+[DBG] NIFTY prices=109 ema10=23571.9 ema30=23558.6 ema_bull=True st=up st_bull=True rsi=71.0 rsi_sma=58.3 rsi_bull=False spot=23589
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #99 @ 10:55:24 ===
+[MON] NIFTY=23592.55 BANKNIFTY=54103.8
+[GPU] Sentiment: N_RSI=80.8 | BN_RSI=72.3 | N_MACDh=5.1 | BN_MACDh=18.0
+[DBG] BANKNIFTY prices=110 ema10=54030.2 ema30=53991.9 ema_bull=True st=up st_bull=True rsi=69.1 rsi_sma=57.2 rsi_bull=True spot=54104
+[DBG] NIFTY prices=110 ema10=23575.7 ema30=23560.8 ema_bull=True st=up st_bull=True rsi=72.3 rsi_sma=60.1 rsi_bull=False spot=23593
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #100 @ 10:56:25 ===
+[MON] NIFTY=23590.5 BANKNIFTY=54088.7
+[GPU] Sentiment: N_RSI=88.3 | BN_RSI=78.9 | N_MACDh=4.6 | BN_MACDh=17.0
+[DBG] BANKNIFTY prices=111 ema10=54040.8 ema30=53998.1 ema_bull=True st=up st_bull=True rsi=65.7 rsi_sma=58.5 rsi_bull=True spot=54089
+[DBG] NIFTY prices=111 ema10=23578.4 ema30=23562.7 ema_bull=True st=up st_bull=True rsi=70.3 rsi_sma=61.5 rsi_bull=False spot=23590
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (293 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #101 @ 10:57:25 ===
+[MON] NIFTY=23592.75 BANKNIFTY=54098.1
+[GPU] Sentiment: N_RSI=84.1 | BN_RSI=74.2 | N_MACDh=4.1 | BN_MACDh=16.0
+[DBG] BANKNIFTY prices=112 ema10=54051.2 ema30=54004.6 ema_bull=True st=up st_bull=True rsi=66.8 rsi_sma=59.6 rsi_bull=True spot=54098
+[DBG] NIFTY prices=112 ema10=23581.0 ema30=23564.6 ema_bull=True st=up st_bull=True rsi=71.2 rsi_sma=63.0 rsi_bull=False spot=23593
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #102 @ 10:58:26 ===
+[MON] NIFTY=23586.3 BANKNIFTY=54084.95
+[GPU] Sentiment: N_RSI=84.8 | BN_RSI=73.2 | N_MACDh=3.1 | BN_MACDh=13.5
+[DBG] BANKNIFTY prices=113 ema10=54057.4 ema30=54009.8 ema_bull=True st=up st_bull=True rsi=63.7 rsi_sma=60.8 rsi_bull=True spot=54085
+[DBG] NIFTY prices=113 ema10=23581.9 ema30=23566.0 ema_bull=True st=up st_bull=True rsi=64.7 rsi_sma=64.2 rsi_bull=True spot=23586
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #103 @ 10:59:26 ===
+[MON] NIFTY=23568.25 BANKNIFTY=54031.3
+[GPU] Sentiment: N_RSI=83.2 | BN_RSI=77.1 | N_MACDh=1.1 | BN_MACDh=7.6
+[DBG] BANKNIFTY prices=114 ema10=54052.6 ema30=54011.2 ema_bull=True st=up st_bull=True rsi=53.1 rsi_sma=61.3 rsi_bull=False spot=54031
+[DBG] NIFTY prices=114 ema10=23579.5 ema30=23566.2 ema_bull=True st=up st_bull=True rsi=50.7 rsi_sma=64.4 rsi_bull=False spot=23568
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #104 @ 11:00:27 ===
+[MON] NIFTY=23577.7 BANKNIFTY=54055.5
+[GPU] Sentiment: N_RSI=66.3 | BN_RSI=65.5 | N_MACDh=0.3 | BN_MACDh=4.8
+[DBG] BANKNIFTY prices=115 ema10=54053.1 ema30=54014.0 ema_bull=True st=up st_bull=True rsi=56.6 rsi_sma=61.5 rsi_bull=False spot=54056
+[DBG] NIFTY prices=115 ema10=23579.1 ema30=23566.9 ema_bull=True st=up st_bull=True rsi=56.0 rsi_sma=64.6 rsi_bull=False spot=23578
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #105 @ 11:01:28 ===
+[MON] NIFTY=23594.85 BANKNIFTY=54100.4
+[GPU] Sentiment: N_RSI=66.3 | BN_RSI=63.2 | N_MACDh=0.8 | BN_MACDh=5.4
+[DBG] BANKNIFTY prices=116 ema10=54061.7 ema30=54019.6 ema_bull=True st=up st_bull=True rsi=62.3 rsi_sma=61.8 rsi_bull=True spot=54100
+[DBG] NIFTY prices=116 ema10=23582.0 ema30=23568.7 ema_bull=True st=up st_bull=True rsi=63.8 rsi_sma=65.1 rsi_bull=False spot=23595
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #106 @ 11:02:28 ===
+[MON] NIFTY=23593.55 BANKNIFTY=54088.45
+[GPU] Sentiment: N_RSI=70.2 | BN_RSI=65.4 | N_MACDh=0.9 | BN_MACDh=4.5
+[DBG] BANKNIFTY prices=117 ema10=54066.6 ema30=54024.0 ema_bull=True st=up st_bull=True rsi=60.0 rsi_sma=61.9 rsi_bull=False spot=54088
+[DBG] NIFTY prices=117 ema10=23584.1 ema30=23570.3 ema_bull=True st=up st_bull=True rsi=62.8 rsi_sma=65.4 rsi_bull=False spot=23594
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #107 @ 11:03:29 ===
+[MON] NIFTY=23588.45 BANKNIFTY=54069.3
+[GPU] Sentiment: N_RSI=68.0 | BN_RSI=63.1 | N_MACDh=0.5 | BN_MACDh=2.3
+[DBG] BANKNIFTY prices=118 ema10=54067.1 ema30=54027.0 ema_bull=True st=up st_bull=True rsi=56.5 rsi_sma=61.4 rsi_bull=False spot=54069
+[DBG] NIFTY prices=118 ema10=23584.9 ema30=23571.5 ema_bull=True st=up st_bull=True rsi=59.3 rsi_sma=65.0 rsi_bull=False spot=23588
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #108 @ 11:04:29 ===
+[MON] NIFTY=23591.5 BANKNIFTY=54077.2
+[GPU] Sentiment: N_RSI=58.6 | BN_RSI=53.9 | N_MACDh=0.3 | BN_MACDh=1.0
+[DBG] BANKNIFTY prices=119 ema10=54068.9 ema30=54030.2 ema_bull=True st=up st_bull=True rsi=57.6 rsi_sma=61.2 rsi_bull=False spot=54077
+[DBG] NIFTY prices=119 ema10=23586.1 ema30=23572.8 ema_bull=True st=up st_bull=True rsi=60.7 rsi_sma=64.7 rsi_bull=False spot=23592
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (292 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #109 @ 11:05:30 ===
+[MON] NIFTY=23591.8 BANKNIFTY=54088.9
+[GPU] Sentiment: N_RSI=61.1 | BN_RSI=58.7 | N_MACDh=0.1 | BN_MACDh=0.6
+[DBG] BANKNIFTY prices=120 ema10=54072.6 ema30=54034.0 ema_bull=True st=up st_bull=True rsi=59.3 rsi_sma=61.3 rsi_bull=False spot=54089
+[DBG] NIFTY prices=120 ema10=23587.1 ema30=23574.0 ema_bull=True st=up st_bull=True rsi=60.9 rsi_sma=64.5 rsi_bull=False spot=23592
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #110 @ 11:06:30 ===
+[MON] NIFTY=23590.4 BANKNIFTY=54077.6
+[GPU] Sentiment: N_RSI=61.5 | BN_RSI=63.4 | N_MACDh=-0.2 | BN_MACDh=-0.7
+[DBG] BANKNIFTY prices=121 ema10=54073.5 ema30=54036.8 ema_bull=True st=up st_bull=True rsi=57.0 rsi_sma=61.0 rsi_bull=False spot=54078
+[DBG] NIFTY prices=121 ema10=23587.7 ema30=23575.1 ema_bull=True st=up st_bull=True rsi=59.8 rsi_sma=63.9 rsi_bull=False spot=23590
+[MON] Signals: 2
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.7
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.2
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (294 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #111 @ 11:07:31 ===
+[MON] NIFTY=23592.4 BANKNIFTY=54092.4
+[GPU] Sentiment: N_RSI=54.9 | BN_RSI=56.4 | N_MACDh=-0.3 | BN_MACDh=-0.7
+[DBG] BANKNIFTY prices=122 ema10=54076.9 ema30=54040.4 ema_bull=True st=up st_bull=True rsi=59.2 rsi_sma=60.8 rsi_bull=False spot=54092
+[DBG] NIFTY prices=122 ema10=23588.6 ema30=23576.2 ema_bull=True st=up st_bull=True rsi=60.9 rsi_sma=63.2 rsi_bull=False spot=23592
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #112 @ 11:08:31 ===
+[MON] NIFTY=23593.0 BANKNIFTY=54106.85
+[GPU] Sentiment: N_RSI=52.9 | BN_RSI=58.2 | N_MACDh=-0.4 | BN_MACDh=-0.1
+[DBG] BANKNIFTY prices=123 ema10=54082.4 ema30=54044.7 ema_bull=True st=up st_bull=True rsi=61.3 rsi_sma=60.6 rsi_bull=True spot=54107
+[DBG] NIFTY prices=123 ema10=23589.4 ema30=23577.3 ema_bull=True st=up st_bull=True rsi=61.2 rsi_sma=62.5 rsi_bull=False spot=23593
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (295 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #113 @ 11:09:32 ===
+[MON] NIFTY=23609.05 BANKNIFTY=54165.05
+[GPU] Sentiment: N_RSI=52.7 | BN_RSI=57.6 | N_MACDh=0.5 | BN_MACDh=3.8
+[DBG] BANKNIFTY prices=124 ema10=54097.4 ema30=54052.4 ema_bull=True st=up st_bull=True rsi=68.4 rsi_sma=60.5 rsi_bull=True spot=54165
+[DBG] NIFTY prices=124 ema10=23593.0 ema30=23579.3 ema_bull=True st=up st_bull=True rsi=69.0 rsi_sma=62.2 rsi_bull=True spot=23609
+[MON] Signals: 4
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  GPU_MACD: BUY_CE (HIGH) macd_h=3.8
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.5
+[MON] Step 3: entering trades (4 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  GPU_MACD → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] ⛔ Token not found for BANKNIFTY09JUN2654200CE — skipping entry
+[MON] Failed to enter BANKNIFTY BUY_CE, trying next candidate
+[MON] Check cycle error: name 'src' is not defined
+Traceback (most recent call last):
+  File "/root/trading/agents/realtime_monitor.py", line 869, in run
+    self._check_cycle()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/root/trading/agents/realtime_monitor.py", line 1031, in _check_cycle
+    pos = self._enter_trade_estimate(idx, sig_type, agreeing_signals[0]["spot"], agreeing_signals[0])
+  File "/root/trading/agents/realtime_monitor.py", line 675, in _enter_trade_estimate
+    print(f"[MON] ✅ ENTRY: {index} {expiry} {strike}{optype} @ ₹{premium} ({src},{iv_str}{greek_str}{chain_info} spot={spot})", flush=True)
+                                                                             ^^^
+NameError: name 'src' is not defined
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #114 @ 11:10:41 ===
+[MON] NIFTY=23611.85 BANKNIFTY=54170.0
+[GPU] Sentiment: N_RSI=59.7 | BN_RSI=59.9 | N_MACDh=1.1 | BN_MACDh=6.1
+[DBG] BANKNIFTY prices=125 ema10=54110.6 ema30=54060.0 ema_bull=True st=up st_bull=True rsi=68.9 rsi_sma=60.8 rsi_bull=True spot=54170
+[DBG] NIFTY prices=125 ema10=23596.4 ema30=23581.4 ema_bull=True st=up st_bull=True rsi=70.1 rsi_sma=62.2 rsi_bull=False spot=23612
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (383 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #115 @ 11:11:42 ===
+[MON] NIFTY=23602.6 BANKNIFTY=54137.55
+[GPU] Sentiment: N_RSI=62.4 | BN_RSI=63.6 | N_MACDh=0.7 | BN_MACDh=4.8
+[DBG] BANKNIFTY prices=126 ema10=54115.5 ema30=54065.0 ema_bull=True st=up st_bull=True rsi=61.7 rsi_sma=60.4 rsi_bull=True spot=54138
+[DBG] NIFTY prices=126 ema10=23597.5 ema30=23582.8 ema_bull=True st=up st_bull=True rsi=62.1 rsi_sma=61.6 rsi_bull=True spot=23603
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (384 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #116 @ 11:12:43 ===
+[MON] NIFTY=23605.6 BANKNIFTY=54157.0
+[GPU] Sentiment: N_RSI=55.3 | BN_RSI=56.1 | N_MACDh=0.6 | BN_MACDh=4.7
+[DBG] BANKNIFTY prices=127 ema10=54123.0 ema30=54071.0 ema_bull=True st=up st_bull=True rsi=64.1 rsi_sma=60.4 rsi_bull=True spot=54157
+[DBG] NIFTY prices=127 ema10=23599.0 ema30=23584.3 ema_bull=True st=up st_bull=True rsi=63.6 rsi_sma=61.5 rsi_bull=True spot=23606
+[MON] Signals: 3
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (3 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] ⛔ NIFTY 23600CE already open — skipping duplicate
+[MON] Already in NIFTY BUY_CE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (382 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #117 @ 11:13:44 ===
+[MON] NIFTY=23608.8 BANKNIFTY=54149.85
+[GPU] Sentiment: N_RSI=60.8 | BN_RSI=60.9 | N_MACDh=0.6 | BN_MACDh=3.7
+[DBG] BANKNIFTY prices=128 ema10=54127.9 ema30=54076.1 ema_bull=True st=up st_bull=True rsi=62.6 rsi_sma=61.1 rsi_bull=True spot=54150
+[DBG] NIFTY prices=128 ema10=23600.8 ema30=23585.8 ema_bull=True st=up st_bull=True rsi=65.1 rsi_sma=62.5 rsi_bull=True spot=23609
+[MON] Signals: 3
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (3 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] ⛔ NIFTY 23600CE already open — skipping duplicate
+[MON] Already in NIFTY BUY_CE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (383 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #118 @ 11:14:45 ===
+[MON] NIFTY=23609.05 BANKNIFTY=54152.15
+[GPU] Sentiment: N_RSI=77.2 | BN_RSI=71.0 | N_MACDh=0.4 | BN_MACDh=2.6
+[DBG] BANKNIFTY prices=129 ema10=54132.3 ema30=54081.0 ema_bull=True st=up st_bull=True rsi=62.9 rsi_sma=61.6 rsi_bull=True spot=54152
+[DBG] NIFTY prices=129 ema10=23602.3 ema30=23587.3 ema_bull=True st=up st_bull=True rsi=65.2 rsi_sma=63.2 rsi_bull=True spot=23609
+[MON] Signals: 3
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (3 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] ⛔ NIFTY 23600CE already open — skipping duplicate
+[MON] Already in NIFTY BUY_CE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (384 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #119 @ 11:15:46 ===
+[MON] NIFTY=23606.35 BANKNIFTY=54182.8
+[GPU] Sentiment: N_RSI=73.9 | BN_RSI=68.5 | N_MACDh=0.1 | BN_MACDh=3.5
+[DBG] BANKNIFTY prices=119 ema10=54141.5 ema30=54087.4 ema_bull=True st=up st_bull=True rsi=66.9 rsi_sma=61.9 rsi_bull=True spot=54183
+[DBG] NIFTY prices=119 ema10=23603.0 ema30=23588.5 ema_bull=True st=up st_bull=True rsi=62.6 rsi_sma=63.1 rsi_bull=False spot=23606
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (384 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #120 @ 11:16:47 ===
+[MON] NIFTY=23600.9 BANKNIFTY=54171.9
+[GPU] Sentiment: N_RSI=61.3 | BN_RSI=66.7 | N_MACDh=-0.6 | BN_MACDh=2.8
+[DBG] BANKNIFTY prices=119 ema10=54147.0 ema30=54092.9 ema_bull=True st=up st_bull=True rsi=64.3 rsi_sma=62.2 rsi_bull=True spot=54172
+[DBG] NIFTY prices=119 ema10=23602.6 ema30=23589.3 ema_bull=True st=up st_bull=True rsi=57.7 rsi_sma=62.7 rsi_bull=False spot=23601
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  GPU_MACD: BUY_PE (HIGH) macd_h=-0.6
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (384 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #121 @ 11:17:48 ===
+[MON] NIFTY=23606.85 BANKNIFTY=54198.65
+[GPU] Sentiment: N_RSI=56.7 | BN_RSI=67.0 | N_MACDh=-0.7 | BN_MACDh=3.6
+[DBG] BANKNIFTY prices=119 ema10=54156.4 ema30=54099.8 ema_bull=True st=up st_bull=True rsi=67.6 rsi_sma=63.0 rsi_bull=True spot=54199
+[DBG] NIFTY prices=119 ema10=23603.4 ema30=23590.5 ema_bull=True st=up st_bull=True rsi=61.3 rsi_sma=62.9 rsi_bull=False spot=23607
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #122 @ 11:18:49 ===
+[MON] NIFTY=23607.9 BANKNIFTY=54201.0
+[GPU] Sentiment: N_RSI=66.4 | BN_RSI=75.6 | N_MACDh=-0.8 | BN_MACDh=3.8
+[DBG] BANKNIFTY prices=119 ema10=54164.5 ema30=54106.3 ema_bull=True st=up st_bull=True rsi=67.9 rsi_sma=63.7 rsi_bull=True spot=54201
+[DBG] NIFTY prices=119 ema10=23604.2 ema30=23591.6 ema_bull=True st=up st_bull=True rsi=61.9 rsi_sma=63.0 rsi_bull=False spot=23608
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (382 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #123 @ 11:19:49 ===
+[MON] NIFTY=23612.2 BANKNIFTY=54209.2
+[GPU] Sentiment: N_RSI=65.2 | BN_RSI=75.0 | N_MACDh=-0.6 | BN_MACDh=3.8
+[DBG] BANKNIFTY prices=119 ema10=54172.6 ema30=54113.0 ema_bull=True st=up st_bull=True rsi=68.9 rsi_sma=64.4 rsi_bull=True spot=54209
+[DBG] NIFTY prices=119 ema10=23605.7 ema30=23592.9 ema_bull=True st=up st_bull=True rsi=64.4 rsi_sma=63.2 rsi_bull=True spot=23612
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (383 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #124 @ 11:20:50 ===
+[MON] NIFTY=23599.95 BANKNIFTY=54170.25
+[GPU] Sentiment: N_RSI=67.6 | BN_RSI=74.7 | N_MACDh=-1.3 | BN_MACDh=0.8
+[DBG] BANKNIFTY prices=119 ema10=54172.2 ema30=54116.6 ema_bull=True st=up st_bull=True rsi=59.2 rsi_sma=64.6 rsi_bull=False spot=54170
+[DBG] NIFTY prices=119 ema10=23604.6 ema30=23593.4 ema_bull=True st=up st_bull=True rsi=53.6 rsi_sma=62.8 rsi_bull=False spot=23600
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #125 @ 11:21:51 ===
+[MON] NIFTY=23596.2 BANKNIFTY=54164.25
+[GPU] Sentiment: N_RSI=56.9 | BN_RSI=67.1 | N_MACDh=-2.0 | BN_MACDh=-1.9
+[DBG] BANKNIFTY prices=119 ema10=54170.8 ema30=54119.7 ema_bull=True st=up st_bull=True rsi=57.8 rsi_sma=64.5 rsi_bull=False spot=54164
+[DBG] NIFTY prices=119 ema10=23603.1 ema30=23593.6 ema_bull=True st=up st_bull=True rsi=50.8 rsi_sma=62.1 rsi_bull=False spot=23596
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-1.9
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #126 @ 11:22:52 ===
+[MON] NIFTY=23588.95 BANKNIFTY=54154.85
+[GPU] Sentiment: N_RSI=52.7 | BN_RSI=63.7 | N_MACDh=-2.9 | BN_MACDh=-4.4
+[DBG] BANKNIFTY prices=119 ema10=54167.9 ema30=54122.0 ema_bull=True st=up st_bull=True rsi=55.7 rsi_sma=64.1 rsi_bull=False spot=54155
+[DBG] NIFTY prices=119 ema10=23600.5 ema30=23593.3 ema_bull=True st=up st_bull=True rsi=45.8 rsi_sma=61.0 rsi_bull=False spot=23589
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #127 @ 11:23:53 ===
+[MON] NIFTY=23586.4 BANKNIFTY=54130.8
+[GPU] Sentiment: N_RSI=47.4 | BN_RSI=59.3 | N_MACDh=-3.5 | BN_MACDh=-7.6
+[DBG] BANKNIFTY prices=119 ema10=54161.1 ema30=54122.5 ema_bull=True st=up st_bull=True rsi=50.5 rsi_sma=62.8 rsi_bull=False spot=54131
+[DBG] NIFTY prices=119 ema10=23598.0 ema30=23592.8 ema_bull=True st=up st_bull=True rsi=44.1 rsi_sma=59.2 rsi_bull=False spot=23586
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #128 @ 11:24:54 ===
+[MON] NIFTY=23582.4 BANKNIFTY=54116.5
+[GPU] Sentiment: N_RSI=32.2 | BN_RSI=42.3 | N_MACDh=-4.1 | BN_MACDh=-10.5
+[DBG] BANKNIFTY prices=119 ema10=54153.0 ema30=54122.1 ema_bull=True st=up st_bull=True rsi=47.6 rsi_sma=61.3 rsi_bull=False spot=54116
+[DBG] NIFTY prices=119 ema10=23595.1 ema30=23592.1 ema_bull=True st=up st_bull=True rsi=41.6 rsi_sma=57.1 rsi_bull=False spot=23582
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #129 @ 11:25:55 ===
+[MON] NIFTY=23581.7 BANKNIFTY=54104.35
+[GPU] Sentiment: N_RSI=27.3 | BN_RSI=38.5 | N_MACDh=-4.3 | BN_MACDh=-12.8
+[DBG] BANKNIFTY prices=119 ema10=54144.2 ema30=54121.0 ema_bull=True st=up st_bull=True rsi=45.3 rsi_sma=60.1 rsi_bull=False spot=54104
+[DBG] NIFTY prices=119 ema10=23592.7 ema30=23591.5 ema_bull=True st=up st_bull=True rsi=41.2 rsi_sma=55.6 rsi_bull=False spot=23582
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #130 @ 11:26:55 ===
+[MON] NIFTY=23574.9 BANKNIFTY=54076.75
+[GPU] Sentiment: N_RSI=31.5 | BN_RSI=42.2 | N_MACDh=-4.7 | BN_MACDh=-15.7
+[DBG] BANKNIFTY prices=119 ema10=54131.9 ema30=54118.1 ema_bull=True st=up st_bull=True rsi=40.5 rsi_sma=58.4 rsi_bull=False spot=54077
+[DBG] NIFTY prices=119 ema10=23589.5 ema30=23590.4 ema_bull=False st=up st_bull=True rsi=37.0 rsi_sma=53.7 rsi_bull=False spot=23575
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #131 @ 11:27:56 ===
+[MON] NIFTY=23574.65 BANKNIFTY=54078.15
+[GPU] Sentiment: N_RSI=24.5 | BN_RSI=31.8 | N_MACDh=-4.7 | BN_MACDh=-16.8
+[DBG] BANKNIFTY prices=119 ema10=54122.1 ema30=54115.6 ema_bull=True st=up st_bull=True rsi=40.8 rsi_sma=56.8 rsi_bull=False spot=54078
+[DBG] NIFTY prices=119 ema10=23586.8 ema30=23589.4 ema_bull=False st=up st_bull=True rsi=36.9 rsi_sma=51.7 rsi_bull=False spot=23575
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (390 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #132 @ 11:28:57 ===
+[MON] NIFTY=23572.3 BANKNIFTY=54066.15
+[GPU] Sentiment: N_RSI=20.2 | BN_RSI=33.3 | N_MACDh=-4.7 | BN_MACDh=-17.5
+[DBG] BANKNIFTY prices=119 ema10=54112.0 ema30=54112.4 ema_bull=False st=up st_bull=True rsi=38.7 rsi_sma=55.1 rsi_bull=False spot=54066
+[DBG] NIFTY prices=119 ema10=23584.1 ema30=23588.3 ema_bull=False st=up st_bull=True rsi=35.5 rsi_sma=49.6 rsi_bull=False spot=23572
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #133 @ 11:29:58 ===
+[MON] NIFTY=23558.7 BANKNIFTY=54026.8
+[GPU] Sentiment: N_RSI=19.0 | BN_RSI=30.9 | N_MACDh=-5.3 | BN_MACDh=-19.8
+[DBG] BANKNIFTY prices=119 ema10=54096.5 ema30=54106.8 ema_bull=False st=up st_bull=True rsi=32.8 rsi_sma=52.7 rsi_bull=False spot=54027
+[DBG] NIFTY prices=119 ema10=23579.5 ema30=23586.4 ema_bull=False st=up st_bull=True rsi=28.6 rsi_sma=47.2 rsi_bull=False spot=23559
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #134 @ 11:30:59 ===
+[MON] NIFTY=23559.65 BANKNIFTY=54036.15
+[GPU] Sentiment: N_RSI=16.1 | BN_RSI=16.6 | N_MACDh=-5.4 | BN_MACDh=-19.7
+[DBG] BANKNIFTY prices=119 ema10=54085.5 ema30=54102.3 ema_bull=False st=up st_bull=True rsi=35.3 rsi_sma=50.6 rsi_bull=False spot=54036
+[DBG] NIFTY prices=119 ema10=23575.9 ema30=23584.6 ema_bull=False st=up st_bull=True rsi=29.6 rsi_sma=45.2 rsi_bull=False spot=23560
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (390 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #135 @ 11:32:00 ===
+[MON] NIFTY=23559.95 BANKNIFTY=54019.35
+[GPU] Sentiment: N_RSI=18.6 | BN_RSI=20.7 | N_MACDh=-5.1 | BN_MACDh=-19.7
+[DBG] BANKNIFTY prices=119 ema10=54073.5 ema30=54096.9 ema_bull=False st=up st_bull=True rsi=32.9 rsi_sma=48.1 rsi_bull=False spot=54019
+[DBG] NIFTY prices=119 ema10=23573.0 ema30=23583.1 ema_bull=False st=up st_bull=True rsi=30.0 rsi_sma=42.9 rsi_bull=False spot=23560
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (390 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #136 @ 11:33:01 ===
+[MON] NIFTY=23549.75 BANKNIFTY=53990.35
+[GPU] Sentiment: N_RSI=11.0 | BN_RSI=9.6 | N_MACDh=-5.3 | BN_MACDh=-20.6
+[DBG] BANKNIFTY prices=119 ema10=54058.4 ema30=54090.1 ema_bull=False st=up st_bull=True rsi=29.3 rsi_sma=45.4 rsi_bull=False spot=53990
+[DBG] NIFTY prices=119 ema10=23568.8 ema30=23580.9 ema_bull=False st=up st_bull=True rsi=25.4 rsi_sma=40.3 rsi_bull=False spot=23550
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #137 @ 11:34:02 ===
+[MON] NIFTY=23540.85 BANKNIFTY=53963.05
+[GPU] Sentiment: N_RSI=8.0 | BN_RSI=7.6 | N_MACDh=-5.7 | BN_MACDh=-21.8
+[DBG] BANKNIFTY prices=119 ema10=54041.0 ema30=54081.8 ema_bull=False st=up st_bull=True rsi=26.3 rsi_sma=42.3 rsi_bull=False spot=53963
+[DBG] NIFTY prices=119 ema10=23563.7 ema30=23578.3 ema_bull=False st=up st_bull=True rsi=22.3 rsi_sma=37.3 rsi_bull=False spot=23541
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #138 @ 11:35:03 ===
+[MON] NIFTY=23543.95 BANKNIFTY=53977.55
+[GPU] Sentiment: N_RSI=1.7 | BN_RSI=4.0 | N_MACDh=-5.4 | BN_MACDh=-20.4
+[DBG] BANKNIFTY prices=119 ema10=54029.5 ema30=54075.1 ema_bull=False st=up st_bull=True rsi=30.3 rsi_sma=40.3 rsi_bull=False spot=53978
+[DBG] NIFTY prices=119 ema10=23560.1 ema30=23576.1 ema_bull=False st=up st_bull=True rsi=25.7 rsi_sma=35.3 rsi_bull=False spot=23544
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #139 @ 11:36:03 ===
+[MON] NIFTY=23553.6 BANKNIFTY=54015.65
+[GPU] Sentiment: N_RSI=6.7 | BN_RSI=10.4 | N_MACDh=-4.2 | BN_MACDh=-15.9
+[DBG] BANKNIFTY prices=119 ema10=54027.0 ema30=54071.3 ema_bull=False st=up st_bull=True rsi=39.7 rsi_sma=39.0 rsi_bull=False spot=54016
+[DBG] NIFTY prices=119 ema10=23558.9 ema30=23574.6 ema_bull=False st=up st_bull=True rsi=35.4 rsi_sma=34.2 rsi_bull=False spot=23554
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #140 @ 11:37:04 ===
+[MON] NIFTY=23547.25 BANKNIFTY=54005.35
+[GPU] Sentiment: N_RSI=19.8 | BN_RSI=23.0 | N_MACDh=-3.6 | BN_MACDh=-12.8
+[DBG] BANKNIFTY prices=119 ema10=54023.0 ema30=54067.0 ema_bull=False st=up st_bull=True rsi=38.2 rsi_sma=37.8 rsi_bull=False spot=54005
+[DBG] NIFTY prices=119 ema10=23556.8 ema30=23572.9 ema_bull=False st=up st_bull=True rsi=32.4 rsi_sma=33.3 rsi_bull=False spot=23547
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (390 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #141 @ 11:38:05 ===
+[MON] NIFTY=23559.25 BANKNIFTY=54027.2
+[GPU] Sentiment: N_RSI=20.1 | BN_RSI=22.9 | N_MACDh=-2.2 | BN_MACDh=-8.5
+[DBG] BANKNIFTY prices=119 ema10=54023.8 ema30=54064.4 ema_bull=False st=up st_bull=True rsi=43.1 rsi_sma=37.2 rsi_bull=False spot=54027
+[DBG] NIFTY prices=119 ema10=23557.2 ema30=23572.0 ema_bull=False st=up st_bull=True rsi=42.3 rsi_sma=33.1 rsi_bull=False spot=23559
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #142 @ 11:39:06 ===
+[MON] NIFTY=23568.35 BANKNIFTY=54060.5
+[GPU] Sentiment: N_RSI=32.8 | BN_RSI=31.1 | N_MACDh=-0.5 | BN_MACDh=-3.1
+[DBG] BANKNIFTY prices=119 ema10=54030.5 ema30=54064.2 ema_bull=False st=up st_bull=True rsi=49.7 rsi_sma=37.4 rsi_bull=False spot=54060
+[DBG] NIFTY prices=119 ema10=23559.3 ema30=23571.8 ema_bull=False st=up st_bull=True rsi=48.5 rsi_sma=33.6 rsi_bull=False spot=23568
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #143 @ 11:40:07 ===
+[MON] NIFTY=23566.65 BANKNIFTY=54048.4
+[GPU] Sentiment: N_RSI=41.7 | BN_RSI=40.4 | N_MACDh=0.5 | BN_MACDh=-0.1
+[DBG] BANKNIFTY prices=119 ema10=54033.7 ema30=54063.2 ema_bull=False st=up st_bull=True rsi=47.5 rsi_sma=37.5 rsi_bull=False spot=54048
+[DBG] NIFTY prices=119 ema10=23560.6 ema30=23571.4 ema_bull=False st=up st_bull=True rsi=47.4 rsi_sma=34.1 rsi_bull=False spot=23567
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.5
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #144 @ 11:41:08 ===
+[MON] NIFTY=23564.8 BANKNIFTY=54049.5
+[GPU] Sentiment: N_RSI=41.2 | BN_RSI=40.5 | N_MACDh=1.1 | BN_MACDh=2.0
+[DBG] BANKNIFTY prices=119 ema10=54036.6 ema30=54062.3 ema_bull=False st=up st_bull=True rsi=47.8 rsi_sma=38.0 rsi_bull=False spot=54050
+[DBG] NIFTY prices=119 ema10=23561.4 ema30=23571.0 ema_bull=False st=up st_bull=True rsi=46.3 rsi_sma=34.7 rsi_bull=False spot=23565
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (HIGH) macd_h=2.0
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #145 @ 11:42:09 ===
+[MON] NIFTY=23566.35 BANKNIFTY=54045.2
+[GPU] Sentiment: N_RSI=43.7 | BN_RSI=44.9 | N_MACDh=1.6 | BN_MACDh=3.2
+[DBG] BANKNIFTY prices=119 ema10=54038.2 ema30=54061.2 ema_bull=False st=up st_bull=True rsi=46.9 rsi_sma=38.5 rsi_bull=False spot=54045
+[DBG] NIFTY prices=119 ema10=23562.3 ema30=23570.7 ema_bull=False st=up st_bull=True rsi=47.4 rsi_sma=35.5 rsi_bull=False spot=23566
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #146 @ 11:43:09 ===
+[MON] NIFTY=23556.25 BANKNIFTY=54026.05
+[GPU] Sentiment: N_RSI=44.9 | BN_RSI=43.9 | N_MACDh=1.2 | BN_MACDh=2.7
+[DBG] BANKNIFTY prices=119 ema10=54036.0 ema30=54058.9 ema_bull=False st=up st_bull=True rsi=43.3 rsi_sma=38.8 rsi_bull=False spot=54026
+[DBG] NIFTY prices=119 ema10=23561.2 ema30=23569.8 ema_bull=False st=up st_bull=True rsi=41.3 rsi_sma=35.9 rsi_bull=False spot=23556
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #147 @ 11:44:10 ===
+[MON] NIFTY=23555.45 BANKNIFTY=54045.2
+[GPU] Sentiment: N_RSI=41.0 | BN_RSI=42.7 | N_MACDh=1.0 | BN_MACDh=3.7
+[DBG] BANKNIFTY prices=119 ema10=54037.6 ema30=54058.0 ema_bull=False st=up st_bull=True rsi=47.7 rsi_sma=39.9 rsi_bull=False spot=54045
+[DBG] NIFTY prices=119 ema10=23560.1 ema30=23568.8 ema_bull=False st=up st_bull=True rsi=40.8 rsi_sma=36.8 rsi_bull=False spot=23555
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #148 @ 11:45:11 ===
+[MON] NIFTY=23548.55 BANKNIFTY=54031.5
+[GPU] Sentiment: N_RSI=47.9 | BN_RSI=53.6 | N_MACDh=0.4 | BN_MACDh=3.5
+[DBG] BANKNIFTY prices=119 ema10=54036.5 ema30=54056.3 ema_bull=False st=up st_bull=True rsi=45.0 rsi_sma=40.6 rsi_bull=False spot=54032
+[DBG] NIFTY prices=119 ema10=23558.0 ema30=23567.5 ema_bull=False st=up st_bull=True rsi=37.1 rsi_sma=37.3 rsi_bull=False spot=23549
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #149 @ 11:46:12 ===
+[MON] NIFTY=23535.7 BANKNIFTY=53998.85
+[GPU] Sentiment: N_RSI=43.3 | BN_RSI=49.1 | N_MACDh=-0.8 | BN_MACDh=1.2
+[DBG] BANKNIFTY prices=119 ema10=54029.7 ema30=54052.6 ema_bull=False st=up st_bull=True rsi=39.4 rsi_sma=41.0 rsi_bull=False spot=53999
+[DBG] NIFTY prices=119 ema10=23554.0 ema30=23565.5 ema_bull=False st=up st_bull=True rsi=31.3 rsi_sma=37.4 rsi_bull=False spot=23536
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-0.8
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #150 @ 11:47:13 ===
+[MON] NIFTY=23542.35 BANKNIFTY=54013.2
+[GPU] Sentiment: N_RSI=37.2 | BN_RSI=46.3 | N_MACDh=-0.9 | BN_MACDh=0.8
+[DBG] BANKNIFTY prices=119 ema10=54026.7 ema30=54050.0 ema_bull=False st=up st_bull=True rsi=42.8 rsi_sma=42.0 rsi_bull=False spot=54013
+[DBG] NIFTY prices=119 ema10=23551.9 ema30=23564.0 ema_bull=False st=up st_bull=True rsi=36.8 rsi_sma=38.2 rsi_bull=False spot=23542
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #151 @ 11:48:14 ===
+[MON] NIFTY=23550.4 BANKNIFTY=54047.4
+[GPU] Sentiment: N_RSI=46.0 | BN_RSI=54.4 | N_MACDh=-0.4 | BN_MACDh=2.9
+[DBG] BANKNIFTY prices=119 ema10=54030.4 ema30=54049.9 ema_bull=False st=up st_bull=True rsi=49.9 rsi_sma=43.7 rsi_bull=False spot=54047
+[DBG] NIFTY prices=119 ema10=23551.6 ema30=23563.1 ema_bull=False st=up st_bull=True rsi=42.8 rsi_sma=39.7 rsi_bull=False spot=23550
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #152 @ 11:49:15 ===
+[MON] NIFTY=23551.55 BANKNIFTY=54040.2
+[GPU] Sentiment: N_RSI=55.3 | BN_RSI=65.7 | N_MACDh=0.1 | BN_MACDh=3.7
+[DBG] BANKNIFTY prices=119 ema10=54032.2 ema30=54049.2 ema_bull=False st=up st_bull=True rsi=48.6 rsi_sma=45.0 rsi_bull=False spot=54040
+[DBG] NIFTY prices=119 ema10=23551.6 ema30=23562.4 ema_bull=False st=up st_bull=True rsi=43.6 rsi_sma=41.0 rsi_bull=False spot=23552
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.1
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #153 @ 11:50:16 ===
+[MON] NIFTY=23554.35 BANKNIFTY=54049.9
+[GPU] Sentiment: N_RSI=54.3 | BN_RSI=62.0 | N_MACDh=0.6 | BN_MACDh=4.8
+[DBG] BANKNIFTY prices=119 ema10=54035.4 ema30=54049.3 ema_bull=False st=up st_bull=True rsi=50.5 rsi_sma=45.7 rsi_bull=True spot=54050
+[DBG] NIFTY prices=119 ema10=23552.1 ema30=23561.9 ema_bull=False st=up st_bull=True rsi=45.6 rsi_sma=41.7 rsi_bull=False spot=23554
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #154 @ 11:51:17 ===
+[MON] NIFTY=23558.05 BANKNIFTY=54078.25
+[GPU] Sentiment: N_RSI=50.5 | BN_RSI=57.3 | N_MACDh=1.3 | BN_MACDh=7.2
+[DBG] BANKNIFTY prices=119 ema10=54043.2 ema30=54051.2 ema_bull=False st=up st_bull=True rsi=55.9 rsi_sma=47.0 rsi_bull=True spot=54078
+[DBG] NIFTY prices=119 ema10=23553.2 ema30=23561.6 ema_bull=False st=up st_bull=True rsi=48.3 rsi_sma=42.8 rsi_bull=False spot=23558
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #155 @ 11:52:18 ===
+[MON] NIFTY=23554.45 BANKNIFTY=54051.85
+[GPU] Sentiment: N_RSI=56.8 | BN_RSI=64.5 | N_MACDh=1.4 | BN_MACDh=6.8
+[DBG] BANKNIFTY prices=119 ema10=54044.8 ema30=54051.2 ema_bull=False st=up st_bull=True rsi=50.4 rsi_sma=47.5 rsi_bull=True spot=54052
+[DBG] NIFTY prices=119 ema10=23553.4 ema30=23561.1 ema_bull=False st=up st_bull=True rsi=45.9 rsi_sma=43.1 rsi_bull=False spot=23554
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #156 @ 11:53:18 ===
+[MON] NIFTY=23556.55 BANKNIFTY=54060.8
+[GPU] Sentiment: N_RSI=46.6 | BN_RSI=54.8 | N_MACDh=1.7 | BN_MACDh=6.8
+[DBG] BANKNIFTY prices=119 ema10=54047.7 ema30=54051.8 ema_bull=False st=up st_bull=True rsi=52.1 rsi_sma=47.7 rsi_bull=True spot=54061
+[DBG] NIFTY prices=119 ema10=23554.0 ema30=23560.9 ema_bull=False st=up st_bull=True rsi=47.5 rsi_sma=43.0 rsi_bull=False spot=23557
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #157 @ 11:54:20 ===
+[MON] NIFTY=23551.9 BANKNIFTY=54055.65
+[GPU] Sentiment: N_RSI=40.8 | BN_RSI=50.1 | N_MACDh=1.5 | BN_MACDh=6.3
+[DBG] BANKNIFTY prices=119 ema10=54049.1 ema30=54052.1 ema_bull=False st=up st_bull=True rsi=51.0 rsi_sma=48.0 rsi_bull=True spot=54056
+[DBG] NIFTY prices=119 ema10=23553.6 ema30=23560.3 ema_bull=False st=up st_bull=True rsi=44.4 rsi_sma=42.8 rsi_bull=False spot=23552
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #158 @ 11:55:20 ===
+[MON] NIFTY=23553.65 BANKNIFTY=54064.5
+[GPU] Sentiment: N_RSI=39.0 | BN_RSI=51.6 | N_MACDh=1.5 | BN_MACDh=6.2
+[DBG] BANKNIFTY prices=119 ema10=54051.9 ema30=54052.9 ema_bull=False st=up st_bull=True rsi=52.9 rsi_sma=48.3 rsi_bull=True spot=54064
+[DBG] NIFTY prices=119 ema10=23553.6 ema30=23559.8 ema_bull=False st=up st_bull=True rsi=45.8 rsi_sma=42.8 rsi_bull=False spot=23554
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #159 @ 11:56:21 ===
+[MON] NIFTY=23544.85 BANKNIFTY=54044.65
+[GPU] Sentiment: N_RSI=41.6 | BN_RSI=53.2 | N_MACDh=0.9 | BN_MACDh=4.7
+[DBG] BANKNIFTY prices=119 ema10=54050.6 ema30=54052.3 ema_bull=False st=up st_bull=True rsi=48.5 rsi_sma=48.4 rsi_bull=False spot=54045
+[DBG] NIFTY prices=119 ema10=23552.0 ema30=23558.9 ema_bull=False st=up st_bull=True rsi=40.1 rsi_sma=42.2 rsi_bull=False spot=23545
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #160 @ 11:57:24 ===
+[MON] NIFTY=23534.9 BANKNIFTY=54016.05
+[GPU] Sentiment: N_RSI=35.5 | BN_RSI=49.9 | N_MACDh=-0.1 | BN_MACDh=1.7
+[DBG] BANKNIFTY prices=119 ema10=54044.3 ema30=54050.0 ema_bull=False st=up st_bull=True rsi=43.0 rsi_sma=48.4 rsi_bull=False spot=54016
+[DBG] NIFTY prices=119 ema10=23548.9 ema30=23557.3 ema_bull=False st=up st_bull=True rsi=34.9 rsi_sma=41.8 rsi_bull=False spot=23535
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.1
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #161 @ 11:58:25 ===
+[MON] NIFTY=23520.8 BANKNIFTY=53960.1
+[GPU] Sentiment: N_RSI=35.5 | BN_RSI=48.1 | N_MACDh=-1.6 | BN_MACDh=-3.8
+[DBG] BANKNIFTY prices=119 ema10=54029.0 ema30=54044.2 ema_bull=False st=up st_bull=True rsi=34.7 rsi_sma=47.5 rsi_bull=False spot=53960
+[DBG] NIFTY prices=119 ema10=23543.8 ema30=23555.0 ema_bull=False st=up st_bull=True rsi=29.1 rsi_sma=40.9 rsi_bull=False spot=23521
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (HIGH) macd_h=-3.8
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #162 @ 11:59:25 ===
+[MON] NIFTY=23496.75 BANKNIFTY=53898.75
+[GPU] Sentiment: N_RSI=30.1 | BN_RSI=35.5 | N_MACDh=-3.9 | BN_MACDh=-10.9
+[DBG] BANKNIFTY prices=119 ema10=54005.3 ema30=54034.8 ema_bull=False st=up st_bull=True rsi=28.2 rsi_sma=46.3 rsi_bull=False spot=53899
+[DBG] NIFTY prices=119 ema10=23535.2 ema30=23551.2 ema_bull=False st=up st_bull=True rsi=22.2 rsi_sma=39.9 rsi_bull=False spot=23497
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (390 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #163 @ 12:00:26 ===
+[MON] NIFTY=23497.2 BANKNIFTY=53886.9
+[GPU] Sentiment: N_RSI=25.1 | BN_RSI=30.6 | N_MACDh=-5.1 | BN_MACDh=-15.4
+[DBG] BANKNIFTY prices=119 ema10=53983.8 ema30=54025.2 ema_bull=False st=up st_bull=True rsi=27.2 rsi_sma=45.4 rsi_bull=False spot=53887
+[DBG] NIFTY prices=119 ema10=23528.3 ema30=23547.7 ema_bull=False st=up st_bull=True rsi=22.6 rsi_sma=39.3 rsi_bull=False spot=23497
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #164 @ 12:01:27 ===
+[MON] NIFTY=23490.8 BANKNIFTY=53874.6
+[GPU] Sentiment: N_RSI=29.0 | BN_RSI=32.5 | N_MACDh=-5.9 | BN_MACDh=-18.1
+[DBG] BANKNIFTY prices=119 ema10=53963.9 ema30=54015.5 ema_bull=False st=up st_bull=True rsi=26.1 rsi_sma=44.2 rsi_bull=False spot=53875
+[DBG] NIFTY prices=119 ema10=23521.5 ema30=23544.1 ema_bull=False st=up st_bull=True rsi=21.1 rsi_sma=38.1 rsi_bull=False spot=23491
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #165 @ 12:02:28 ===
+[MON] NIFTY=23492.0 BANKNIFTY=53867.7
+[GPU] Sentiment: N_RSI=21.8 | BN_RSI=28.3 | N_MACDh=-5.9 | BN_MACDh=-19.1
+[DBG] BANKNIFTY prices=119 ema10=53946.4 ema30=54006.0 ema_bull=False st=up st_bull=True rsi=25.5 rsi_sma=42.5 rsi_bull=False spot=53868
+[DBG] NIFTY prices=119 ema10=23516.1 ema30=23540.7 ema_bull=False st=up st_bull=True rsi=22.1 rsi_sma=36.7 rsi_bull=False spot=23492
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #166 @ 12:03:29 ===
+[MON] NIFTY=23497.35 BANKNIFTY=53897.2
+[GPU] Sentiment: N_RSI=15.5 | BN_RSI=19.2 | N_MACDh=-5.1 | BN_MACDh=-16.7
+[DBG] BANKNIFTY prices=119 ema10=53937.5 ema30=53998.9 ema_bull=False st=up st_bull=True rsi=32.8 rsi_sma=41.4 rsi_bull=False spot=53897
+[DBG] NIFTY prices=119 ema10=23512.7 ema30=23537.9 ema_bull=False st=up st_bull=True rsi=26.9 rsi_sma=35.5 rsi_bull=False spot=23497
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #167 @ 12:04:30 ===
+[MON] NIFTY=23499.35 BANKNIFTY=53905.0
+[GPU] Sentiment: N_RSI=19.5 | BN_RSI=27.2 | N_MACDh=-4.2 | BN_MACDh=-13.5
+[DBG] BANKNIFTY prices=119 ema10=53931.6 ema30=53992.9 ema_bull=False st=up st_bull=True rsi=34.6 rsi_sma=40.2 rsi_bull=False spot=53905
+[DBG] NIFTY prices=119 ema10=23510.3 ema30=23535.4 ema_bull=False st=up st_bull=True rsi=28.6 rsi_sma=34.3 rsi_bull=False spot=23499
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #168 @ 12:05:31 ===
+[MON] NIFTY=23505.25 BANKNIFTY=53930.1
+[GPU] Sentiment: N_RSI=18.8 | BN_RSI=26.8 | N_MACDh=-2.8 | BN_MACDh=-9.0
+[DBG] BANKNIFTY prices=119 ema10=53931.3 ema30=53988.8 ema_bull=False st=up st_bull=True rsi=40.2 rsi_sma=39.1 rsi_bull=False spot=53930
+[DBG] NIFTY prices=119 ema10=23509.4 ema30=23533.5 ema_bull=False st=up st_bull=True rsi=33.6 rsi_sma=33.2 rsi_bull=False spot=23505
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #169 @ 12:06:32 ===
+[MON] NIFTY=23508.5 BANKNIFTY=53934.0
+[GPU] Sentiment: N_RSI=20.8 | BN_RSI=26.0 | N_MACDh=-1.5 | BN_MACDh=-5.1
+[DBG] BANKNIFTY prices=119 ema10=53931.8 ema30=53985.3 ema_bull=False st=up st_bull=True rsi=41.1 rsi_sma=38.4 rsi_bull=False spot=53934
+[DBG] NIFTY prices=119 ema10=23509.2 ema30=23531.9 ema_bull=False st=up st_bull=True rsi=36.3 rsi_sma=32.5 rsi_bull=False spot=23508
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #170 @ 12:07:33 ===
+[MON] NIFTY=23513.7 BANKNIFTY=53923.7
+[GPU] Sentiment: N_RSI=24.5 | BN_RSI=29.4 | N_MACDh=-0.1 | BN_MACDh=-2.8
+[DBG] BANKNIFTY prices=119 ema10=53930.3 ema30=53981.3 ema_bull=False st=up st_bull=True rsi=39.5 rsi_sma=37.5 rsi_bull=False spot=53924
+[DBG] NIFTY prices=119 ema10=23510.0 ema30=23530.7 ema_bull=False st=up st_bull=True rsi=40.4 rsi_sma=32.0 rsi_bull=False spot=23514
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #171 @ 12:08:34 ===
+[MON] NIFTY=23512.9 BANKNIFTY=53909.3
+[GPU] Sentiment: N_RSI=27.0 | BN_RSI=26.1 | N_MACDh=0.8 | BN_MACDh=-1.8
+[DBG] BANKNIFTY prices=119 ema10=53926.5 ema30=53976.7 ema_bull=False st=up st_bull=True rsi=37.3 rsi_sma=36.5 rsi_bull=False spot=53909
+[DBG] NIFTY prices=119 ema10=23510.6 ema30=23529.5 ema_bull=False st=up st_bull=True rsi=39.9 rsi_sma=31.7 rsi_bull=False spot=23513
+[MON] Signals: 2
+  GPU_MACD: BUY_CE (HIGH) macd_h=0.8
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] ⛔ NIFTY 23600CE already open — skipping duplicate
+[MON] Already in NIFTY BUY_CE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #172 @ 12:09:35 ===
+[MON] NIFTY=23507.5 BANKNIFTY=53892.95
+[GPU] Sentiment: N_RSI=28.1 | BN_RSI=25.3 | N_MACDh=1.2 | BN_MACDh=-1.8
+[DBG] BANKNIFTY prices=119 ema10=53920.4 ema30=53971.3 ema_bull=False st=up st_bull=True rsi=34.9 rsi_sma=35.2 rsi_bull=False spot=53893
+[DBG] NIFTY prices=119 ema10=23510.0 ema30=23528.1 ema_bull=False st=up st_bull=True rsi=37.1 rsi_sma=31.1 rsi_bull=False spot=23508
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #173 @ 12:10:35 ===
+[MON] NIFTY=23502.0 BANKNIFTY=53874.1
+[GPU] Sentiment: N_RSI=25.1 | BN_RSI=21.8 | N_MACDh=1.1 | BN_MACDh=-2.5
+[DBG] BANKNIFTY prices=119 ema10=53912.0 ema30=53965.0 ema_bull=False st=up st_bull=True rsi=32.4 rsi_sma=34.1 rsi_bull=False spot=53874
+[DBG] NIFTY prices=119 ema10=23508.5 ema30=23526.4 ema_bull=False st=up st_bull=True rsi=34.4 rsi_sma=30.6 rsi_bull=False spot=23502
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #174 @ 12:11:36 ===
+[MON] NIFTY=23505.2 BANKNIFTY=53884.65
+[GPU] Sentiment: N_RSI=26.1 | BN_RSI=21.9 | N_MACDh=1.3 | BN_MACDh=-1.9
+[DBG] BANKNIFTY prices=119 ema10=53907.0 ema30=53959.8 ema_bull=False st=up st_bull=True rsi=35.2 rsi_sma=33.5 rsi_bull=False spot=53885
+[DBG] NIFTY prices=119 ema10=23507.9 ema30=23525.1 ema_bull=False st=up st_bull=True rsi=37.2 rsi_sma=30.8 rsi_bull=False spot=23505
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #175 @ 12:12:37 ===
+[MON] NIFTY=23507.65 BANKNIFTY=53887.55
+[GPU] Sentiment: N_RSI=32.1 | BN_RSI=27.0 | N_MACDh=1.7 | BN_MACDh=-0.9
+[DBG] BANKNIFTY prices=119 ema10=53903.5 ema30=53955.2 ema_bull=False st=up st_bull=True rsi=36.0 rsi_sma=33.6 rsi_bull=False spot=53888
+[DBG] NIFTY prices=119 ema10=23507.9 ema30=23523.9 ema_bull=False st=up st_bull=True rsi=39.4 rsi_sma=31.6 rsi_bull=False spot=23508
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #176 @ 12:13:38 ===
+[MON] NIFTY=23521.6 BANKNIFTY=53931.8
+[GPU] Sentiment: N_RSI=40.8 | BN_RSI=34.4 | N_MACDh=2.8 | BN_MACDh=2.9
+[DBG] BANKNIFTY prices=119 ema10=53908.6 ema30=53953.7 ema_bull=False st=up st_bull=True rsi=46.8 rsi_sma=35.0 rsi_bull=False spot=53932
+[DBG] NIFTY prices=119 ema10=23510.4 ema30=23523.8 ema_bull=False st=up st_bull=True rsi=50.0 rsi_sma=33.5 rsi_bull=True spot=23522
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (HIGH) macd_h=2.9
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #177 @ 12:14:39 ===
+[MON] NIFTY=23531.35 BANKNIFTY=53943.5
+[GPU] Sentiment: N_RSI=70.4 | BN_RSI=57.7 | N_MACDh=4.1 | BN_MACDh=6.3
+[DBG] BANKNIFTY prices=119 ema10=53915.0 ema30=53953.0 ema_bull=False st=up st_bull=True rsi=49.2 rsi_sma=36.5 rsi_bull=False spot=53944
+[DBG] NIFTY prices=119 ema10=23514.2 ema30=23524.3 ema_bull=False st=up st_bull=True rsi=55.8 rsi_sma=35.9 rsi_bull=True spot=23531
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #178 @ 12:15:40 ===
+[MON] NIFTY=23521.45 BANKNIFTY=53911.0
+[GPU] Sentiment: N_RSI=74.3 | BN_RSI=63.2 | N_MACDh=4.2 | BN_MACDh=6.3
+[DBG] BANKNIFTY prices=119 ema10=53914.2 ema30=53950.3 ema_bull=False st=up st_bull=True rsi=43.3 rsi_sma=37.8 rsi_bull=False spot=53911
+[DBG] NIFTY prices=119 ema10=23515.5 ema30=23524.1 ema_bull=False st=up st_bull=True rsi=49.5 rsi_sma=37.9 rsi_bull=False spot=23521
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #179 @ 12:16:41 ===
+[MON] NIFTY=23525.8 BANKNIFTY=53928.05
+[GPU] Sentiment: N_RSI=70.8 | BN_RSI=57.7 | N_MACDh=4.4 | BN_MACDh=7.3
+[DBG] BANKNIFTY prices=119 ema10=53916.8 ema30=53948.9 ema_bull=False st=up st_bull=True rsi=46.9 rsi_sma=39.3 rsi_bull=False spot=53928
+[DBG] NIFTY prices=119 ema10=23517.4 ema30=23524.2 ema_bull=False st=up st_bull=True rsi=52.1 rsi_sma=40.1 rsi_bull=True spot=23526
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #180 @ 12:17:42 ===
+[MON] NIFTY=23517.15 BANKNIFTY=53917.9
+[GPU] Sentiment: N_RSI=71.9 | BN_RSI=62.3 | N_MACDh=3.9 | BN_MACDh=7.2
+[DBG] BANKNIFTY prices=119 ema10=53917.0 ema30=53946.9 ema_bull=False st=up st_bull=True rsi=45.1 rsi_sma=40.2 rsi_bull=False spot=53918
+[DBG] NIFTY prices=119 ema10=23517.3 ema30=23523.7 ema_bull=False st=up st_bull=True rsi=47.0 rsi_sma=41.5 rsi_bull=False spot=23517
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #181 @ 12:18:43 ===
+[MON] NIFTY=23527.8 BANKNIFTY=53943.3
+[GPU] Sentiment: N_RSI=62.3 | BN_RSI=54.6 | N_MACDh=4.0 | BN_MACDh=8.7
+[DBG] BANKNIFTY prices=119 ema10=53921.8 ema30=53946.6 ema_bull=False st=up st_bull=True rsi=50.3 rsi_sma=41.3 rsi_bull=True spot=53943
+[DBG] NIFTY prices=119 ema10=23519.2 ema30=23524.0 ema_bull=False st=up st_bull=True rsi=53.1 rsi_sma=43.3 rsi_bull=True spot=23528
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #182 @ 12:19:44 ===
+[MON] NIFTY=23531.65 BANKNIFTY=53945.3
+[GPU] Sentiment: N_RSI=66.0 | BN_RSI=57.9 | N_MACDh=4.3 | BN_MACDh=9.5
+[DBG] BANKNIFTY prices=119 ema10=53926.0 ema30=53946.5 ema_bull=False st=up st_bull=True rsi=50.7 rsi_sma=42.0 rsi_bull=True spot=53945
+[DBG] NIFTY prices=119 ema10=23521.5 ema30=23524.5 ema_bull=False st=up st_bull=True rsi=55.1 rsi_sma=44.8 rsi_bull=True spot=23532
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #183 @ 12:20:45 ===
+[MON] NIFTY=23518.25 BANKNIFTY=53897.05
+[GPU] Sentiment: N_RSI=65.2 | BN_RSI=53.4 | N_MACDh=3.4 | BN_MACDh=6.7
+[DBG] BANKNIFTY prices=119 ema10=53920.8 ema30=53943.3 ema_bull=False st=up st_bull=True rsi=41.9 rsi_sma=42.1 rsi_bull=False spot=53897
+[DBG] NIFTY prices=119 ema10=23520.9 ema30=23524.1 ema_bull=False st=up st_bull=True rsi=47.5 rsi_sma=45.6 rsi_bull=False spot=23518
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #184 @ 12:21:46 ===
+[MON] NIFTY=23513.95 BANKNIFTY=53882.65
+[GPU] Sentiment: N_RSI=55.0 | BN_RSI=43.0 | N_MACDh=2.4 | BN_MACDh=3.8
+[DBG] BANKNIFTY prices=119 ema10=53913.8 ema30=53939.4 ema_bull=False st=up st_bull=True rsi=39.7 rsi_sma=42.1 rsi_bull=False spot=53883
+[DBG] NIFTY prices=119 ema10=23519.6 ema30=23523.4 ema_bull=False st=up st_bull=True rsi=45.3 rsi_sma=46.0 rsi_bull=False spot=23514
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #185 @ 12:22:47 ===
+[MON] NIFTY=23528.55 BANKNIFTY=53908.85
+[GPU] Sentiment: N_RSI=50.1 | BN_RSI=42.4 | N_MACDh=2.7 | BN_MACDh=3.7
+[DBG] BANKNIFTY prices=119 ema10=53912.9 ema30=53937.5 ema_bull=False st=up st_bull=True rsi=45.4 rsi_sma=42.7 rsi_bull=False spot=53909
+[DBG] NIFTY prices=119 ema10=23521.3 ema30=23523.8 ema_bull=False st=up st_bull=True rsi=53.1 rsi_sma=46.9 rsi_bull=True spot=23529
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #186 @ 12:23:48 ===
+[MON] NIFTY=23521.15 BANKNIFTY=53898.6
+[GPU] Sentiment: N_RSI=57.1 | BN_RSI=49.9 | N_MACDh=2.3 | BN_MACDh=3.0
+[DBG] BANKNIFTY prices=119 ema10=53910.3 ema30=53934.9 ema_bull=False st=up st_bull=True rsi=43.7 rsi_sma=43.3 rsi_bull=False spot=53899
+[DBG] NIFTY prices=119 ema10=23521.2 ema30=23523.6 ema_bull=False st=up st_bull=True rsi=49.3 rsi_sma=47.8 rsi_bull=False spot=23521
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #187 @ 12:24:49 ===
+[MON] NIFTY=23518.2 BANKNIFTY=53888.75
+[GPU] Sentiment: N_RSI=56.1 | BN_RSI=51.0 | N_MACDh=1.7 | BN_MACDh=1.9
+[DBG] BANKNIFTY prices=119 ema10=53906.4 ema30=53931.9 ema_bull=False st=up st_bull=True rsi=42.0 rsi_sma=44.0 rsi_bull=False spot=53889
+[DBG] NIFTY prices=119 ema10=23520.7 ema30=23523.3 ema_bull=False st=up st_bull=True rsi=47.8 rsi_sma=48.7 rsi_bull=False spot=23518
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #188 @ 12:25:50 ===
+[MON] NIFTY=23516.7 BANKNIFTY=53892.4
+[GPU] Sentiment: N_RSI=57.4 | BN_RSI=52.8 | N_MACDh=1.2 | BN_MACDh=1.6
+[DBG] BANKNIFTY prices=119 ema10=53903.9 ema30=53929.4 ema_bull=False st=up st_bull=True rsi=42.9 rsi_sma=44.6 rsi_bull=False spot=53892
+[DBG] NIFTY prices=119 ema10=23520.0 ema30=23522.8 ema_bull=False st=up st_bull=True rsi=47.0 rsi_sma=49.4 rsi_bull=False spot=23517
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #189 @ 12:26:51 ===
+[MON] NIFTY=23525.1 BANKNIFTY=53903.8
+[GPU] Sentiment: N_RSI=55.3 | BN_RSI=51.5 | N_MACDh=1.4 | BN_MACDh=2.2
+[DBG] BANKNIFTY prices=119 ema10=53903.8 ema30=53927.7 ema_bull=False st=up st_bull=True rsi=45.6 rsi_sma=45.2 rsi_bull=False spot=53904
+[DBG] NIFTY prices=119 ema10=23520.9 ema30=23523.0 ema_bull=False st=up st_bull=True rsi=51.7 rsi_sma=50.3 rsi_bull=True spot=23525
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #190 @ 12:27:51 ===
+[MON] NIFTY=23520.6 BANKNIFTY=53871.95
+[GPU] Sentiment: N_RSI=57.7 | BN_RSI=53.0 | N_MACDh=1.2 | BN_MACDh=0.6
+[DBG] BANKNIFTY prices=119 ema10=53898.0 ema30=53924.1 ema_bull=False st=up st_bull=True rsi=39.9 rsi_sma=44.8 rsi_bull=False spot=53872
+[DBG] NIFTY prices=119 ema10=23520.8 ema30=23522.8 ema_bull=False st=up st_bull=True rsi=49.2 rsi_sma=50.3 rsi_bull=False spot=23521
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #191 @ 12:28:52 ===
+[MON] NIFTY=23516.85 BANKNIFTY=53868.95
+[GPU] Sentiment: N_RSI=49.5 | BN_RSI=38.2 | N_MACDh=0.8 | BN_MACDh=-0.5
+[DBG] BANKNIFTY prices=119 ema10=53892.8 ema30=53920.6 ema_bull=False st=up st_bull=True rsi=39.4 rsi_sma=44.1 rsi_bull=False spot=53869
+[DBG] NIFTY prices=119 ema10=23520.1 ema30=23522.4 ema_bull=False st=up st_bull=True rsi=47.1 rsi_sma=49.6 rsi_bull=False spot=23517
+[MON] Signals: 2
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.5
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #192 @ 12:29:53 ===
+[MON] NIFTY=23517.35 BANKNIFTY=53872.8
+[GPU] Sentiment: N_RSI=42.6 | BN_RSI=34.8 | N_MACDh=0.5 | BN_MACDh=-0.7
+[DBG] BANKNIFTY prices=119 ema10=53889.1 ema30=53917.5 ema_bull=False st=up st_bull=True rsi=40.4 rsi_sma=43.9 rsi_bull=False spot=53873
+[DBG] NIFTY prices=119 ema10=23519.6 ema30=23522.1 ema_bull=False st=up st_bull=True rsi=47.5 rsi_sma=49.5 rsi_bull=False spot=23517
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #193 @ 12:30:54 ===
+[MON] NIFTY=23517.35 BANKNIFTY=53892.3
+[GPU] Sentiment: N_RSI=47.7 | BN_RSI=41.2 | N_MACDh=0.4 | BN_MACDh=0.6
+[DBG] BANKNIFTY prices=119 ema10=53889.7 ema30=53915.8 ema_bull=False st=up st_bull=True rsi=45.5 rsi_sma=43.8 rsi_bull=False spot=53892
+[DBG] NIFTY prices=119 ema10=23519.2 ema30=23521.8 ema_bull=False st=up st_bull=True rsi=47.5 rsi_sma=49.2 rsi_bull=False spot=23517
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.6
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #194 @ 12:31:55 ===
+[MON] NIFTY=23519.7 BANKNIFTY=53890.85
+[GPU] Sentiment: N_RSI=45.0 | BN_RSI=41.9 | N_MACDh=0.4 | BN_MACDh=1.5
+[DBG] BANKNIFTY prices=119 ema10=53889.9 ema30=53914.2 ema_bull=False st=up st_bull=True rsi=45.2 rsi_sma=43.8 rsi_bull=False spot=53891
+[DBG] NIFTY prices=119 ema10=23519.3 ema30=23521.7 ema_bull=False st=up st_bull=True rsi=49.1 rsi_sma=49.3 rsi_bull=False spot=23520
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #195 @ 12:32:56 ===
+[MON] NIFTY=23512.05 BANKNIFTY=53877.1
+[GPU] Sentiment: N_RSI=51.6 | BN_RSI=43.6 | N_MACDh=-0.1 | BN_MACDh=1.2
+[DBG] BANKNIFTY prices=119 ema10=53887.6 ema30=53911.8 ema_bull=False st=up st_bull=True rsi=42.3 rsi_sma=43.2 rsi_bull=False spot=53877
+[DBG] NIFTY prices=119 ema10=23518.0 ema30=23521.0 ema_bull=False st=up st_bull=True rsi=44.2 rsi_sma=48.7 rsi_bull=False spot=23512
+[MON] Signals: 1
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.1
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #196 @ 12:33:57 ===
+[MON] NIFTY=23512.8 BANKNIFTY=53875.1
+[GPU] Sentiment: N_RSI=39.5 | BN_RSI=33.4 | N_MACDh=-0.3 | BN_MACDh=1.1
+[DBG] BANKNIFTY prices=119 ema10=53885.3 ema30=53909.5 ema_bull=False st=up st_bull=True rsi=41.8 rsi_sma=42.6 rsi_bull=False spot=53875
+[DBG] NIFTY prices=119 ema10=23517.0 ema30=23520.5 ema_bull=False st=up st_bull=True rsi=44.8 rsi_sma=47.9 rsi_bull=False spot=23513
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #197 @ 12:34:57 ===
+[MON] NIFTY=23513.25 BANKNIFTY=53880.1
+[GPU] Sentiment: N_RSI=36.9 | BN_RSI=32.4 | N_MACDh=-0.4 | BN_MACDh=1.4
+[DBG] BANKNIFTY prices=119 ema10=53884.4 ema30=53907.6 ema_bull=False st=up st_bull=True rsi=43.4 rsi_sma=42.7 rsi_bull=False spot=53880
+[DBG] NIFTY prices=119 ema10=23516.3 ema30=23520.0 ema_bull=False st=up st_bull=True rsi=45.2 rsi_sma=47.8 rsi_bull=False spot=23513
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #198 @ 12:35:58 ===
+[MON] NIFTY=23519.75 BANKNIFTY=53881.65
+[GPU] Sentiment: N_RSI=45.8 | BN_RSI=44.6 | N_MACDh=0.0 | BN_MACDh=1.8
+[DBG] BANKNIFTY prices=119 ema10=53883.9 ema30=53905.9 ema_bull=False st=up st_bull=True rsi=43.9 rsi_sma=42.9 rsi_bull=False spot=53882
+[DBG] NIFTY prices=119 ema10=23517.0 ema30=23520.0 ema_bull=False st=up st_bull=True rsi=50.4 rsi_sma=48.1 rsi_bull=True spot=23520
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.0
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #199 @ 12:36:59 ===
+[MON] NIFTY=23521.3 BANKNIFTY=53870.0
+[GPU] Sentiment: N_RSI=54.7 | BN_RSI=49.7 | N_MACDh=0.4 | BN_MACDh=1.3
+[DBG] BANKNIFTY prices=119 ema10=53881.3 ema30=53903.6 ema_bull=False st=up st_bull=True rsi=41.0 rsi_sma=42.6 rsi_bull=False spot=53870
+[DBG] NIFTY prices=119 ema10=23517.8 ema30=23520.1 ema_bull=False st=up st_bull=True rsi=51.5 rsi_sma=48.0 rsi_bull=True spot=23521
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #200 @ 12:38:00 ===
+[MON] NIFTY=23518.15 BANKNIFTY=53872.55
+[GPU] Sentiment: N_RSI=42.5 | BN_RSI=34.9 | N_MACDh=0.4 | BN_MACDh=1.3
+[DBG] BANKNIFTY prices=119 ema10=53879.7 ema30=53901.6 ema_bull=False st=up st_bull=True rsi=41.9 rsi_sma=42.5 rsi_bull=False spot=53873
+[DBG] NIFTY prices=119 ema10=23517.8 ema30=23520.0 ema_bull=False st=up st_bull=True rsi=49.0 rsi_sma=48.0 rsi_bull=False spot=23518
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #201 @ 12:39:01 ===
+[MON] NIFTY=23518.65 BANKNIFTY=53865.4
+[GPU] Sentiment: N_RSI=46.6 | BN_RSI=39.2 | N_MACDh=0.5 | BN_MACDh=0.9
+[DBG] BANKNIFTY prices=119 ema10=53877.1 ema30=53899.3 ema_bull=False st=up st_bull=True rsi=40.0 rsi_sma=42.4 rsi_bull=False spot=53865
+[DBG] NIFTY prices=119 ema10=23518.0 ema30=23519.9 ema_bull=False st=up st_bull=True rsi=49.4 rsi_sma=48.1 rsi_bull=False spot=23519
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #202 @ 12:40:02 ===
+[MON] NIFTY=23514.9 BANKNIFTY=53857.35
+[GPU] Sentiment: N_RSI=50.5 | BN_RSI=40.1 | N_MACDh=0.2 | BN_MACDh=0.2
+[DBG] BANKNIFTY prices=119 ema10=53873.5 ema30=53896.6 ema_bull=False st=up st_bull=True rsi=38.0 rsi_sma=42.0 rsi_bull=False spot=53857
+[DBG] NIFTY prices=119 ema10=23517.4 ema30=23519.6 ema_bull=False st=up st_bull=True rsi=46.3 rsi_sma=48.1 rsi_bull=False spot=23515
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #203 @ 12:41:03 ===
+[MON] NIFTY=23509.95 BANKNIFTY=53855.05
+[GPU] Sentiment: N_RSI=47.9 | BN_RSI=35.7 | N_MACDh=-0.2 | BN_MACDh=-0.2
+[DBG] BANKNIFTY prices=119 ema10=53870.2 ema30=53893.9 ema_bull=False st=up st_bull=True rsi=37.4 rsi_sma=41.4 rsi_bull=False spot=53855
+[DBG] NIFTY prices=119 ema10=23516.1 ema30=23519.0 ema_bull=False st=up st_bull=True rsi=42.5 rsi_sma=47.4 rsi_bull=False spot=23510
+[MON] Signals: 2
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.2
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.2
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #204 @ 12:42:03 ===
+[MON] NIFTY=23507.35 BANKNIFTY=53834.95
+[GPU] Sentiment: N_RSI=31.2 | BN_RSI=28.6 | N_MACDh=-0.6 | BN_MACDh=-1.6
+[DBG] BANKNIFTY prices=119 ema10=53863.8 ema30=53890.1 ema_bull=False st=up st_bull=True rsi=32.7 rsi_sma=40.9 rsi_bull=False spot=53835
+[DBG] NIFTY prices=119 ema10=23514.5 ema30=23518.2 ema_bull=False st=up st_bull=True rsi=40.6 rsi_sma=46.8 rsi_bull=False spot=23507
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (389 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #205 @ 12:43:04 ===
+[MON] NIFTY=23511.55 BANKNIFTY=53849.9
+[GPU] Sentiment: N_RSI=32.8 | BN_RSI=31.8 | N_MACDh=-0.6 | BN_MACDh=-1.3
+[DBG] BANKNIFTY prices=119 ema10=53861.3 ema30=53887.5 ema_bull=False st=up st_bull=True rsi=38.9 rsi_sma=40.9 rsi_bull=False spot=53850
+[DBG] NIFTY prices=119 ema10=23513.9 ema30=23517.8 ema_bull=False st=up st_bull=True rsi=44.9 rsi_sma=46.6 rsi_bull=False spot=23512
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #206 @ 12:44:05 ===
+[MON] NIFTY=23512.2 BANKNIFTY=53851.8
+[GPU] Sentiment: N_RSI=43.2 | BN_RSI=41.6 | N_MACDh=-0.5 | BN_MACDh=-0.7
+[DBG] BANKNIFTY prices=119 ema10=53859.5 ema30=53885.2 ema_bull=False st=up st_bull=True rsi=39.6 rsi_sma=40.8 rsi_bull=False spot=53852
+[DBG] NIFTY prices=119 ema10=23513.6 ema30=23517.4 ema_bull=False st=up st_bull=True rsi=45.5 rsi_sma=46.5 rsi_bull=False spot=23512
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #207 @ 12:45:06 ===
+[MON] NIFTY=23516.1 BANKNIFTY=53866.25
+[GPU] Sentiment: N_RSI=43.4 | BN_RSI=40.6 | N_MACDh=-0.1 | BN_MACDh=0.7
+[DBG] BANKNIFTY prices=119 ema10=53860.8 ema30=53884.0 ema_bull=False st=up st_bull=True rsi=45.2 rsi_sma=40.8 rsi_bull=False spot=53866
+[DBG] NIFTY prices=119 ema10=23514.1 ema30=23517.3 ema_bull=False st=up st_bull=True rsi=49.4 rsi_sma=46.6 rsi_bull=False spot=23516
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (MEDIUM) macd_h=0.7
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #208 @ 12:46:07 ===
+[MON] NIFTY=23516.95 BANKNIFTY=53868.6
+[GPU] Sentiment: N_RSI=48.5 | BN_RSI=37.8 | N_MACDh=0.2 | BN_MACDh=1.9
+[DBG] BANKNIFTY prices=119 ema10=53862.2 ema30=53883.0 ema_bull=False st=up st_bull=True rsi=46.1 rsi_sma=40.9 rsi_bull=False spot=53869
+[DBG] NIFTY prices=119 ema10=23514.6 ema30=23517.3 ema_bull=False st=up st_bull=True rsi=50.2 rsi_sma=46.7 rsi_bull=True spot=23517
+[MON] Signals: 1
+  GPU_MACD: BUY_CE (HIGH) macd_h=0.2
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  GPU_MACD → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #209 @ 12:47:08 ===
+[MON] NIFTY=23521.5 BANKNIFTY=53883.9
+[GPU] Sentiment: N_RSI=46.7 | BN_RSI=39.7 | N_MACDh=0.7 | BN_MACDh=3.7
+[DBG] BANKNIFTY prices=119 ema10=53866.1 ema30=53883.1 ema_bull=False st=up st_bull=True rsi=51.5 rsi_sma=41.5 rsi_bull=True spot=53884
+[DBG] NIFTY prices=119 ema10=23515.9 ema30=23517.6 ema_bull=False st=up st_bull=True rsi=54.5 rsi_sma=47.4 rsi_bull=True spot=23522
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (385 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #210 @ 12:48:09 ===
+[MON] NIFTY=23534.5 BANKNIFTY=53925.75
+[GPU] Sentiment: N_RSI=62.3 | BN_RSI=53.1 | N_MACDh=1.8 | BN_MACDh=7.4
+[DBG] BANKNIFTY prices=119 ema10=53877.0 ema30=53885.8 ema_bull=False st=up st_bull=True rsi=62.5 rsi_sma=43.0 rsi_bull=True spot=53926
+[DBG] NIFTY prices=119 ema10=23519.2 ema30=23518.7 ema_bull=True st=up st_bull=True rsi=64.1 rsi_sma=48.8 rsi_bull=True spot=23534
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #211 @ 12:49:10 ===
+[MON] NIFTY=23525.65 BANKNIFTY=53895.7
+[GPU] Sentiment: N_RSI=71.4 | BN_RSI=67.0 | N_MACDh=1.9 | BN_MACDh=7.5
+[DBG] BANKNIFTY prices=119 ema10=53880.4 ema30=53886.5 ema_bull=False st=up st_bull=True rsi=53.2 rsi_sma=43.7 rsi_bull=True spot=53896
+[DBG] NIFTY prices=119 ema10=23520.4 ema30=23519.1 ema_bull=True st=up st_bull=True rsi=55.5 rsi_sma=49.5 rsi_bull=True spot=23526
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #212 @ 12:50:11 ===
+[MON] NIFTY=23535.6 BANKNIFTY=53925.75
+[GPU] Sentiment: N_RSI=60.5 | BN_RSI=54.5 | N_MACDh=2.4 | BN_MACDh=9.3
+[DBG] BANKNIFTY prices=119 ema10=53888.6 ema30=53889.0 ema_bull=False st=up st_bull=True rsi=59.7 rsi_sma=44.8 rsi_bull=True spot=53926
+[DBG] NIFTY prices=119 ema10=23523.2 ema30=23520.2 ema_bull=True st=up st_bull=True rsi=61.7 rsi_sma=50.4 rsi_bull=True spot=23536
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] ⛔ NIFTY 23600CE already open — skipping duplicate
+[MON] Already in NIFTY BUY_CE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #213 @ 12:51:12 ===
+[MON] NIFTY=23531.3 BANKNIFTY=53900.35
+[GPU] Sentiment: N_RSI=62.7 | BN_RSI=60.9 | N_MACDh=2.4 | BN_MACDh=8.3
+[DBG] BANKNIFTY prices=119 ema10=53890.8 ema30=53889.7 ema_bull=True st=up st_bull=True rsi=53.0 rsi_sma=45.7 rsi_bull=True spot=53900
+[DBG] NIFTY prices=119 ema10=23524.6 ema30=23520.9 ema_bull=True st=up st_bull=True rsi=58.0 rsi_sma=50.8 rsi_bull=True spot=23531
+[MON] Signals: 3
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  SPOT_MOMENTUM: BUY_CE (MEDIUM)
+[MON] Step 3: entering trades (3 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=2, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+  SPOT_MOMENTUM → BUY_CE (MEDIUM)
+[MON] ⛔ NIFTY 23600CE already open — skipping duplicate
+[MON] Already in NIFTY BUY_CE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #214 @ 12:52:13 ===
+[MON] NIFTY=23530.85 BANKNIFTY=53896.0
+[GPU] Sentiment: N_RSI=57.7 | BN_RSI=57.0 | N_MACDh=2.2 | BN_MACDh=7.1
+[DBG] BANKNIFTY prices=119 ema10=53891.7 ema30=53890.1 ema_bull=True st=up st_bull=True rsi=51.9 rsi_sma=46.4 rsi_bull=True spot=53896
+[DBG] NIFTY prices=119 ema10=23525.8 ema30=23521.6 ema_bull=True st=up st_bull=True rsi=57.6 rsi_sma=51.4 rsi_bull=True spot=23531
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #215 @ 12:53:14 ===
+[MON] NIFTY=23524.4 BANKNIFTY=53879.45
+[GPU] Sentiment: N_RSI=60.2 | BN_RSI=55.4 | N_MACDh=1.6 | BN_MACDh=4.9
+[DBG] BANKNIFTY prices=119 ema10=53889.5 ema30=53889.4 ema_bull=True st=up st_bull=True rsi=47.9 rsi_sma=47.0 rsi_bull=False spot=53879
+[DBG] NIFTY prices=119 ema10=23525.5 ema30=23521.7 ema_bull=True st=up st_bull=True rsi=52.1 rsi_sma=51.6 rsi_bull=True spot=23524
+[MON] Signals: 1
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (386 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #216 @ 12:54:15 ===
+[MON] NIFTY=23532.75 BANKNIFTY=53911.35
+[GPU] Sentiment: N_RSI=54.2 | BN_RSI=53.1 | N_MACDh=1.6 | BN_MACDh=5.4
+[DBG] BANKNIFTY prices=119 ema10=53893.5 ema30=53890.9 ema_bull=True st=up st_bull=True rsi=55.1 rsi_sma=48.2 rsi_bull=True spot=53911
+[DBG] NIFTY prices=119 ema10=23526.8 ema30=23522.4 ema_bull=True st=up st_bull=True rsi=57.7 rsi_sma=52.4 rsi_bull=True spot=23533
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #217 @ 12:55:16 ===
+[MON] NIFTY=23531.35 BANKNIFTY=53906.05
+[GPU] Sentiment: N_RSI=62.2 | BN_RSI=60.7 | N_MACDh=1.4 | BN_MACDh=5.1
+[DBG] BANKNIFTY prices=119 ema10=53895.7 ema30=53891.9 ema_bull=True st=up st_bull=True rsi=53.7 rsi_sma=49.3 rsi_bull=True spot=53906
+[DBG] NIFTY prices=119 ema10=23527.7 ema30=23523.0 ema_bull=True st=up st_bull=True rsi=56.5 rsi_sma=53.4 rsi_bull=True spot=23531
+[MON] Signals: 2
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+  TREND_CONFLUENCE: BUY_CE (HIGH)
+[MON] Step 3: entering trades (2 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] Vote tally for NIFTY: BUY_CE=1, BUY_PE=0
+  TREND_CONFLUENCE → BUY_CE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #218 @ 12:56:16 ===
+[MON] NIFTY=23519.15 BANKNIFTY=53862.65
+[GPU] Sentiment: N_RSI=65.4 | BN_RSI=60.0 | N_MACDh=0.5 | BN_MACDh=1.9
+[DBG] BANKNIFTY prices=119 ema10=53889.7 ema30=53890.0 ema_bull=False st=up st_bull=True rsi=44.4 rsi_sma=50.2 rsi_bull=False spot=53863
+[DBG] NIFTY prices=119 ema10=23526.1 ema30=23522.8 ema_bull=True st=up st_bull=True rsi=47.3 rsi_sma=53.9 rsi_bull=False spot=23519
+[MON] Signals: 0
+[MON] Step 3: entering trades (0 signals)...
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #219 @ 12:57:17 ===
+[MON] NIFTY=23516.9 BANKNIFTY=53849.3
+[GPU] Sentiment: N_RSI=57.5 | BN_RSI=55.0 | N_MACDh=-0.3 | BN_MACDh=-1.1
+[DBG] BANKNIFTY prices=119 ema10=53882.4 ema30=53887.4 ema_bull=False st=up st_bull=True rsi=41.9 rsi_sma=50.4 rsi_bull=False spot=53849
+[DBG] NIFTY prices=119 ema10=23524.4 ema30=23522.4 ema_bull=True st=up st_bull=True rsi=45.8 rsi_sma=54.0 rsi_bull=False spot=23517
+[MON] Signals: 3
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-1.1
+  GPU_MACD: BUY_PE (MEDIUM) macd_h=-0.3
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (3 signals)...
+[MON] Vote tally for BANKNIFTY: BUY_CE=0, BUY_PE=1
+  GPU_MACD → BUY_PE (MEDIUM)
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=2
+  GPU_MACD → BUY_PE (MEDIUM)
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] ⛔ NIFTY BUY_PE skipped — opposite CE already open
+[MON] Already in NIFTY BUY_PE, skipping candidate
+[MON] Step 4: sending status update...
+[MON] Discord: sending (387 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #220 @ 12:58:18 ===
+[MON] NIFTY=23514.15 BANKNIFTY=53842.2
+[GPU] Sentiment: N_RSI=53.5 | BN_RSI=49.9 | N_MACDh=-1.0 | BN_MACDh=-3.3
+[DBG] BANKNIFTY prices=119 ema10=53875.1 ema30=53884.4 ema_bull=False st=up st_bull=True rsi=40.7 rsi_sma=50.5 rsi_bull=False spot=53842
+[DBG] NIFTY prices=119 ema10=23522.6 ema30=23521.9 ema_bull=True st=up st_bull=True rsi=44.0 rsi_sma=53.9 rsi_bull=False spot=23514
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (MEDIUM)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (MEDIUM)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...
+
+[MON] === Check #221 @ 12:59:19 ===
+[MON] NIFTY=23510.85 BANKNIFTY=53836.9
+[GPU] Sentiment: N_RSI=51.2 | BN_RSI=48.3 | N_MACDh=-1.6 | BN_MACDh=-4.8
+[DBG] BANKNIFTY prices=119 ema10=53868.1 ema30=53881.3 ema_bull=False st=up st_bull=True rsi=39.7 rsi_sma=50.1 rsi_bull=False spot=53837
+[DBG] NIFTY prices=119 ema10=23520.4 ema30=23521.1 ema_bull=False st=up st_bull=True rsi=41.9 rsi_sma=53.4 rsi_bull=False spot=23511
+[MON] Signals: 1
+  SPOT_MOMENTUM: BUY_PE (HIGH)
+[MON] Step 3: entering trades (1 signals)...
+[MON] Vote tally for NIFTY: BUY_CE=0, BUY_PE=1
+  SPOT_MOMENTUM → BUY_PE (HIGH)
+[MON] No signal has ≥2 agreement — skipping entry
+[MON] Step 4: sending status update...
+[MON] Discord: sending (388 chars)...
+[MON] Discord: OK (204)
+[MON] Check cycle complete
+[MON] Sleeping 60s until next check...

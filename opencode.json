@@ -1,0 +1,37 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "market-status": {
+      "description": "Runs market analysis pipeline and sends trade suggestions to Discord webhook",
+      "mode": "subagent"
+    },
+    "trader-manager": {
+      "description": "Chief orchestrator. Takes user investment goal, plans which experts to consult, delegates work to all team agents, collects real-time analysis from each, and compiles final actionable suggestion with specific CE/PE strike, entry, SL, target.",
+      "mode": "primary"
+    },
+    "news-analyst": {
+      "description": "Indian financial news analyst. Fetches live news, assesses sentiment per sector, determines market outlook. Use for news-driven market analysis.",
+      "mode": "subagent"
+    },
+    "trading-expert": {
+      "description": "Options trading strategist. Uses real-time option chain data, OI concentration, PCR, IV to recommend specific CE/PE strikes with entry, SL, target.",
+      "mode": "subagent"
+    },
+    "candlestick-analyst": {
+      "description": "Technical chartist. GPU-accelerated candlestick pattern recognition (doji, engulfing, hammer) combined with RSI/MACD for directional bias.",
+      "mode": "subagent"
+    },
+    "python-expert-cuda": {
+      "description": "Quant analyst. GPU-accelerated VWAP, RSI, MACD, Bollinger Bands, Monte Carlo options pricing. Use for quantitative and probabilistic analysis.",
+      "mode": "subagent"
+    },
+    "learning-agent": {
+      "description": "Trading knowledge base. Records suggestions, tracks actual outcomes, analyzes why trades succeeded or failed, extracts lessons for improvement.",
+      "mode": "subagent"
+    },
+    "risk-manager": {
+      "description": "Risk officer. Validates every trade against capital, position sizing, and exposure rules. Ensures R:R discipline.",
+      "mode": "subagent"
+    }
+  }
+}
