@@ -40,7 +40,7 @@ async def on_ready():
         try:
             ch = bot.get_channel(CHANNEL_ID)
             if ch:
-                await ch.send("🤖 **Trading Bot online!** Commands: `!pnl` `!summary` `!daily` `!help` `!status` `!suggest` `!ltp` `!papertrade`")
+                await ch.send("🤖 **Trading Bot online!** Commands: `!pnl` `!summary` `!daily` `!vp` `!help` `!status` `!suggest` `!ltp` `!papertrade`")
                 logger.info(f"Sent startup message to channel {CHANNEL_ID}")
         except Exception as e:
             logger.error(f"Could not send to channel: {e}")
@@ -69,6 +69,7 @@ async def cmd_help(ctx):
 `!summary` / `!plan` — Full TraderManager analysis
 `!status` — Market status + suggestions
 `!daily` — Next-day directional bias (76% accuracy)
+`!vp` — VWAP Pullback Breakout strategy status
 `!suggest` — Real-time option LTPs for key strikes
 `!vwap` — VWAP heat map
 `!oi` — Open Interest analysis
@@ -216,6 +217,28 @@ async def cmd_daily(ctx):
         await ctx.send(embed=embed)
     except Exception as e:
         logger.error(f"daily error: {e}", exc_info=True)
+        await ctx.send(f"❌ Error: {str(e)[:150]}")
+
+
+@bot.command(name="vp")
+async def cmd_vp(ctx):
+    """VWAP Pullback Breakout strategy status."""
+    try:
+        import sys as _sys
+        _sys.path.insert(0, "/root/trading")
+        from agents.vwap_pullback_breakout import VwapPullbackTrader
+        vp = VwapPullbackTrader()
+        text = vp.get_summary()
+        embed = discord.Embed(
+            title="📊 VWAP Pullback Breakout",
+            description=text,
+            color=0x00BFFF
+        )
+        from datetime import datetime
+        embed.set_footer(text=f"VP Strategy • {datetime.now().strftime('%H:%M')}")
+        await ctx.send(embed=embed)
+    except Exception as e:
+        logger.error(f"vp error: {e}", exc_info=True)
         await ctx.send(f"❌ Error: {str(e)[:150]}")
 
 
@@ -485,49 +508,43 @@ async def cmd_recommend(ctx, amount: int = 10000, strategy: str = "outright"):
 
 @bot.command(name="pnl")
 async def cmd_pnl(ctx):
-    """P&L statement from today's paper trades."""
+    """P&L statement — day-wise from paper trades + history (all-time)."""
     import sqlite3
     from datetime import datetime, timezone, timedelta
     IST = timezone(timedelta(hours=5, minutes=30))
-    today = datetime.now(IST).strftime("%Y-%m-%d")
     db = "/root/trading/data/papertrades.db"
-    try:
-        conn = sqlite3.connect(db)
-        conn.execute("ALTER TABLE trades ADD COLUMN exit_timestamp TEXT")
-    except:
-        pass
-    rows = conn.execute("""
-        SELECT id, timestamp, index_name, strike, option_type,
-               entry_ltp, exit_ltp, exit_reason, pnl, exit_timestamp
-        FROM trades WHERE date(timestamp) = ? ORDER BY id
-    """, (today,)).fetchall()
+    conn = sqlite3.connect(db)
+
+    # Day-wise from trade_history (all completed trades preserved forever)
+    day_rows = conn.execute("""
+        SELECT date(timestamp) as day,
+               count(*) as trades,
+               sum(CASE WHEN exit_reason='TARGET_HIT' THEN 1 ELSE 0 END) as wins,
+               sum(CASE WHEN exit_reason='STOP_LOSS' THEN 1 ELSE 0 END) as losses,
+               sum(CASE WHEN pnl IS NOT NULL THEN pnl ELSE 0 END) as pnl
+        FROM trade_history
+        GROUP BY day ORDER BY day
+    """).fetchall()
     conn.close()
-    if not rows:
-        await ctx.send("No trades today.")
+
+    if not day_rows:
+        await ctx.send("No trade history found.")
         return
-    cols = ['id','ts','idx','strike','type','entry','exit_ltp','reason','pnl','exit_ts']
-    by_trade = {}
-    for r in rows:
-        d = dict(zip(cols, r))
-        key = (d['ts'], d['strike'], d['type'])
-        if key not in by_trade:
-            by_trade[key] = {}
-        if d['exit_ltp'] is not None:
-            by_trade[key]['exit'] = d
-        else:
-            by_trade[key]['entry'] = d
-    closed = [v['exit'] for k,v in by_trade.items() if 'exit' in v]
-    opened = [v['entry'] for k,v in by_trade.items() if 'exit' not in v]
-    total = sum(d['pnl'] for d in closed)
-    lines = [f"**📊 P&L Statement — {datetime.now(IST).strftime('%d %b %Y (%a)')}**"]
-    lines.append(f"Closed: {len(closed)} | {'🟢' if total>=0 else '🔴'} **₹{total:+,.0f}** ({sum(1 for d in closed if d['pnl']>0)}W/{sum(1 for d in closed if d['pnl']<0)}L)\n")
-    for d in sorted(closed, key=lambda x: x['ts']):
-        bt = d['ts'][11:16]
-        st = d['exit_ts'][11:16] if d.get('exit_ts') else bt
-        lines.append(f"✅ {d['idx']} {d['strike']}{d['type']}  B {bt} @ ₹{d['entry']:.0f} → S {st} @ ₹{d['exit_ltp']:.0f} | P&L ₹{d['pnl']:+,.0f}")
-    for d in opened:
-        bt = d['ts'][11:16]
-        lines.append(f"\n⏳ {d['idx']} {d['strike']}{d['type']}  B {bt} @ ₹{d['entry']:.0f}  (OPEN)")
+
+    total_trades = sum(r[1] for r in day_rows)
+    total_wins = sum(r[2] for r in day_rows)
+    total_losses = sum(r[3] for r in day_rows)
+    total_pnl = sum(r[4] for r in day_rows)
+
+    lines = [f"**📊 P&L Statement — Day Wise (All Time)**"]
+    for day, cnt, wins, losses, pnl in day_rows:
+        emoji = "🟢" if pnl >= 0 else "🔴"
+        lines.append(f"{emoji} **{day}** — {wins}W / {losses}L | P&L **₹{pnl:+,.0f}**")
+    lines.append("")
+    if total_trades > 0:
+        lines.append(f"**Total: {total_trades} trades | {total_wins}W / {total_losses}L | P&L ₹{total_pnl:+,.0f} | Win%: {total_wins/total_trades*100:.0f}%**")
+    else:
+        lines.append("No completed trades")
     await ctx.send("\n".join(lines))
 
 

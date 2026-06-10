@@ -118,8 +118,243 @@ class TradingExpert:
         else:
             return K * math.exp(-r * T) * norm.cdf(-d2) - S * norm.cdf(-d1)
 
+    # ── Price / momentum helpers ──────────────────────────────────────
+
+    def _fetch_price_data(self, symbol):
+        """Fetch 5-min candles for VWAP, momentum, and pullback analysis."""
+        import yfinance as yf
+        yf_sym = {"NIFTY": "^NSEI", "BANKNIFTY": "^NSEBANK"}.get(symbol, "^NSEI")
+        try:
+            df = yf.download(yf_sym, period="5d", interval="5m", progress=False)
+            if df is None or df.empty:
+                return None
+            if isinstance(df.columns, pd.MultiIndex):
+                df.columns = df.columns.droplevel(1)
+            df.columns = [str(c).lower() for c in df.columns]
+            if df.index.tz is not None:
+                df.index = df.index.tz_convert("Asia/Kolkata")
+            else:
+                df.index = pd.to_datetime(df.index).tz_localize("UTC").tz_convert("Asia/Kolkata")
+            df = df.between_time("09:15", "15:30")
+            return df
+        except Exception:
+            return None
+
+    def _vwap_structure_score(self, df):
+        """Compute VWAP + market structure score.
+        Returns (score, vwap, above_vwap, hhlh, lhll, details_str)."""
+        if df is None or len(df) < 20:
+            return 0, None, False, False, False, "Insufficient data"
+
+        df = df.copy()
+        df["tp"] = (df["high"] + df["low"] + df["close"]) / 3
+        vol = df["volume"].values
+        if vol.max() > 0:
+            df["vwap"] = (df["tp"] * df["volume"]).cumsum() / df["volume"].cumsum()
+        else:
+            df["vwap"] = df["tp"].expanding().mean()
+        df["vwap_diff"] = ((df["close"] - df["vwap"]) / df["vwap"]) * 100
+
+        vwap = float(df["vwap"].iloc[-1])
+        above_vwap = float(df["close"].iloc[-1]) > vwap
+
+        # Find swing points for structure
+        from agents.vwap_pullback_breakout import find_swing_points, check_hhlh, check_lhll
+        swh, swl = find_swing_points(df)
+        hhlh, _, _ = check_hhlh(swl, swh)
+        lhll, _, _ = check_lhll(swl, swh)
+
+        score = 0
+        details = []
+        if above_vwap and hhlh:
+            score = 0.5
+            details.append("VWAP uptrend (HHLH)")
+        elif not above_vwap and lhll:
+            score = -0.5
+            details.append("VWAP downtrend (LHLL)")
+        elif above_vwap:
+            score = 0.2
+            details.append("Above VWAP only")
+        elif not above_vwap:
+            score = -0.2
+            details.append("Below VWAP only")
+        else:
+            details.append("No clear structure")
+
+        return score, vwap, above_vwap, hhlh, lhll, " | ".join(details)
+
+    def _momentum(self, df):
+        """Compute momentum strength from price data.
+        Returns (strength_label, rsi, atr_pct, vol_ratio, details_str)."""
+        if df is None or len(df) < 20:
+            return "neutral", 50, 0, 1, "No data"
+
+        closes = df["close"].values
+        highs = df["high"].values
+        lows = df["low"].values
+        vols = df["volume"].values
+
+        # RSI(14)
+        deltas = np.diff(closes)
+        gains = np.where(deltas > 0, deltas, 0)
+        losses = np.where(deltas < 0, -deltas, 0)
+        avg_gain = np.mean(gains[-14:]) if len(gains) >= 14 else np.mean(gains)
+        avg_loss = np.mean(losses[-14:]) if len(losses) >= 14 else np.mean(losses)
+        rsi = 50
+        if avg_loss > 0:
+            rs = avg_gain / avg_loss
+            rsi = 100 - (100 / (1 + rs))
+
+        # ATR %
+        true_ranges = []
+        for j in range(1, min(15, len(df))):
+            tr = max(highs[-j] - lows[-j], abs(highs[-j] - closes[-j - 1]), abs(lows[-j] - closes[-j - 1]))
+            true_ranges.append(tr)
+        atr = np.mean(true_ranges) if true_ranges else 0
+        atr_pct = atr / closes[-1] * 100 if closes[-1] > 0 else 0
+
+        # Volume ratio
+        avg_vol = np.mean(vols[-20:]) if len(vols) >= 20 else np.mean(vols)
+        vol_ratio = float(vols[-1] / avg_vol) if avg_vol > 0 else 1
+
+        # Candle strength
+        last = df.iloc[-1]
+        candle_range = last["high"] - last["low"]
+        body = abs(last["close"] - last["open"])
+        body_pct = body / candle_range if candle_range > 0 else 0.5
+
+        # Combined momentum assessment
+        details = [f"RSI {rsi:.0f}", f"ATR {atr_pct:.2f}%", f"Vol {vol_ratio:.1f}x", f"Body {body_pct:.0%}"]
+
+        if rsi > 65 and vol_ratio > 1.2 and body_pct > 0.6:
+            return "strong_bullish", rsi, atr_pct, vol_ratio, " | ".join(details)
+        elif rsi < 35 and vol_ratio > 1.2 and body_pct > 0.6:
+            return "strong_bearish", rsi, atr_pct, vol_ratio, " | ".join(details)
+        elif rsi > 55:
+            return "mild_bullish", rsi, atr_pct, vol_ratio, " | ".join(details)
+        elif rsi < 45:
+            return "mild_bearish", rsi, atr_pct, vol_ratio, " | ".join(details)
+        else:
+            return "neutral", rsi, atr_pct, vol_ratio, " | ".join(details)
+
+    def _detect_pullback(self, df, direction):
+        """Detect pullback/retracement in price action.
+        direction: 'bullish' (looking for pullback in uptrend) or 'bearish' (retrace in downtrend).
+        Returns (is_pullback, pullback_price, description)."""
+        if df is None or len(df) < 10:
+            return False, None, "Insufficient data"
+
+        closes = df["close"].values
+        highs = df["high"].values
+        lows = df["low"].values
+
+        if direction == "bullish":
+            # Look for 2+ down candles after a rise
+            down_count = 0
+            pullback_low = None
+            for j in range(min(8, len(df) - 1), 0, -1):
+                if closes[-j] < closes[-j - 1]:
+                    down_count += 1
+                    if pullback_low is None or lows[-j] < pullback_low:
+                        pullback_low = lows[-j]
+                else:
+                    if down_count >= 2:
+                        # Found pullback — check if last candle reversed up
+                        last_bullish = closes[-1] > closes[-2]
+                        if last_bullish:
+                            return True, pullback_low, f"Pullback to {pullback_low:.0f}, reversing up"
+                        return True, pullback_low, f"Pullback to {pullback_low:.0f}, awaiting reversal"
+                    return False, None, "No pullback"
+            return False, None, "No pullback"
+
+        else:  # bearish
+            # Look for 2+ up candles after a fall
+            up_count = 0
+            retrace_high = None
+            for j in range(min(8, len(df) - 1), 0, -1):
+                if closes[-j] > closes[-j - 1]:
+                    up_count += 1
+                    if retrace_high is None or highs[-j] > retrace_high:
+                        retrace_high = highs[-j]
+                else:
+                    if up_count >= 2:
+                        last_bearish = closes[-1] < closes[-2]
+                        if last_bearish:
+                            return True, retrace_high, f"Retrace to {retrace_high:.0f}, reversing down"
+                        return True, retrace_high, f"Retrace to {retrace_high:.0f}, awaiting reversal"
+                    return False, None, "No retracement"
+            return False, None, "No retracement"
+
+    # ── Contract scoring ──────────────────────────────────────────────
+
+    def _score_contract(self, spot, strike, optype, T, r, iv, direction, momentum_label, balance):
+        """Score an option contract 0-100 for suitability."""
+        premium = self._bs_price(spot, strike, T, r, iv, optype)
+        if premium <= 0:
+            return 0, premium, "Zero premium"
+
+        interval = 50 if strike % 50 == 0 else 100
+        atm = round(spot / interval) * interval
+        otm_distance = abs(strike - atm) / interval
+
+        # Affordability: premium * lot size ≤ 10% of capital
+        lot_size = 65 if strike < 50000 else 30  # NIFTY vs BANKNIFTY approx
+        cost = premium * lot_size
+        affordable = cost <= balance * 0.10
+
+        delta_est = 0.5 - otm_distance * 0.15 if optype == "CE" else -(0.5 - otm_distance * 0.15)
+        if optype == "PE":
+            delta_est = -(0.5 - otm_distance * 0.15)
+
+        score = 30  # base
+
+        # Affordability weight (soft penalty — 1 lot minimum trade)
+        if affordable:
+            score += 15
+        elif cost > balance:
+            score -= 10  # genuinely can't afford even 1 lot
+        else:
+            score += 0  # can afford 1 lot but tight
+
+        # OTM distance fit with momentum
+        bullish = optype == "CE"
+        if momentum_label == "strong_bullish" and bullish:
+            score += max(0, 15 - otm_distance * 5)  # strong bull → prefer OTM for leverage
+            score += 15
+        elif momentum_label == "mild_bullish" and bullish:
+            score += max(0, 10 - otm_distance * 8)  # prefer nearer strikes
+        elif momentum_label == "strong_bearish" and not bullish:
+            score += max(0, 15 - otm_distance * 5)
+            score += 15
+        elif momentum_label == "mild_bearish" and not bullish:
+            score += max(0, 10 - otm_distance * 8)
+        elif momentum_label == "neutral":
+            score += 0  # no momentum penalty or bonus
+        else:
+            score -= 10  # mismatched direction
+
+        # Premium reasonability
+        premium_pct = premium / spot * 100
+        if 0.2 <= premium_pct <= 2.0:
+            score += 10
+        elif premium_pct > 5.0:
+            score -= 5  # too expensive
+
+        # ATM bonus (best liquidity)
+        if otm_distance == 0:
+            score += 10
+        elif otm_distance <= 1:
+            score += 5
+
+        confidence = round(min(max(score, 0), 100))
+        return confidence, round(premium, 1), None
+
+    # ── Main suggest ──────────────────────────────────────────────────
+
     def suggest(self, capital=50000, nifty=None, banknifty=None, news_summary=None, risk_tolerance="moderate", preferred_index="NIFTY"):
-        """Generate trade suggestions using Angel One real IV + Black-Scholes pricing."""
+        """Generate trade suggestions using full strategy: combined direction, 10-contract scan, momentum strike selection, pullback entry."""
+        import pandas as pd
+
         result = {
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "capital": capital,
@@ -128,6 +363,7 @@ class TradingExpert:
             "suggestions": [],
         }
 
+        # ── Spot price ──
         if preferred_index == "BANKNIFTY":
             from core.market_data import get_banknifty_realtime
             spot = (banknifty or get_banknifty_realtime()) or 53700
@@ -146,8 +382,8 @@ class TradingExpert:
 
         T = 11 / 365
         r = 0.065
-        iv = greeks.get("iv_call", 0.21) or 0.21
 
+        # ── News sentiment ──
         sentiment = 0
         if news_summary:
             if news_summary.get("overall_sentiment") == "positive":
@@ -155,24 +391,65 @@ class TradingExpert:
             elif news_summary.get("overall_sentiment") == "negative":
                 sentiment = -1
 
+        # ── Price data for VWAP + momentum + pullback ──
+        price_df = self._fetch_price_data(preferred_index)
+
+        # VWAP structure score
+        vwap_score, vwap, above_vwap, hhlh, lhll, vwap_detail = self._vwap_structure_score(price_df)
+
+        # Momentum
+        momentum_label, rsi, atr_pct, vol_ratio, momentum_detail = self._momentum(price_df)
+
+        # ── Combined direction score ──
         direction_score = 0
         direction_score += 0.5 if sentiment > 0 else (-0.5 if sentiment < 0 else 0)
-        direction_score += 0.5 if oi.get("pcr", 0.8) > 0.8 else (-0.3 if oi.get("pcr", 0.8) < 0.6 else 0)
-        direction_score += 0.3 if spot > oi.get("support", spot - 100) else 0
+        pcr = oi.get("pcr", 1.0)
+        direction_score += 0.5 if pcr > 0.8 else (-0.2 if pcr > 0.6 else -0.5)
+        direction_score += 0.3 if spot > oi.get("support", spot - 200) else -0.3
+        direction_score += vwap_score  # ±0.5 from VWAP structure
 
         is_bullish = direction_score > 0
-        atm = oi.get("atm", round(spot / 50) * 50)
+        interval = 50 if preferred_index == "NIFTY" else 100
+        atm = round(spot / interval) * interval
         resistance = oi.get("resistance", atm + 200)
         support = oi.get("support", atm - 200)
 
-        strike_dist = {"conservative": 100, "moderate": 200, "aggressive": 300}.get(risk_tolerance, 200)
-        trade_type = "CE" if is_bullish else "PE"
-        buy_strike = atm + strike_dist if is_bullish else atm - strike_dist
+        # ── Pullback detection ──
+        pullback_dir = "bullish" if is_bullish else "bearish"
+        in_pullback, pullback_price, pullback_detail = self._detect_pullback(price_df, pullback_dir)
 
-        premium = self._bs_price(spot, buy_strike, T, r, iv, trade_type)
-        if premium == 0:
-            premium = max(round(spot * 0.006), 50)
+        # ── 10-contract scan: ATM-2 to ATM+2 for both CE and PE ──
+        strikes = [atm - 2 * interval, atm - interval, atm, atm + interval, atm + 2 * interval]
+        scored = []
+        for strike in strikes:
+            for optype in ["CE", "PE"]:
+                # Only score contracts matching our direction
+                if is_bullish and optype != "CE":
+                    continue
+                if not is_bullish and optype != "PE":
+                    continue
+                conf, prem, err = self._score_contract(spot, strike, optype, T, r, iv, is_bullish, momentum_label, capital)
+                if err:
+                    continue
+                scored.append((conf, strike, optype, prem))
 
+        scored.sort(key=lambda x: -x[0])
+
+        # ── Build suggestion ──
+        if scored:
+            best_conf, best_strike, best_type, best_prem = scored[0]
+            alternative = scored[1] if len(scored) > 1 else None
+        else:
+            # Fallback: use ATM
+            best_strike = atm
+            best_type = "CE" if is_bullish else "PE"
+            best_prem = self._bs_price(spot, best_strike, T, r, iv, best_type)
+            if best_prem <= 0:
+                best_prem = max(round(spot * 0.006), 50)
+            best_prem = round(best_prem, 1)
+            best_conf = 50
+
+        premium = best_prem if best_prem > 0 else max(round(spot * 0.006), 50)
         sl_points = round(premium * 0.4)
         target_points = round(premium * 2.5)
         sl_price = round(premium - sl_points, 1)
@@ -182,13 +459,28 @@ class TradingExpert:
         max_lots = max(1, int(capital / cost_per_lot)) if cost_per_lot > 0 else 1
         qty = max_lots * lot_size
         total_risk = max_lots * lot_size * sl_points
-        confidence = "HIGH" if abs(direction_score) > 0.8 else ("MEDIUM" if abs(direction_score) > 0.3 else "LOW")
+
+        if best_conf >= 70:
+            confidence_label = "HIGH"
+        elif best_conf >= 40:
+            confidence_label = "MEDIUM"
+        else:
+            confidence_label = "LOW"
+
+        # Entry trigger description
+        if in_pullback:
+            entry_trigger = f"Enter on pullback: {pullback_detail}. Wait for candle to resume in direction."
+        else:
+            entry_trigger = f"No pullback yet. {pullback_detail}. Wait for retrace."
+
+        otm_distance = (best_strike - atm) / interval
+        otm_label = "ITM" if otm_distance < 0 else ("ATM" if otm_distance == 0 else "OTM")
 
         main_suggestion = {
             "index": preferred_index,
             "lot_size": lot_size,
-            "strike": buy_strike,
-            "type": trade_type,
+            "strike": best_strike,
+            "type": best_type,
             "entry_premium": round(premium),
             "cost_per_lot": round(cost_per_lot),
             "stop_loss": sl_price,
@@ -200,13 +492,31 @@ class TradingExpert:
             "recommended_qty": qty,
             "total_risk": round(total_risk),
             "risk_reward": r_to_r,
-            "confidence": confidence,
+            "confidence": confidence_label,
             "direction_score": round(direction_score, 2),
-            "reasoning_summary": self._generate_reasoning(direction_score, oi, greeks, is_bullish, news_summary),
+            "reasoning_summary": self._generate_reasoning(
+                direction_score, oi, greeks, is_bullish, news_summary,
+                momentum_label, vwap_detail, in_pullback, pullback_detail,
+                best_strike, best_type, otm_label, atm,
+            ),
             "oi_support": support,
             "oi_resistance": resistance,
             "pcr": oi.get("pcr", "N/A"),
             "atm": atm,
+            "vwap": round(vwap, 1) if vwap else None,
+            "above_vwap": above_vwap,
+            "hhlh": hhlh,
+            "lhll": lhll,
+            "momentum": momentum_label,
+            "rsi": round(rsi, 1),
+            "atr_pct": round(atr_pct, 3),
+            "volume_ratio": round(vol_ratio, 1),
+            "in_pullback": in_pullback,
+            "entry_trigger": entry_trigger,
+            "scanned_contracts": [
+                {"strike": s, "type": t, "score": c, "premium": p}
+                for c, s, t, p in scored[:6]
+            ],
         }
 
         result["suggestions"] = [main_suggestion]
@@ -214,27 +524,36 @@ class TradingExpert:
         result["greeks"] = greeks
         return result
 
-    def _generate_reasoning(self, direction_score, oi, greeks, is_bullish, news_summary):
+    def _generate_reasoning(self, direction_score, oi, greeks, is_bullish, news_summary,
+                           momentum=None, vwap_detail=None, in_pullback=None, pullback_detail=None,
+                           strike=None, optype=None, otm_label=None, atm=None):
         parts = []
         supp = oi.get('support')
         res = oi.get('resistance')
         pcr = oi.get('pcr', 'N/A')
-        if is_bullish:
-            parts.append(f"Bullish bias (score {direction_score:+.2f})")
-            parts.append(f"OI support at {supp if supp else 'N/A'}")
-            parts.append(f"PCR at {pcr}")
-        else:
-            parts.append(f"Bearish bias (score {direction_score:+.2f})")
-            parts.append(f"OI resistance at {res if res else 'N/A'}")
-            parts.append(f"PCR at {pcr}")
+        direction = "BULLISH" if is_bullish else "BEARISH"
+        parts.append(f"{direction} (score {direction_score:+.2f})")
+
+        if vwap_detail:
+            parts.append(vwap_detail)
+        if momentum:
+            parts.append(f"Momentum: {momentum}")
+
+        parts.append(f"OI support {supp if supp else 'N/A'} | PCR {pcr}")
+
+        if strike and optype:
+            otm_str = otm_label or ""
+            parts.append(f"Pick: {strike}{optype} ({otm_str})")
+
+        if in_pullback:
+            parts.append(f"Pullback: {pullback_detail}")
+        elif pullback_detail and "No" not in pullback_detail:
+            parts.append(f"Pullback: {pullback_detail}")
 
         if greeks.get("iv_call"):
-            parts.append(f"Call IV: {greeks['iv_call']:.1%}")
-        if greeks.get("iv_put"):
-            parts.append(f"Put IV: {greeks['iv_put']:.1%}")
-
+            parts.append(f"Call IV: {greeks['iv_call']:.1%} | Put IV: {greeks.get('iv_put', 0):.1%}")
         if news_summary:
-            parts.append(f"Sentiment: {news_summary.get('overall_sentiment', 'neutral')}")
+            parts.append(f"News: {news_summary.get('overall_sentiment', 'neutral')}")
 
         return " | ".join(parts)
 

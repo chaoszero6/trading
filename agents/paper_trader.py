@@ -75,6 +75,19 @@ class PaperTrader:
                     strike INTEGER, optype TEXT, cached_at TEXT
                 )
             """)
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS trade_history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    timestamp TEXT, index_name TEXT, strike INTEGER,
+                    option_type TEXT, entry_ltp REAL, entry_spot REAL,
+                    sl REAL, target REAL, exit_ltp REAL, exit_spot REAL,
+                    exit_reason TEXT, pnl REAL, held_minutes REAL,
+                    entry_signal TEXT, rsi REAL, vwap_diff REAL,
+                    expiry TEXT, exit_timestamp TEXT,
+                    gpu_score INTEGER, gpu_bullish INTEGER, gpu_bearish INTEGER,
+                    archived_at TEXT DEFAULT (datetime('now'))
+                )
+            """)
             conn.commit()
 
     def _load_open_positions(self):
@@ -486,6 +499,38 @@ class PaperTrader:
                     pos.get("gpu_bearish"),
                 ),
             )
+            # Auto-archive completed trades to history
+            if is_exit:
+                conn.execute(
+                    """INSERT INTO trade_history (timestamp, index_name, strike, option_type,
+                       entry_ltp, entry_spot, sl, target, exit_ltp, exit_spot,
+                       exit_reason, pnl, held_minutes, entry_signal, rsi, vwap_diff,
+                       expiry, exit_timestamp, gpu_score, gpu_bullish, gpu_bearish)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    (
+                        pos.get("timestamp"),
+                        pos.get("index"),
+                        pos.get("strike"),
+                        pos.get("type"),
+                        pos.get("entry_ltp"),
+                        pos.get("entry_spot"),
+                        pos.get("sl"),
+                        pos.get("target"),
+                        pos.get("exit_ltp"),
+                        pos.get("exit_spot"),
+                        pos.get("exit_reason"),
+                        pos.get("pnl"),
+                        pos.get("held_minutes"),
+                        pos.get("entry_signal"),
+                        pos.get("rsi"),
+                        pos.get("vwap_diff"),
+                        pos.get("expiry"),
+                        exit_ts,
+                        pos.get("gpu_score"),
+                        pos.get("gpu_bullish"),
+                        pos.get("gpu_bearish"),
+                    ),
+                )
             conn.commit()
 
     def close_all_eod(self):
@@ -504,7 +549,7 @@ class PaperTrader:
         print(f"[PT] EOD: {len(self.trade_log)} trades closed")
 
     def get_summary(self):
-        """Get formatted summary of all trades."""
+        """Get formatted summary of all trades (today only)."""
         lines = []
         total_pnl = 0.0
         wins = 0
@@ -545,3 +590,20 @@ class PaperTrader:
                 wp = wins / (wins + losses) * 100 if (wins + losses) > 0 else 0
                 lines.append(f"🏆 {wins}W / {losses}L | P&L: ₹{total_pnl:+,.0f} | Win%: {wp:.0f}%")
         return "\n".join(lines)
+
+    def get_pnl_history(self, days=30):
+        """Get day-wise P&L from trade_history (all completed trades, never lost)."""
+        rows = []
+        with sqlite3.connect(DB_PATH) as conn:
+            cur = conn.execute("""
+                SELECT date(timestamp) as day,
+                       count(*) as trades,
+                       sum(CASE WHEN exit_reason='TARGET_HIT' THEN 1 ELSE 0 END) as wins,
+                       sum(CASE WHEN exit_reason='STOP_LOSS' THEN 1 ELSE 0 END) as losses,
+                       sum(CASE WHEN pnl IS NOT NULL THEN pnl ELSE 0 END) as pnl
+                FROM trade_history
+                WHERE timestamp >= date('now', ? || ' days')
+                GROUP BY day ORDER BY day
+            """, (f'-{days}',))
+            rows = cur.fetchall()
+        return rows
