@@ -43,7 +43,7 @@ def get_latest_trade():
                 "SELECT * FROM trades ORDER BY id DESC LIMIT 1"
             ).fetchone()
             if row:
-                cols = [d[0] for d in conn.execute("PRAGMA table_info(trades)").fetchall()]
+                cols = [d[1] for d in conn.execute("PRAGMA table_info(trades)").fetchall()]
                 return dict(zip(cols, row))
     except Exception:
         pass

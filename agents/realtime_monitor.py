@@ -170,7 +170,7 @@ class RealTimeMonitor:
         rsi_val = rsi_series[-1] if rsi_series else None
         rsi_sma_val = sum(rsi_series[-14:]) / 14 if have_rsi else None
         rsi_bull = rsi_val is not None and have_rsi and rsi_val > 50 and rsi_val > rsi_sma_val and rsi_val < 70
-        rsi_bear = rsi_val is not None and have_rsi and rsi_val < 50 and rsi_val < rsi_sma_val and rsi_val > 30
+        rsi_bear = rsi_val is not None and have_rsi and rsi_val < 50 and rsi_val < rsi_sma_val
 
         # Debug
         rsi_str = f"rsi={rsi_val:.1f} rsi_sma={rsi_sma_val:.1f}" if have_rsi else "rsi=N/A"
@@ -672,7 +672,11 @@ class RealTimeMonitor:
         greek_str = ""
         if entry_delta is not None:
             greek_str = f" Δ={entry_delta:.2f} Γ={entry_gamma:.4f}" if entry_gamma else f" Δ={entry_delta:.2f}"
-        print(f"[MON] ✅ ENTRY: {index} {expiry} {strike}{optype} @ ₹{premium} ({src},{iv_str}{greek_str}{chain_info} spot={spot})", flush=True)
+        spot_now_for_log = spot
+        print(f"[MON] ✅ ENTRY: {index} {expiry} {strike}{optype} @ ₹{premium} (WS{iv_str}{greek_str}{chain_info} spot={spot_now_for_log})", flush=True)
+        rsi_at_entry = pos.get("rsi")
+        if rsi_at_entry is not None:
+            print(f"[MON] ENTRY_DETAIL: {index} {strike}{optype} RSI={rsi_at_entry} SL=₹{sl_price} TGT=₹{target_price} Lot={LOT_SIZES.get(index, 65)} Cost=₹{cost}", flush=True)
         return pos
 
     def _has_open_position_for(self, index, signal):
@@ -749,11 +753,15 @@ class RealTimeMonitor:
         spot_now = self.get_spot(pos["index"]) or pos["entry_spot"]
         iv = pos.get("entry_iv")
         if not iv:
+            print(f"[MON] ⚠️ LTP_EST: {pos['strike']}{pos['type']} {pos['index']} — NO WS data, NO IV — using ENTRY LTP (₹{pos['entry_ltp']})", flush=True)
             return round(pos["entry_ltp"], 1), "ENTRY"
         T = self._days_to_expiry(pos["index"]) / 365
         try:
-            return round(self._bs_price(spot_now, pos["strike"], T, iv, pos["type"]), 1), "BS"
-        except:
+            bs_price = round(self._bs_price(spot_now, pos["strike"], T, iv, pos["type"]), 1)
+            print(f"[MON] ⚠️ LTP_EST: {pos['strike']}{pos['type']} {pos['index']} — WS unavailable, using BS (spot={spot_now:.0f}, IV={iv:.2%}, T={T:.2f}yrs) → ₹{bs_price}", flush=True)
+            return bs_price, "BS"
+        except Exception as e:
+            print(f"[MON] ⚠️ LTP_EST: {pos['strike']}{pos['type']} {pos['index']} — WS FAILED, BS ERROR: {e} — using ENTRY LTP (₹{pos['entry_ltp']})", flush=True)
             return round(pos["entry_ltp"], 1), "ENTRY"
 
     def _build_status_message(self):
@@ -910,7 +918,15 @@ class RealTimeMonitor:
 
         for pos in self.pt.positions[:]:
             spot_now = self.get_spot(pos["index"]) or pos["entry_spot"]
-            est_ltp, _ = self._est_option_ltp(pos)
+            est_ltp, src = self._est_option_ltp(pos)
+            pnl_ = (est_ltp - pos["entry_ltp"]) * LOT_SIZES.get(pos["index"], 65)
+            sl_pct = (pos["sl"] / pos["entry_ltp"] - 1) * 100 if pos["entry_ltp"] else 0
+            held_min = (datetime.now() - datetime.fromisoformat(pos["timestamp"])).total_seconds() / 60 if pos.get("timestamp") else 0
+            print(f"[MON] ⏱️ POS: {pos['strike']}{pos['type']} {pos['index']} "
+                  f"Entry=₹{pos['entry_ltp']:.1f} LTP=₹{est_ltp:.1f}({src}) "
+                  f"P&L=₹{pnl_:+,.0f} Pts={est_ltp-pos['entry_ltp']:+.1f} "
+                  f"SL=₹{pos['sl']:.1f}({sl_pct:+.0f}%) TGT=₹{pos['target']:.1f} "
+                  f"Held={held_min:.0f}m Spot={spot_now:.0f}", flush=True)
 
             # Trail SL
             trail = self.pt._trail_sl(pos, est_ltp)
@@ -923,7 +939,10 @@ class RealTimeMonitor:
                 self.pt._save_trade(pos)
                 self.pt.trade_log.append(pos)
                 self.pt.positions.remove(pos)
-                print(f"[MON] ✅ TARGET HIT: {pos['strike']}{pos['type']} @ est ₹{est_ltp:.0f} (P&L ₹{pos['pnl']:+,.0f})", flush=True)
+                exit_pnl = pos["pnl"]
+                exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
+                print(f"[MON] ✅ TARGET HIT: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f} ({src}) P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
+                self._send_discord(f"✅ **TARGET** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
                 continue
             if est_ltp <= pos["sl"]:
                 pos["exit_ltp"] = est_ltp
@@ -934,7 +953,11 @@ class RealTimeMonitor:
                 self.pt._save_trade(pos)
                 self.pt.trade_log.append(pos)
                 self.pt.positions.remove(pos)
-                print(f"[MON] ❌ SL HIT: {pos['strike']}{pos['type']} @ est ₹{est_ltp:.0f} (P&L ₹{pos['pnl']:+,.0f})", flush=True)
+                exit_pnl = pos["pnl"]
+                exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
+                sl_dist = (pos["sl"] - est_ltp) / pos["entry_ltp"] * 100 if pos["entry_ltp"] else 0
+                print(f"[MON] ❌ SL HIT: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) SL=₹{pos['sl']:.1f} P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
+                self._send_discord(f"❌ **SL HIT** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
 
     def _check_cycle(self):
         nifty = self.get_spot("NIFTY")
@@ -971,7 +994,20 @@ class RealTimeMonitor:
             p = s.get('patterns', '')
             p_str = f" patterns={p}" if p else ""
             m = f" macd_h={s.get('hist','')}" if 'hist' in s else ""
-            print(f"  {s['strategy']}: {s['signal']} ({s['confidence']}){p_str}{m}")
+            r = f" rsi={s.get('rsi','')}" if 'rsi' in s else ""
+            print(f"  {s['strategy']}: {s['signal']} ({s['confidence']}){p_str}{m}{r}")
+
+        # Log RSI guard reference values for context
+        if self.gpu_sentiment:
+            n_rsi = self.gpu_sentiment.get("nifty_rsi")
+            b_rsi = self.gpu_sentiment.get("banknifty_rsi")
+            rsi_notes = []
+            if n_rsi is not None:
+                rsi_notes.append(f"NIFTY RSI={n_rsi}" + (" 🔴OB" if n_rsi >= 65 else " 🟢OS" if n_rsi <= 35 else ""))
+            if b_rsi is not None:
+                rsi_notes.append(f"BN RSI={b_rsi}" + (" 🔴OB" if b_rsi >= 65 else " 🟢OS" if b_rsi <= 35 else ""))
+            if rsi_notes:
+                print(f"[MON] RSI_GUARD: {' | '.join(rsi_notes)} (CE≥65=reject, PE≤35=reject)", flush=True)
 
         print(f"[MON] Step 3: entering trades ({len(signals)} signals)...", flush=True)
         now = datetime.now()
@@ -998,23 +1034,37 @@ class RealTimeMonitor:
 
         MIN_AGREE = 2
 
+        # Weighted confidence scoring helper
+        def _weighted_score(vote_list):
+            return sum({"HIGH": 3, "MEDIUM": 2, "LOW": 1}.get(s.get("confidence", "LOW"), 1) for s in vote_list)
+
         # Group signals by index and direction
         by_index = defaultdict(lambda: {"BUY_CE": [], "BUY_PE": []})
         for sig in signals:
             by_index[sig["index"]][sig["signal"]].append(sig)
 
-        # Vote per index — require MIN_AGREE signals agreeing on same direction
+        # Vote per index — weighted confidence first, then raw count tiebreaker
         candidates = []
         for idx, votes in by_index.items():
             ce_votes, pe_votes = votes["BUY_CE"], votes["BUY_PE"]
             ce_count, pe_count = len(ce_votes), len(pe_votes)
 
-            if ce_count >= MIN_AGREE and ce_count > pe_count:
-                conf_score = sum({"HIGH": 3, "MEDIUM": 2, "LOW": 1}.get(s.get("confidence", "LOW"), 1) for s in ce_votes)
-                candidates.append((idx, "BUY_CE", ce_count, conf_score, ce_votes))
-            if pe_count >= MIN_AGREE and pe_count > ce_count:
-                conf_score = sum({"HIGH": 3, "MEDIUM": 2, "LOW": 1}.get(s.get("confidence", "LOW"), 1) for s in pe_votes)
-                candidates.append((idx, "BUY_PE", pe_count, conf_score, pe_votes))
+            # Conflict veto: if both sides have signals for same index, skip
+            # Forces alignment — prevents chasing a trend against diverging indicators
+            if ce_count > 0 and pe_count > 0:
+                print(f"[MON] ⛔ CONFLICT_VETO: {idx} has {ce_count} CE + {pe_count} PE signals — waiting for alignment", flush=True)
+                for s in ce_votes + pe_votes:
+                    print(f"  {s['strategy']} → {s['signal']} ({s.get('confidence','?')})", flush=True)
+                continue
+
+            # Weighted confidence scoring: HIGH=3, MEDIUM=2, LOW=1
+            ce_weight, pe_weight = _weighted_score(ce_votes), _weighted_score(pe_votes)
+
+            # Prefer direction with highest weighted score above threshold
+            if ce_count >= MIN_AGREE and ce_weight >= pe_weight:
+                candidates.append((idx, "BUY_CE", ce_count, ce_weight, ce_votes))
+            if pe_count >= MIN_AGREE and pe_weight >= ce_weight:
+                candidates.append((idx, "BUY_PE", pe_count, pe_weight, pe_votes))
 
             print(f"[MON] Vote tally for {idx}: BUY_CE={ce_count}, BUY_PE={pe_count}", flush=True)
             for s in ce_votes + pe_votes:
@@ -1028,6 +1078,31 @@ class RealTimeMonitor:
                 if self._has_open_position_for(idx, sig_type):
                     print(f"[MON] Already in {idx} {sig_type}, skipping candidate", flush=True)
                     continue
+                # RSI guard: use strategy RSI (Wilder's smoothed) not GPU sentiment (simple avg)
+                # to match what the strategies actually see — prevents false windows
+                rsi_guard_rejected = False
+                rsi_ticks = self.banknifty_ticks if idx == "BANKNIFTY" else self.nifty_ticks
+                rsi_prices = [v for _, v in rsi_ticks]
+                rsi_series = self._calc_rsi_series(rsi_prices, 14)
+                current_rsi = rsi_series[-1] if rsi_series and len(rsi_series) > 0 else None
+                if current_rsi is not None:
+                    if sig_type == "BUY_CE" and current_rsi >= 65:
+                        rsi_reason = f"RSI={current_rsi:.1f} >= 65 (overbought)"
+                        print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
+                        rsi_guard_rejected = True
+                        self._send_discord(f"⛔ **RSI GUARD** {idx} {sig_type} rejected — {rsi_reason} — {len(agreeing_signals)} votes agreed but RSI guard blocked")
+                    elif sig_type == "BUY_PE" and current_rsi <= 35:
+                        rsi_reason = f"RSI={current_rsi:.1f} <= 35 (oversold)"
+                        print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
+                        rsi_guard_rejected = True
+                        self._send_discord(f"⛔ **RSI GUARD** {idx} {sig_type} rejected — {rsi_reason} — waiting for RSI recovery")
+                    elif sig_type == "BUY_PE" and current_rsi >= 75:
+                        rsi_reason = f"RSI={current_rsi:.1f} >= 75 (overbought, avoid PE fade)"
+                        print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
+                        rsi_guard_rejected = True
+                if rsi_guard_rejected:
+                    continue
+
                 pos = self._enter_trade_estimate(idx, sig_type, agreeing_signals[0]["spot"], agreeing_signals[0])
                 if pos:
                     self._daily_entry_count += 1
@@ -1057,7 +1132,7 @@ class RealTimeMonitor:
         if self.pt.positions:
             for pos in self.pt.positions[:]:
                 spot_now = self.get_spot(pos["index"]) or pos["entry_spot"]
-                exit_ltp, _ = self._est_option_ltp(pos)
+                exit_ltp, src = self._est_option_ltp(pos)
                 pos["exit_ltp"] = exit_ltp
                 pos["exit_spot"] = spot_now
                 pos["exit_reason"] = "MONITOR_END"
@@ -1067,6 +1142,10 @@ class RealTimeMonitor:
                     pos["held_minutes"] = (datetime.now() - datetime.fromisoformat(pos["timestamp"])).total_seconds() / 60
                 self.pt._save_trade(pos)
                 self.pt.trade_log.append(pos)
+                exit_pct = ((exit_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
+                emoji_exit = "✅" if pnl > 0 else "❌"
+                held = pos.get("held_minutes", 0)
+                print(f"[MON] {emoji_exit} EOD CLOSE: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{exit_ltp:.1f}({src}) P&L=₹{pos['pnl']:+,.0f} ({exit_pct:+.1f}%) Held={held:.0f}m Spot={spot_now:.0f}", flush=True)
             self.pt.positions.clear()
 
         elapsed = (datetime.now() - self.start_time).total_seconds() / 60
