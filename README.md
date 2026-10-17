@@ -11,6 +11,9 @@ GPU-accelerated trading analysis and paper trading system for NIFTY, BANKNIFTY, 
 - **Daily Directional Bias** — GPU-powered next-day direction prediction (76% backtested accuracy)
 - **Learning Agent** — SQLite-backed trade journal that auto-syncs from paper trades and tracks win rates, patterns, lessons
 - **Real-Time Monitor** — 1-min monitoring loop for automated entry/exit during market hours
+- **AutoTrader Android App** — Kotlin/Jetpack Compose app with multi-broker support (Angel One, Dhan, ICICI Direct, Upstox, Zerodha, paper), backtesting, and Room DB trade history
+- **Web Dashboard** — FastAPI + WebSocket UI for live trading control and P&L
+- **Holiday Gate** — Fail-safe NSE holiday calendar guard for all scheduled jobs (skips trading on holidays)
 
 ## Commands
 
@@ -57,6 +60,14 @@ data/
   papertrades.db        — Paper trade records
   learning.db           — Learning agent journal (auto-synced)
   predictions.db        — Prediction backtest results
+AutoTrader/              — Android app (Kotlin/Compose, multi-broker, backtesting)
+autotrader_web/          — FastAPI web dashboard + trading engine
+scripts/
+  holiday_gate.py        — Importable holiday gate (should_run_trading, guard_or_exit)
+  holiday_guard.sh       — Sourceable bash guard for scheduled jobs
+  holidays/              — NSE market calendar data + cache
+  gate_detail.py         — TIME-EXIT GATE blocked-candidate analysis
+  parse_monitor_log.py   — Post-market monitor log analysis
 ```
 
 ## Setup
@@ -79,6 +90,13 @@ python3 agents/realtime_monitor.py
 python3 agents/prediction_agent.py            # all modes (15m, daily, volume)
 python3 agents/prediction_agent.py daily      # daily only
 python3 agents/prediction_agent.py live       # live prediction from Angel One
+
+# Post-market analysis
+python3 scripts/parse_monitor_log.py           # monitor log summary + trade events
+python3 scripts/gate_detail.py                 # blocked-candidate RSI analysis
+
+# Web dashboard
+cd autotrader_web && python3 main.py
 ```
 
 ## Backtest Results (Daily Directional Bias)
