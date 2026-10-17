@@ -1,0 +1,15 @@
+[Unit]
+Description=AutoTrader Web Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/trading/autotrader_web
+ExecStart=/root/trading/venv/bin/python /root/trading/autotrader_web/main.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

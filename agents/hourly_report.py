@@ -111,7 +111,7 @@ def send_discord(message):
     if not DISCORD_WEBHOOK:
         return False
     try:
-        r = requests.post(DISCORD_WEBHOOK, json={"content": message}, timeout=10)
+        r = requests.post(DISCORD_WEBHOOK, json={"content": message[:1900]}, timeout=10)
         return r.status_code == 204
     except:
         return False

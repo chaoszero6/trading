@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#FF1A1A2E</color>
+    <color name="bg_card">#FF16213E</color>
+    <color name="accent_green">#FF00FF88</color>
+    <color name="accent_red">#FFFF4444</color>
+    <color name="accent_blue">#FF0F9BFF</color>
+    <color name="accent_yellow">#FFFFD700</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB0B0B0</color>
+    <color name="supertrend_green">#FF00C853</color>
+    <color name="supertrend_red">#FFFF1744</color>
+</resources>

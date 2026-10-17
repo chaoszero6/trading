@@ -33,6 +33,7 @@ from core.gpu_signals import batch_rsi, batch_macd
 DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "")
 MONITOR_HOURS = 2  # fallback if started after market close
 CHECK_INTERVAL = 60  # 1 minute — frequent enough for tick-based indicators
+MAX_HOLD_MINUTES = 60  # Force close position after this many minutes if no target
 
 
 class RealTimeMonitor:
@@ -608,8 +609,8 @@ class RealTimeMonitor:
         if used + cost > 50000:
             print(f"[MON] ⛔ Capital limit: ₹{used:.0f} used + ₹{cost:.0f} > ₹50k — skipping", flush=True)
             return None
-        sl_price = round(premium * 0.6, 1)
-        target_price = round(premium * 1.035, 1)
+        sl_price = round(premium * 0.90, 1)
+        target_price = round(premium * 1.06, 1)
 
         # WS: real LTP for nearby strikes
         chain_info = ""
@@ -696,21 +697,22 @@ class RealTimeMonitor:
 
     def _evaluate_all_strategies(self):
         signals = []
-        for idx in ["BANKNIFTY", "NIFTY"]:
+        # Only trade NIFTY — BANKNIFTY disabled until paper P&L turns positive
+        for idx in ["NIFTY"]:
             try:
                 result = self._trend_confluence_signal(index=idx)
                 if result:
                     signals.append(result)
             except Exception as e:
                 print(f"[MON] _trend_confluence_signal({idx}) error: {e}", flush=True)
-        for idx in ["BANKNIFTY", "NIFTY"]:
+        for idx in ["NIFTY"]:
             try:
                 result = self._gpu_pattern_strategy(index=idx)
                 if result:
                     signals.append(result)
             except Exception as e:
                 print(f"[MON] _gpu_pattern_strategy({idx}) error: {e}", flush=True)
-        for idx in ["BANKNIFTY", "NIFTY"]:
+        for idx in ["NIFTY"]:
             try:
                 result = self._gpu_macd_strategy(index=idx)
                 if result:
@@ -859,7 +861,8 @@ class RealTimeMonitor:
         dur = (self.end_time - self.start_time).total_seconds() / 60
         msg = (
             f"**🚀 Real-Time Monitor Started (EOD)** @ {datetime.now().strftime('%H:%M:%S')}\n"
-            f"NIFTY: {nifty:.0f}" + (f" | BANKNIFTY: {bnifty:.0f}" if bnifty else "") + "\n"
+            f"{(f'NIFTY: {nifty:.0f}' if nifty else 'NIFTY: n/a')}"
+            + (f" | BANKNIFTY: {bnifty:.0f}" if bnifty else "") + "\n"
             f"Duration: {dur:.0f}min (until {self.end_time.strftime('%H:%M:%S')})\n"
             f"Strategies: Trend Confluence + GPU Pattern/MACD + Spot Momentum\n"
             f"Data source: Angel One API + GPU (NVIDIA 920MX)"
@@ -959,6 +962,44 @@ class RealTimeMonitor:
                 print(f"[MON] ❌ SL HIT: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) SL=₹{pos['sl']:.1f} P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
                 self._send_discord(f"❌ **SL HIT** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
 
+            # Time-based force close: exit position if held > MAX_HOLD_MINUTES
+            if pos in self.pt.positions:
+                held_now = (datetime.now() - datetime.fromisoformat(pos["timestamp"])).total_seconds() / 60
+                if held_now > MAX_HOLD_MINUTES:
+                    pos["exit_ltp"] = est_ltp
+                    pos["exit_spot"] = spot_now
+                    pos["exit_reason"] = "TIME_FORCE_CLOSE"
+                    pos["pnl"] = round((est_ltp - pos["entry_ltp"]) * LOT_SIZES.get(pos["index"], 65), 0)
+                    pos["held_minutes"] = round(held_now, 1)
+                    self.pt._save_trade(pos)
+                    self.pt.trade_log.append(pos)
+                    self.pt.positions.remove(pos)
+                    exit_pnl = pos["pnl"]
+                    exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
+                    emoji = "⏰"
+                    print(f"[MON] {emoji} TIME CLOSE ({MAX_HOLD_MINUTES}m): {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m", flush=True)
+                    self._send_discord(f"{emoji} **TIME EXIT** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) held {pos['held_minutes']:.0f}m")
+
+            # Dead-trade rule: if LTP < entry×0.93 at 30 min, force-close immediately.
+            # Catches underwater positions early — trades that lose 7% in 30 min
+            # almost never recover, and holding longer only bleeds more theta.
+            if pos in self.pt.positions:
+                held_now = (datetime.now() - datetime.fromisoformat(pos["timestamp"])).total_seconds() / 60
+                entry_ltp = pos["entry_ltp"]
+                if held_now >= 30 and entry_ltp and est_ltp < entry_ltp * 0.93:
+                    pos["exit_ltp"] = est_ltp
+                    pos["exit_spot"] = spot_now
+                    pos["exit_reason"] = "DEAD_TRADE"
+                    pos["pnl"] = round((est_ltp - pos["entry_ltp"]) * LOT_SIZES.get(pos["index"], 65), 0)
+                    pos["held_minutes"] = round(held_now, 1)
+                    self.pt._save_trade(pos)
+                    self.pt.trade_log.append(pos)
+                    self.pt.positions.remove(pos)
+                    exit_pnl = pos["pnl"]
+                    exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
+                    print(f"[MON] 💀 DEAD TRADE CLOSE: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
+                    self._send_discord(f"💀 **DEAD TRADE** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) held {pos['held_minutes']:.0f}m — -7% in 30m, no recovery")
+
     def _check_cycle(self):
         nifty = self.get_spot("NIFTY")
         bnifty = self.get_spot("BANKNIFTY")
@@ -1003,16 +1044,26 @@ class RealTimeMonitor:
             b_rsi = self.gpu_sentiment.get("banknifty_rsi")
             rsi_notes = []
             if n_rsi is not None:
-                rsi_notes.append(f"NIFTY RSI={n_rsi}" + (" 🔴OB" if n_rsi >= 65 else " 🟢OS" if n_rsi <= 35 else ""))
+                rsi_notes.append(f"NIFTY RSI={n_rsi}" + (" 🔴OB" if n_rsi >= 70 else " 🟢OS" if n_rsi <= 35 else ""))
             if b_rsi is not None:
-                rsi_notes.append(f"BN RSI={b_rsi}" + (" 🔴OB" if b_rsi >= 65 else " 🟢OS" if b_rsi <= 35 else ""))
+                rsi_notes.append(f"BN RSI={b_rsi}" + (" 🔴OB" if b_rsi >= 70 else " 🟢OS" if b_rsi <= 35 else ""))
             if rsi_notes:
-                print(f"[MON] RSI_GUARD: {' | '.join(rsi_notes)} (CE≥65=reject, PE≤35=reject)", flush=True)
+                print(f"[MON] RSI_GUARD: {' | '.join(rsi_notes)} (CE≥70=reject, PE≤35=reject)", flush=True)
 
         print(f"[MON] Step 3: entering trades ({len(signals)} signals)...", flush=True)
         now = datetime.now()
         if now.hour < 9 or (now.hour == 9 and now.minute < 30):
             print(f"[MON] Before 9:30 — skipping all entries", flush=True)
+            return
+        # Time-exit feasibility gate: entry must leave enough room for the
+        # MAX_HOLD_MINUTES force-close before 15:00 EOD (else the trade can only
+        # be capped by EOD close, and the time exit never fires).
+        # Cutoff is derived from MAX_HOLD_MINUTES, so it tracks config changes:
+        # MAX_HOLD_MINUTES=60 → 15:00 − 60m = 14:00 → no entries after 14:00.
+        hold_cutoff = now.replace(hour=15, minute=0, second=0, microsecond=0) - timedelta(minutes=MAX_HOLD_MINUTES)
+        if now >= hold_cutoff:
+            print(f"[MON] After {hold_cutoff.strftime('%H:%M')} — {MAX_HOLD_MINUTES}m time exit can't fire before 15:00 — skipping all entries", flush=True)
+            self._send_discord(f"⛔ **TIME-EXIT GATE** {now.strftime('%H:%M')} — entries blocked (needs {MAX_HOLD_MINUTES}m room before 15:00 EOD)")
             return
         if now.hour >= 14 and now.minute >= 25:
             print(f"[MON] After 14:25 — skipping all entries", flush=True)
@@ -1086,8 +1137,8 @@ class RealTimeMonitor:
                 rsi_series = self._calc_rsi_series(rsi_prices, 14)
                 current_rsi = rsi_series[-1] if rsi_series and len(rsi_series) > 0 else None
                 if current_rsi is not None:
-                    if sig_type == "BUY_CE" and current_rsi >= 65:
-                        rsi_reason = f"RSI={current_rsi:.1f} >= 65 (overbought)"
+                    if sig_type == "BUY_CE" and current_rsi >= 70:
+                        rsi_reason = f"RSI={current_rsi:.1f} >= 70 (overbought)"
                         print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
                         rsi_guard_rejected = True
                         self._send_discord(f"⛔ **RSI GUARD** {idx} {sig_type} rejected — {rsi_reason} — {len(agreeing_signals)} votes agreed but RSI guard blocked")

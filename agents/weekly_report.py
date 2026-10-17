@@ -30,8 +30,8 @@ def get_weekly_pnl():
         rows = conn.execute("""
             SELECT date(timestamp) as day,
                    count(*) as trades,
-                   sum(CASE WHEN exit_reason='TARGET_HIT' THEN 1 ELSE 0 END) as wins,
-                   sum(CASE WHEN exit_reason='STOP_LOSS' THEN 1 ELSE 0 END) as losses,
+                   sum(CASE WHEN pnl > 0 THEN 1 ELSE 0 END) as wins,
+                   sum(CASE WHEN pnl < 0 THEN 1 ELSE 0 END) as losses,
                    sum(CASE WHEN pnl IS NOT NULL THEN pnl ELSE 0 END) as pnl
             FROM trade_history
             WHERE date(timestamp) >= ?

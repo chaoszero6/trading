@@ -11,6 +11,16 @@ mkdir -p "$LOG_DIR"
 WATCHDOG_LOG="$LOG_DIR/watchdog.log"
 MONITOR_LOG="$LOG_DIR/realtime_monitor.log"
 
+# --- Holiday gate -----------------------------------------------------------
+# The watchdog restarts the monitor, so it must respect the calendar too —
+# otherwise it happily resurrects a trading session on a holiday.
+. /root/trading/scripts/holiday_guard.sh
+if ! holiday_guard; then
+    echo "$(date '+%H:%M:%S') Watchdog: not a trading day — exiting" >> "$WATCHDOG_LOG"
+    exit 0
+fi
+# ---------------------------------------------------------------------------
+
 log() {
     echo "[$(date '+%H:%M:%S')] $*" >> "$WATCHDOG_LOG"
     echo "[WATCHDOG] $*"
@@ -25,9 +35,18 @@ is_market_hours() {
 restart_monitor() {
     log "Restarting monitor..."
     screen -ls 2>/dev/null | grep -q trading_ && screen -X -S "$(screen -ls | grep trading_ | awk '{print $1}' | head -1)" quit 2>/dev/null
-    rm -f "$MONITOR_LOG" 2>/dev/null
-    screen -dmS trading_$(date +%H%M) bash -c "cd /root/trading && python3 -u agents/realtime_monitor.py > $MONITOR_LOG 2>&1"
+    screen -dmS trading_$(date +%H%M) bash -c "cd /root/trading && python3 -u agents/realtime_monitor.py >> $MONITOR_LOG 2>&1"
     log "Monitor restarted in screen session"
+}
+
+# The Discord bot is started once by start_monitor.sh and, unlike the monitor,
+# was never supervised: a transient DNS blip at login killed it for the whole
+# day and `!pnl` / `!status` silently stopped answering. Keep it alive here.
+restart_discbot() {
+    log "Restarting Discord bot..."
+    screen -ls 2>/dev/null | grep -q discbot_ && screen -X -S "$(screen -ls | grep discbot_ | awk '{print $1}' | head -1)" quit 2>/dev/null
+    screen -dmS discbot_$(date +%H%M) bash -c "cd /root/trading && python3 -u discord_bot.py >> $LOG_DIR/discord_bot.log 2>&1"
+    log "Discord bot restarted in screen session"
 }
 
 # Send Discord alert
@@ -45,6 +64,12 @@ log "Watchdog started"
 restart_monitor
 discord_alert "Watchdog online — monitoring session"
 
+# Adopt (or start) the Discord bot at watchdog startup.
+if ! screen -ls 2>/dev/null | grep -q discbot_; then
+    restart_discbot
+    discord_alert "Discord bot was not running — started"
+fi
+
 LAST_HEARTBEAT=""
 CONSECUTIVE_FAILS=0
 
@@ -52,6 +77,14 @@ while true; do
     if is_market_hours; then
         SCREEN_ALIVE=$(screen -ls 2>/dev/null | grep -c trading_)
         if [ "$SCREEN_ALIVE" -eq 0 ]; then
+            # Normal EOD: monitor writes 'Session Complete' before exiting at 15:00.
+            # Don't treat that as a crash — restarting would spawn a monitor that
+            # immediately exits and trips the AI watcher into a false DEAD alert.
+            if [ -f "$MONITOR_LOG" ] && tail -10 "$MONITOR_LOG" | grep -q "Session Complete"; then
+                log "Monitor completed session normally at EOD — no restart"
+                sleep 60
+                continue
+            fi
             CONSECUTIVE_FAILS=$((CONSECUTIVE_FAILS + 1))
             log "Monitor screen dead (fail #$CONSECUTIVE_FAILS)"
             if [ -f "$MONITOR_LOG" ]; then
@@ -69,6 +102,12 @@ while true; do
             fi
         else
             CONSECUTIVE_FAILS=0
+            # Discord bot liveness — it is a separate screen from the monitor.
+            if ! screen -ls 2>/dev/null | grep -q discbot_; then
+                log "Discord bot screen dead — restarting"
+                restart_discbot
+                discord_alert "Discord bot was down — restarted"
+            fi
             # Check log heartbeat
             if [ -f "$MONITOR_LOG" ]; then
                 LAST_MOD=$(stat -c %Y "$MONITOR_LOG" 2>/dev/null || echo 0)

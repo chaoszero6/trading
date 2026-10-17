@@ -67,7 +67,7 @@ if opened:
 
 wh = os.environ.get('DISCORD_WEBHOOK', '')
 if wh:
-    r = requests.post(wh, json={'content': '\n'.join(lines)}, timeout=10)
+    r = requests.post(wh, json={'content': '\n'.join(lines)[:1900]}, timeout=10)
     print('Sent' if r.status_code == 204 else f'FAIL {r.status_code}')
 else:
     print('\n'.join(lines))

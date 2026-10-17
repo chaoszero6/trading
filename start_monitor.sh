@@ -9,7 +9,17 @@ fi
 LOG_DIR="/root/trading/logs"
 mkdir -p "$LOG_DIR"
 
-rm -f "$LOG_DIR/realtime_monitor.log" /root/trading/data/papertrades.db 2>/dev/null
+# --- Holiday gate -----------------------------------------------------------
+# Skip entirely on weekends/NSE holidays, and fail safe (skip) if the calendar
+# can't be resolved. Override with TRADING_HOLIDAY_OVERRIDE=1.
+. /root/trading/scripts/holiday_guard.sh
+if ! holiday_guard; then
+    echo "$(date): SKIPPED — not a trading day (see holiday_guard.log)" >> "$LOG_DIR/monitor_scheduler.log"
+    exit 0
+fi
+# ---------------------------------------------------------------------------
+
+rm -f "$LOG_DIR/realtime_monitor.log" 2>/dev/null
 
 # Kill old sessions
 screen -ls 2>/dev/null | grep -q trading_ && screen -X -S "$(screen -ls | grep trading_ | awk '{print $1}' | head -1)" quit 2>/dev/null

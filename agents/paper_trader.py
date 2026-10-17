@@ -290,10 +290,10 @@ class PaperTrader:
             signal = "BUY_PE"
             confidence = "HIGH" if gpu_score < -5 else "MEDIUM"
         # Weak signals — try technical-only
-        elif above_vwap and sma10_slope > 2 and rsi > 40 and rsi > bdf["rsi14"].iloc[-3] if len(bdf) >= 15 else False:
+        elif above_vwap and sma10_slope > 2 and rsi > 40 and len(bdf) >= 15 and rsi > bdf["rsi14"].iloc[-3]:
             signal = "BUY_CE"
             confidence = "LOW"
-        elif not above_vwap and sma10_slope < -2 and rsi < 60 and rsi < bdf["rsi14"].iloc[-3] if len(bdf) >= 15 else False:
+        elif not above_vwap and sma10_slope < -2 and rsi < 60 and len(bdf) >= 15 and rsi < bdf["rsi14"].iloc[-3]:
             signal = "BUY_PE"
             confidence = "LOW"
 
@@ -312,14 +312,30 @@ class PaperTrader:
         }
 
     def _trail_sl(self, pos, ltp):
+        """Trail stop-loss as position goes in profit.
+        Locks in 70% of max profit once price moves 3% above entry.
+        """
         entry = pos["entry_ltp"]
         peak = pos.get("peak_ltp", entry)
+
+        # Track new peak
         if ltp > peak:
             peak = ltp
             pos["peak_ltp"] = peak
 
-        if peak >= entry * 1.035:
+        # Target hit at 6% gain
+        if peak >= entry * 1.06:
             return "target"
+
+        # Trail SL: once 3% above entry, trail at 30% of max gain (locks 70%)
+        if peak > entry * 1.03:
+            new_sl = peak - (peak - entry) * 0.30
+            old_sl = pos.get("sl", 0)
+            if new_sl > old_sl:
+                pos["sl"] = round(new_sl, 1)
+                if not pos.get("trail_activated"):
+                    pos["trail_activated"] = True
+                    print(f"[PT] 🔄 Trailing SL activated: ₹{old_sl:.1f} → ₹{pos['sl']:.1f} (peak={peak:.1f})")
 
         return None
 
@@ -385,8 +401,8 @@ class PaperTrader:
         if ltp is None or ltp < 5:
             return None
 
-        sl_price = round(ltp * 0.6, 1)
-        target_price = round(ltp * 1.035, 1)
+        sl_price = round(ltp * 0.90, 1)
+        target_price = round(ltp * 1.06, 1)
 
         strategies = []
         if trend_data.get("above_vwap"):
@@ -413,6 +429,8 @@ class PaperTrader:
             "entry_spot": spot,
             "sl": sl_price,
             "target": target_price,
+            "peak_ltp": ltp,
+            "trail_activated": False,
             "exit_ltp": None,
             "exit_spot": None,
             "exit_reason": None,
@@ -469,36 +487,56 @@ class PaperTrader:
         is_exit = pos.get("exit_ltp") is not None
         exit_ts = datetime.now().isoformat() if is_exit else None
         with sqlite3.connect(DB_PATH) as conn:
-            conn.execute(
-                """INSERT INTO trades (timestamp, index_name, strike, option_type,
-                   entry_ltp, entry_spot, sl, target, exit_ltp, exit_spot,
-                   exit_reason, pnl, held_minutes, entry_signal, rsi, vwap_diff,
-                   expiry, exit_timestamp, gpu_score, gpu_bullish, gpu_bearish)
-                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-                (
-                    pos.get("timestamp"),
-                    pos.get("index"),
-                    pos.get("strike"),
-                    pos.get("type"),
-                    pos.get("entry_ltp"),
-                    pos.get("entry_spot"),
-                    pos.get("sl"),
-                    pos.get("target"),
-                    pos.get("exit_ltp"),
-                    pos.get("exit_spot"),
-                    pos.get("exit_reason"),
-                    pos.get("pnl"),
-                    pos.get("held_minutes"),
-                    pos.get("entry_signal"),
-                    pos.get("rsi"),
-                    pos.get("vwap_diff"),
-                    pos.get("expiry"),
-                    exit_ts,
-                    pos.get("gpu_score"),
-                    pos.get("gpu_bullish"),
-                    pos.get("gpu_bearish"),
-                ),
-            )
+            if is_exit and pos.get("id"):
+                # Exit: UPDATE the existing entry row (1 row per trade)
+                conn.execute(
+                    """UPDATE trades SET exit_ltp=?, exit_spot=?, exit_reason=?,
+                       pnl=?, held_minutes=?, exit_timestamp=?
+                       WHERE id=? AND exit_ltp IS NULL""",
+                    (
+                        pos.get("exit_ltp"),
+                        pos.get("exit_spot"),
+                        pos.get("exit_reason"),
+                        pos.get("pnl"),
+                        pos.get("held_minutes"),
+                        exit_ts,
+                        pos.get("id"),
+                    ),
+                )
+            else:
+                # Entry: INSERT new row and capture id
+                cursor = conn.execute(
+                    """INSERT INTO trades (timestamp, index_name, strike, option_type,
+                       entry_ltp, entry_spot, sl, target, exit_ltp, exit_spot,
+                       exit_reason, pnl, held_minutes, entry_signal, rsi, vwap_diff,
+                       expiry, exit_timestamp, gpu_score, gpu_bullish, gpu_bearish)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    (
+                        pos.get("timestamp"),
+                        pos.get("index"),
+                        pos.get("strike"),
+                        pos.get("type"),
+                        pos.get("entry_ltp"),
+                        pos.get("entry_spot"),
+                        pos.get("sl"),
+                        pos.get("target"),
+                        None,  # exit_ltp
+                        None,  # exit_spot
+                        None,  # exit_reason
+                        None,  # pnl
+                        None,  # held_minutes
+                        pos.get("entry_signal"),
+                        pos.get("rsi"),
+                        pos.get("vwap_diff"),
+                        pos.get("expiry"),
+                        None,  # exit_timestamp
+                        pos.get("gpu_score"),
+                        pos.get("gpu_bullish"),
+                        pos.get("gpu_bearish"),
+                    ),
+                )
+                pos["id"] = cursor.lastrowid  # Store id back for exit UPDATE
+
             # Auto-archive completed trades to history
             if is_exit:
                 conn.execute(
@@ -556,7 +594,7 @@ class PaperTrader:
         losses = 0
         with sqlite3.connect(DB_PATH) as conn:
             rows = conn.execute(
-                "SELECT * FROM trades WHERE date(timestamp) = date('now') ORDER BY id"
+                "SELECT * FROM trades WHERE date(timestamp) = date('now','localtime') ORDER BY id"
             ).fetchall()
             if not rows:
                 return "No trades today."
@@ -598,11 +636,11 @@ class PaperTrader:
             cur = conn.execute("""
                 SELECT date(timestamp) as day,
                        count(*) as trades,
-                       sum(CASE WHEN exit_reason='TARGET_HIT' THEN 1 ELSE 0 END) as wins,
-                       sum(CASE WHEN exit_reason='STOP_LOSS' THEN 1 ELSE 0 END) as losses,
+                       sum(CASE WHEN pnl > 0 THEN 1 ELSE 0 END) as wins,
+                       sum(CASE WHEN pnl < 0 THEN 1 ELSE 0 END) as losses,
                        sum(CASE WHEN pnl IS NOT NULL THEN pnl ELSE 0 END) as pnl
                 FROM trade_history
-                WHERE timestamp >= date('now', ? || ' days')
+                WHERE timestamp >= datetime('now', ? || ' days', 'localtime')
                 GROUP BY day ORDER BY day
             """, (f'-{days}',))
             rows = cur.fetchall()

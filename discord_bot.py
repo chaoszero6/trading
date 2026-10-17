@@ -17,6 +17,8 @@ import os
 import sys
 import asyncio
 import logging
+import time
+import aiohttp
 import discord
 from discord.ext import commands
 
@@ -548,42 +550,97 @@ async def cmd_pnl(ctx):
     for d in opened:
         bt = d['ts'][11:16]
         lines.append(f"\n⏳ {d['idx']} {d['strike']}{d['type']}  B {bt} @ ₹{d['entry']:.0f}  (OPEN)")
-    await ctx.send("\n".join(lines))
+    await ctx.send("\n".join(lines)[:1900])
 
 
 @bot.command(name="history")
-async def cmd_history(ctx):
-    """Day-wise all-time P&L from trade history."""
+async def cmd_history(ctx, arg: str = ""):
+    """Day-wise P&L, cumulative, newest first.
+
+    Default: last 10 trading days. `!history all` / `!history 30` for more.
+    Dedupes partial legs of the same position before aggregating.
+    """
     import sqlite3
     db = "/root/trading/data/papertrades.db"
     conn = sqlite3.connect(db)
-    day_rows = conn.execute("""
-        SELECT date(timestamp) as day,
-               count(*) as trades,
-               sum(CASE WHEN exit_reason='TARGET_HIT' THEN 1 ELSE 0 END) as wins,
-               sum(CASE WHEN exit_reason='STOP_LOSS' THEN 1 ELSE 0 END) as losses,
-               sum(CASE WHEN pnl IS NOT NULL THEN pnl ELSE 0 END) as pnl
+
+    # One position = one (timestamp, strike, option_type). Partial legs are
+    # summed into a single trade so counts and W/L reflect real positions.
+    # (max(pnl, sum) via CASE — GREATEST is not available in this SQLite build.)
+    dedup = """
+        SELECT date(timestamp) AS day,
+               CASE WHEN sum(pnl) > max(pnl) THEN sum(pnl) ELSE max(pnl) END AS pnl
         FROM trade_history
-        GROUP BY day ORDER BY day
+        WHERE pnl IS NOT NULL
+        GROUP BY timestamp, strike, option_type
+    """
+    # Cumulative is computed over ALL days in SQL so the running total is
+    # never clipped by the display limit.
+    # NOTE: the window function must live in its own subquery that is NOT
+    # already sorted DESC by day — otherwise OVER (ORDER BY day) inherits that
+    # order and accumulates backwards (silently wrong cumulative column).
+    day_rows = conn.execute(f"""
+        SELECT day, trades, wins, losses, net, cumulative
+        FROM (
+            SELECT day,
+                   count(*) AS trades,
+                   sum(CASE WHEN pnl > 0 THEN 1 ELSE 0 END) AS wins,
+                   sum(CASE WHEN pnl <= 0 THEN 1 ELSE 0 END) AS losses,
+                   sum(pnl) AS net,
+                   sum(sum(pnl)) OVER (ORDER BY day ASC) AS cumulative
+            FROM ({dedup})
+            GROUP BY day
+        )
+        ORDER BY day DESC
     """).fetchall()
     conn.close()
+
     if not day_rows:
         await ctx.send("No trade history found.")
         return
+
     total_trades = sum(r[1] for r in day_rows)
     total_wins = sum(r[2] for r in day_rows)
     total_losses = sum(r[3] for r in day_rows)
-    total_pnl = sum(r[4] for r in day_rows)
-    lines = [f"**📊 Day-Wise P&L (All Time)**"]
-    for day, cnt, wins, losses, pnl in day_rows:
-        emoji = "🟢" if pnl >= 0 else "🔴"
-        lines.append(f"{emoji} **{day}** — {wins}W / {losses}L | P&L **₹{pnl:+,.0f}**")
+    total_pnl = day_rows[0][5]  # cumulative of newest day = all-time total
+
+    # How many days to display
+    limit = 10
+    label = "Last 10 Days"
+    if arg:
+        a = arg.strip().lower()
+        if a in ("all", "full"):
+            limit, label = len(day_rows), "All Time"
+        elif a.isdigit() and int(a) > 0:
+            limit, label = int(a), f"Last {int(a)} Days"
+
+    shown = day_rows[:limit]
+    lines = [f"**📊 Day-Wise P&L — {label}**"]
+    if len(shown) < len(day_rows):
+        lines.append(f"_(showing {len(shown)} of {len(day_rows)} days — use `!history all`)_")
     lines.append("")
-    if total_trades > 0:
-        lines.append(f"**Total: {total_trades} trades | {total_wins}W / {total_losses}L | P&L ₹{total_pnl:+,.0f} | Win%: {total_wins/total_trades*100:.0f}%**")
-    else:
-        lines.append("No completed trades")
-    await ctx.send("\n".join(lines))
+    for day, cnt, wins, losses, net, cum in shown:
+        emoji = "🟢" if net >= 0 else "🔴"
+        lines.append(f"{emoji} **{day}** — {cnt} trades | {wins}W/{losses}L | ₹{net:+,.0f} | cum ₹{cum:+,.0f}")
+    lines.append("")
+    lines.append(f"**All-time: {total_trades} trades | {total_wins}W/{total_losses}L | "
+                 f"P&L ₹{total_pnl:+,.0f} | Win%: {total_wins/total_trades*100:.0f}%**")
+    out = "\n".join(lines)
+    if len(out) <= 1900:
+        await ctx.send(out)
+        return
+    # Split on line boundaries — never mid-line, never silently drop days.
+    chunk, chunks = "", []
+    for ln in lines:
+        if len(chunk) + len(ln) + 1 > 1900:
+            chunks.append(chunk)
+            chunk = ln
+        else:
+            chunk = f"{chunk}\n{ln}" if chunk else ln
+    if chunk:
+        chunks.append(chunk)
+    for c in chunks:
+        await ctx.send(c)
 
 
 async def run_async_send(ctx, script, *args):
@@ -613,4 +670,17 @@ if __name__ == "__main__":
         print("[!] Set DISCORD_BOT_TOKEN env var")
         sys.exit(1)
     print("[+] Starting Discord trading bot...")
-    bot.run(BOT_TOKEN)
+    # Retry login: a transient DNS/network blip at startup must not kill the bot
+    # for the rest of the day (watchdog never restarts discbot_).
+    for attempt in range(1, 11):
+        try:
+            bot.run(BOT_TOKEN)
+            break
+        except (aiohttp.ClientConnectorError, aiohttp.ClientConnectorDNSError, OSError) as e:
+            wait = min(60, 5 * attempt)
+            print(f"[!] Login attempt {attempt}/10 failed: {type(e).__name__}: {e}")
+            print(f"[!] Retrying in {wait}s...", flush=True)
+            time.sleep(wait)
+    else:
+        print("[!] Giving up after 10 login attempts")
+        sys.exit(1)

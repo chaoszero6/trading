@@ -14,6 +14,16 @@ export TZ=Asia/Kolkata
 
 cd "$PROJECT"
 
+# --- Holiday gate -----------------------------------------------------------
+# No reports on weekends/NSE holidays. Fail safe (skip) if the calendar is
+# unavailable. Override with TRADING_HOLIDAY_OVERRIDE=1.
+. /root/trading/scripts/holiday_guard.sh
+if ! holiday_guard; then
+    echo "[$(date)] SKIPPED — not a trading day (see holiday_guard.log)" >> "$LOG"
+    exit 0
+fi
+# ---------------------------------------------------------------------------
+
 if [ -f .env ]; then
     set -a
     source .env
