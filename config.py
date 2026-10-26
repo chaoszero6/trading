@@ -130,21 +130,63 @@ GLOBAL_INDICES = {
     "SHANGHAI": "000001.SS",
 }
 
-def get_next_next_weekly_expiry(index: str) -> str:
-    """Return weekly expiry identifier in DDMMMYY format, skipping the current weekly.
+def _nearest_valid_expiry(index: str, min_days: int = 1, prefer_within_days: int = 21) -> str:
+    """Return the nearest *real* expiry token for `index` by querying Angel One.
 
-    Angel One uses Tuesday as the expiry identifier for both indices.
-    Current weekly = Tuesday of the current ISO week (Mon-Sun).
-    For NIFTY: next-next Tuesday (+14d), for BN: next Tuesday (+7d).
+    The scrip master is the single source of truth: a computed date can silently
+    be a non-existent expiry (e.g. NIFTY10NOV26 had 0 contracts), which makes
+    search_scrip() return None for every option symbol and blocks ALL entries.
+    Fall back to the Thursday-based calculation only if the API is unreachable.
     """
+    import os
+    import re
+    try:
+        from core.angel_bridge import AngelOneBridge
+        from dotenv import load_dotenv
+        load_dotenv()
+        ab = AngelOneBridge()
+        symbols = ab.search_scrip("NFO", index)
+        if symbols:
+            today = datetime.now()
+            found = {}
+            for row in symbols:
+                sym = row.get("tradingsymbol", "") or ""
+                m = re.match(rf"^{index}(\d{{2}}[A-Z]{{3}}\d{{2}})", sym)
+                if not m:
+                    continue
+                tok = m.group(1)
+                try:
+                    dt = datetime.strptime(tok, "%d%b%y")
+                except ValueError:
+                    continue
+                days = (dt.date() - today.date()).days
+                if min_days <= days <= prefer_within_days:
+                    found[tok] = min(found.get(tok, 10**9), days)
+            if found:
+                return min(found, key=lambda t: found[t])
+    except Exception:
+        pass
+    return _weekly_expiry_fallback(index)
+
+
+def _weekly_expiry_fallback(index: str) -> str:
+    """Thursday-based weekly expiry fallback (NSE moved weekly expiry to Thursday)."""
     today = datetime.now()
-    this_monday = today - timedelta(days=today.weekday())
-    this_tuesday = this_monday + timedelta(days=1)
-    if index == "NIFTY":
-        expiry = this_tuesday + timedelta(days=14)
-    else:
-        expiry = this_tuesday + timedelta(days=7)
+    # Thursday of this week
+    this_thursday = today - timedelta(days=today.weekday()) + timedelta(days=3)
+    expiry = this_thursday
+    while expiry.date() <= today.date():
+        expiry += timedelta(days=7)
     return expiry.strftime("%d%b%y").upper()
+
+
+def get_next_next_weekly_expiry(index: str) -> str:
+    """Return a real, near-term weekly expiry identifier in DDMMMYY format.
+
+    Prefers the nearest live expiry from the Angel One scrip master; falls back
+    to the next upcoming Thursday. Both indices resolve against the same source.
+    """
+    return _nearest_valid_expiry(index)
 
 NEWS_RSS_FEEDS = [
     "https://www.economictimes.indiatimes.com/rssfeeds/13352319.cms",
