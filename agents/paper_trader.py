@@ -22,6 +22,18 @@ DB_PATH = Path(__file__).parent.parent / "data" / "papertrades.db"
 _ws_lock = threading.Lock()
 
 LOT_SIZES = {"NIFTY": 65, "BANKNIFTY": 30}
+
+# --- Profit-target switch (02-Nov-2026) -------------------------------------
+# The +6% hard target is DISABLED. Audit of 299 live paper trades showed the
+# target capped the average winner at Rs 580 while the average loser ran to
+# Rs -962 (payoff ratio 0.60) -> 62.4% win rate required just to break even,
+# against 62.2% delivered. Removing the cap lets the existing trailing SL
+# (arms at +3%, gives back 30% of peak gain) carry the profit, which roughly
+# triples the average winner. Set TARGET_ENABLED = True to restore old
+# behaviour exactly (target_price is still written to every trade row).
+TARGET_ENABLED = False
+TARGET_PCT = 1.06
+
 EXPIRIES = {
     "NIFTY": {"weekly": get_next_next_weekly_expiry("NIFTY"), "monthly": "30JUN26"},
     "BANKNIFTY": {"weekly": get_next_next_weekly_expiry("BANKNIFTY"), "monthly": "30JUN26"},
@@ -323,8 +335,8 @@ class PaperTrader:
             peak = ltp
             pos["peak_ltp"] = peak
 
-        # Target hit at 6% gain
-        if peak >= entry * 1.06:
+        # Target hit at 6% gain — disabled 02-Nov-2026, see TARGET_ENABLED above.
+        if TARGET_ENABLED and peak >= entry * TARGET_PCT:
             return "target"
 
         # Trail SL: once 3% above entry, trail at 30% of max gain (locks 70%)
@@ -372,7 +384,7 @@ class PaperTrader:
                 self.trade_log.append(pos)
                 self.positions.remove(pos)
                 print(f"[PT] ❌ SL HIT: {pos['strike']}{pos['type']} @ ₹{ltp} (P&L ₹{pos['pnl']:+.0f})")
-            elif ltp >= pos["target"]:
+            elif TARGET_ENABLED and ltp >= pos["target"]:
                 pos["exit_ltp"] = ltp
                 pos["exit_spot"] = spot
                 pos["exit_reason"] = "TARGET_HIT"

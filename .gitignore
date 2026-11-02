@@ -12,3 +12,12 @@ __pycache__/
 data/predictions.db
 predictions_history.json
 *.html
+
+# Manual backups & build artefacts (never commit)
+*.bak*
+AutoTrader.apk
+AutoTrader/.gradle/
+AutoTrader/app/build/
+AutoTrader/local.properties
+/*.db
+daily_learnings/

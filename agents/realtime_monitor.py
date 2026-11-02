@@ -35,6 +35,20 @@ MONITOR_HOURS = 2  # fallback if started after market close
 CHECK_INTERVAL = 60  # 1 minute — frequent enough for tick-based indicators
 MAX_HOLD_MINUTES = 60  # Force close position after this many minutes if no target
 
+# --- RSI guard persistence (Fix 1, 29-Oct-2026) -------------------------------
+# A single RSI reading is noisy: a 1-point wobble across the 70/35 boundary let
+# entries through right at the top/bottom of a move. The guard now needs the
+# condition to hold for RSI_PERSIST_CHECKS consecutive checks (60s apart).
+RSI_PERSIST_CHECKS = 2      # consecutive checks before the block releases
+RSI_CE_MAX = 70             # BUY_CE rejected while RSI >= this
+RSI_PE_MIN = 35             # BUY_PE rejected while RSI <= this
+RSI_PE_MAX = 75             # BUY_PE rejected while RSI >= this
+
+# --- Per-strike cooldown (Fix 5, 29-Oct-2026) --------------------------------
+# Re-entering the same strike seconds after an exit re-buys the same theta-
+# bleeding trade. Block a strike for N minutes after a position in it closes.
+STRIKE_COOLDOWN_MINUTES = 15
+
 
 class RealTimeMonitor:
     def __init__(self, webhook_url=""):
@@ -59,6 +73,76 @@ class RealTimeMonitor:
         self.gpu_chain = None
         self._daily_entry_count = 0
         self._daily_pnl = 0
+        # RSI guard persistence: index -> {"side": "BUY_CE"/"BUY_PE", "count": n, "rsi": v}
+        self._rsi_guard_state = {}
+        # Per-strike cooldown: "INDEX:STRIKE:TYPE" -> epoch seconds when it may re-enter
+        self._strike_cooldown = {}
+
+    # ------------------------------------------------------------------
+    # Fix 1 — RSI guard persistence
+    # ------------------------------------------------------------------
+    def _rsi_guard_check(self, index, sig_type, rsi):
+        """Return (blocked: bool, reason: str).
+
+        A single noisy RSI reading must not be enough to release the guard: the
+        overbought/oversold condition has to be gone for RSI_PERSIST_CHECKS
+        consecutive checks before an entry is allowed. Conversely one bad tick
+        into an extreme blocks immediately (fail-safe direction).
+        """
+        st = self._rsi_guard_state.setdefault(index, {"side": None, "count": 0, "rsi": None})
+
+        armed = False
+        if sig_type == "BUY_CE" and rsi >= RSI_CE_MAX:
+            armed, why = True, f"RSI={rsi:.1f} >= {RSI_CE_MAX} (overbought)"
+        elif sig_type == "BUY_PE" and rsi <= RSI_PE_MIN:
+            armed, why = True, f"RSI={rsi:.1f} <= {RSI_PE_MIN} (oversold)"
+        elif sig_type == "BUY_PE" and rsi >= RSI_PE_MAX:
+            armed, why = True, f"RSI={rsi:.1f} >= {RSI_PE_MAX} (overbought, avoid PE fade)"
+        else:
+            why = ""
+
+        if armed:
+            # Extreme reading: arm the block immediately.
+            st["side"], st["count"], st["rsi"] = sig_type, RSI_PERSIST_CHECKS, rsi
+            return True, why
+
+        # Not extreme on this tick. Only release once the guard has been clear
+        # for RSI_PERSIST_CHECKS consecutive checks; otherwise keep holding the
+        # previous block (this is the whole point — stop 1-point wobbles).
+        if st["side"] == sig_type and st["count"] > 0:
+            st["count"] -= 1
+            st["rsi"] = rsi
+            if st["count"] > 0:
+                return True, (f"RSI={rsi:.1f} clearing (persist {RSI_PERSIST_CHECKS - st['count']}"
+                              f"/{RSI_PERSIST_CHECKS}, last extreme RSI={st['rsi']:.1f})")
+            st["side"], st["count"] = None, 0
+        return False, ""
+
+    # ------------------------------------------------------------------
+    # Fix 5 — per-strike cooldown
+    # ------------------------------------------------------------------
+    @staticmethod
+    def _strike_key(index, strike, optype):
+        return f"{index}:{strike}:{optype}"
+
+    def _start_strike_cooldown(self, pos):
+        """Called when a position closes: block that exact strike for a while."""
+        if not pos:
+            return
+        key = self._strike_key(pos.get("index"), pos.get("strike"), pos.get("type"))
+        self._strike_cooldown[key] = time.time() + STRIKE_COOLDOWN_MINUTES * 60
+
+    def _strike_on_cooldown(self, index, strike, optype):
+        """Return (blocked: bool, remaining_minutes: float)."""
+        key = self._strike_key(index, strike, optype)
+        until = self._strike_cooldown.get(key)
+        if not until:
+            return False, 0.0
+        left = until - time.time()
+        if left <= 0:
+            self._strike_cooldown.pop(key, None)
+            return False, 0.0
+        return True, left / 60.0
 
     def refresh_spots(self):
         try:
@@ -565,6 +649,14 @@ class RealTimeMonitor:
         except:
             return 7
 
+    @staticmethod
+    def _atm_strike_for(index, spot):
+        """ATM strike used by _enter_trade_estimate — must stay in sync with it."""
+        if not spot:
+            return None
+        step = 100 if index == "BANKNIFTY" else 50
+        return round(spot / step) * step
+
     def _enter_trade_estimate(self, index, signal, spot, trend_data):
         """Enter a paper trade using real LTP only — no BS fallback."""
         is_ce = signal == "BUY_CE"
@@ -915,6 +1007,7 @@ class RealTimeMonitor:
                 self.pt._save_trade(pos)
                 self.pt.trade_log.append(pos)
                 self.pt.positions.remove(pos)
+                self._start_strike_cooldown(pos)  # Fix 5: per-strike cooldown
                 emoji = "✅" if pnl > 0 else "❌"
                 print(f"[MON] {emoji} EOD EXIT (15:00): {pos['strike']}{pos['type']} @ ₹{est_ltp:.0f} (P&L ₹{pnl:+,.0f})", flush=True)
             return
@@ -928,7 +1021,8 @@ class RealTimeMonitor:
             print(f"[MON] ⏱️ POS: {pos['strike']}{pos['type']} {pos['index']} "
                   f"Entry=₹{pos['entry_ltp']:.1f} LTP=₹{est_ltp:.1f}({src}) "
                   f"P&L=₹{pnl_:+,.0f} Pts={est_ltp-pos['entry_ltp']:+.1f} "
-                  f"SL=₹{pos['sl']:.1f}({sl_pct:+.0f}%) TGT=₹{pos['target']:.1f} "
+                  f"SL=₹{pos['sl']:.1f}({sl_pct:+.0f}%) "
+                  f"{'TGT=₹%.1f' % pos['target'] if getattr(self.pt, 'TARGET_ENABLED', True) else 'PEAK=₹%.1f(nogr)' % pos.get('peak_ltp', pos['entry_ltp'])} "
                   f"Held={held_min:.0f}m Spot={spot_now:.0f}", flush=True)
 
             # Trail SL
@@ -943,6 +1037,7 @@ class RealTimeMonitor:
                 self.pt.trade_log.append(pos)
                 self.pt.positions.remove(pos)
                 exit_pnl = pos["pnl"]
+                self._start_strike_cooldown(pos)  # Fix 5: per-strike cooldown
                 exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
                 print(f"[MON] ✅ TARGET HIT: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f} ({src}) P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
                 self._send_discord(f"✅ **TARGET** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
@@ -958,6 +1053,7 @@ class RealTimeMonitor:
                 self.pt.positions.remove(pos)
                 exit_pnl = pos["pnl"]
                 exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
+                self._start_strike_cooldown(pos)  # Fix 5: per-strike cooldown
                 sl_dist = (pos["sl"] - est_ltp) / pos["entry_ltp"] * 100 if pos["entry_ltp"] else 0
                 print(f"[MON] ❌ SL HIT: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) SL=₹{pos['sl']:.1f} P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
                 self._send_discord(f"❌ **SL HIT** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
@@ -977,6 +1073,7 @@ class RealTimeMonitor:
                     exit_pnl = pos["pnl"]
                     exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
                     emoji = "⏰"
+                    self._start_strike_cooldown(pos)  # Fix 5: per-strike cooldown
                     print(f"[MON] {emoji} TIME CLOSE ({MAX_HOLD_MINUTES}m): {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m", flush=True)
                     self._send_discord(f"{emoji} **TIME EXIT** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) held {pos['held_minutes']:.0f}m")
 
@@ -999,6 +1096,7 @@ class RealTimeMonitor:
                     exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
                     print(f"[MON] 💀 DEAD TRADE CLOSE: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
                     self._send_discord(f"💀 **DEAD TRADE** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) held {pos['held_minutes']:.0f}m — -7% in 30m, no recovery")
+                    self._start_strike_cooldown(pos)  # Fix 5: per-strike cooldown
 
     def _check_cycle(self):
         nifty = self.get_spot("NIFTY")
@@ -1137,22 +1235,25 @@ class RealTimeMonitor:
                 rsi_series = self._calc_rsi_series(rsi_prices, 14)
                 current_rsi = rsi_series[-1] if rsi_series and len(rsi_series) > 0 else None
                 if current_rsi is not None:
-                    if sig_type == "BUY_CE" and current_rsi >= 70:
-                        rsi_reason = f"RSI={current_rsi:.1f} >= 70 (overbought)"
+                    # Persistent guard: an entry is only released after the
+                    # extreme condition has been clear for RSI_PERSIST_CHECKS
+                    # consecutive checks (prevents 1-point wobble entries).
+                    blocked, rsi_reason = self._rsi_guard_check(idx, sig_type, current_rsi)
+                    if blocked:
                         print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
                         rsi_guard_rejected = True
                         self._send_discord(f"⛔ **RSI GUARD** {idx} {sig_type} rejected — {rsi_reason} — {len(agreeing_signals)} votes agreed but RSI guard blocked")
-                    elif sig_type == "BUY_PE" and current_rsi <= 35:
-                        rsi_reason = f"RSI={current_rsi:.1f} <= 35 (oversold)"
-                        print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
-                        rsi_guard_rejected = True
-                        self._send_discord(f"⛔ **RSI GUARD** {idx} {sig_type} rejected — {rsi_reason} — waiting for RSI recovery")
-                    elif sig_type == "BUY_PE" and current_rsi >= 75:
-                        rsi_reason = f"RSI={current_rsi:.1f} >= 75 (overbought, avoid PE fade)"
-                        print(f"[MON] ⛔ RSI_GUARD: {idx} {sig_type} rejected — {rsi_reason}", flush=True)
-                        rsi_guard_rejected = True
                 if rsi_guard_rejected:
                     continue
+
+                # Per-strike cooldown: don't re-buy a strike we just exited.
+                cd_strike = self._atm_strike_for(idx, agreeing_signals[0]["spot"])
+                if cd_strike:
+                    on_cd, cd_left = self._strike_on_cooldown(idx, cd_strike, sig_type.replace("BUY_", ""))
+                    if on_cd:
+                        print(f"[MON] ⏳ STRIKE_COOLDOWN: {idx} {cd_strike}{sig_type.replace('BUY_','')} "
+                              f"blocked — {cd_left:.0f}m left of {STRIKE_COOLDOWN_MINUTES}m", flush=True)
+                        continue
 
                 pos = self._enter_trade_estimate(idx, sig_type, agreeing_signals[0]["spot"], agreeing_signals[0])
                 if pos:
