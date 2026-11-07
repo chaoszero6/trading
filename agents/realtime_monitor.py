@@ -77,6 +77,9 @@ class RealTimeMonitor:
         self._rsi_guard_state = {}
         # Per-strike cooldown: "INDEX:STRIKE:TYPE" -> epoch seconds when it may re-enter
         self._strike_cooldown = {}
+        # TIME-EXIT GATE Discord dedupe: epoch seconds of last gate notification
+        self._gate_notify_last = 0.0
+        self._GATE_NOTIFY_INTERVAL = 1800  # 30 min
 
     # ------------------------------------------------------------------
     # Fix 1 — RSI guard persistence
@@ -1043,9 +1046,17 @@ class RealTimeMonitor:
                 self._send_discord(f"✅ **TARGET** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
                 continue
             if est_ltp <= pos["sl"]:
+                # Distinguish a real stop-loss from a trailing-stop lock-in: if the
+                # stop has been ratcheted to/above entry it can only ever exit in
+                # profit, and labelling that SL_HIT hides how many trades the
+                # trailing logic actually rescued.
+                if pos["sl"] >= pos["entry_ltp"]:
+                    exit_reason, exit_tag, exit_emoji = "TRAIL_SL_HIT", "TRAIL SL HIT", "🔄"
+                else:
+                    exit_reason, exit_tag, exit_emoji = "SL_HIT", "SL HIT", "❌"
                 pos["exit_ltp"] = est_ltp
                 pos["exit_spot"] = spot_now
-                pos["exit_reason"] = "SL_HIT"
+                pos["exit_reason"] = exit_reason
                 pos["pnl"] = round((est_ltp - pos["entry_ltp"]) * LOT_SIZES.get(pos["index"], 65), 0)
                 pos["held_minutes"] = (datetime.now() - datetime.fromisoformat(pos["timestamp"])).total_seconds() / 60
                 self.pt._save_trade(pos)
@@ -1055,8 +1066,8 @@ class RealTimeMonitor:
                 exit_pct = ((est_ltp / pos["entry_ltp"]) - 1) * 100 if pos["entry_ltp"] else 0
                 self._start_strike_cooldown(pos)  # Fix 5: per-strike cooldown
                 sl_dist = (pos["sl"] - est_ltp) / pos["entry_ltp"] * 100 if pos["entry_ltp"] else 0
-                print(f"[MON] ❌ SL HIT: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) SL=₹{pos['sl']:.1f} P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
-                self._send_discord(f"❌ **SL HIT** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
+                print(f"[MON] {exit_emoji} {exit_tag}: {pos['strike']}{pos['type']} {pos['index']} Entry=₹{pos['entry_ltp']:.1f}→Exit=₹{est_ltp:.1f}({src}) SL=₹{pos['sl']:.1f} P&L=₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%) Held={pos['held_minutes']:.0f}m Spot={spot_now:.0f}", flush=True)
+                self._send_discord(f"{exit_emoji} **{exit_tag}** {pos['strike']}{pos['type']} {pos['index']}: ₹{exit_pnl:+,.0f} ({exit_pct:+.1f}%)")
 
             # Time-based force close: exit position if held > MAX_HOLD_MINUTES
             if pos in self.pt.positions:
@@ -1153,15 +1164,18 @@ class RealTimeMonitor:
         if now.hour < 9 or (now.hour == 9 and now.minute < 30):
             print(f"[MON] Before 9:30 — skipping all entries", flush=True)
             return
-        # Time-exit feasibility gate: entry must leave enough room for the
-        # MAX_HOLD_MINUTES force-close before 15:00 EOD (else the trade can only
-        # be capped by EOD close, and the time exit never fires).
-        # Cutoff is derived from MAX_HOLD_MINUTES, so it tracks config changes:
-        # MAX_HOLD_MINUTES=60 → 15:00 − 60m = 14:00 → no entries after 14:00.
-        hold_cutoff = now.replace(hour=15, minute=0, second=0, microsecond=0) - timedelta(minutes=MAX_HOLD_MINUTES)
+        # Time-exit entry gate (TIME-EXIT GATE): no new entries after 13:00.
+        # Fixed cutoff — independent of MAX_HOLD_MINUTES so a hold-length change
+        # can never silently move the gate (was 15:00−MAX_HOLD, i.e. 14:00 at 60m).
+        hold_cutoff = now.replace(hour=13, minute=0, second=0, microsecond=0)  # fixed 13:00
         if now >= hold_cutoff:
-            print(f"[MON] After {hold_cutoff.strftime('%H:%M')} — {MAX_HOLD_MINUTES}m time exit can't fire before 15:00 — skipping all entries", flush=True)
-            self._send_discord(f"⛔ **TIME-EXIT GATE** {now.strftime('%H:%M')} — entries blocked (needs {MAX_HOLD_MINUTES}m room before 15:00 EOD)")
+            print(f"[MON] After 13:00 — TIME-EXIT GATE: entries blocked (MAX_HOLD={MAX_HOLD_MINUTES}m, EOD 15:00)", flush=True)
+            # Dedupe: log every check, but only notify Discord every 30 min
+            # (was firing once per 60s check from 13:00-15:00: ~150 msgs/day).
+            import time as _time
+            if _time.time() - self._gate_notify_last >= self._GATE_NOTIFY_INTERVAL:
+                self._gate_notify_last = _time.time()
+                self._send_discord(f"⛔ **TIME-EXIT GATE** {now.strftime('%H:%M')} — entries blocked (no new positions after 13:00)")
             return
         if now.hour >= 14 and now.minute >= 25:
             print(f"[MON] After 14:25 — skipping all entries", flush=True)

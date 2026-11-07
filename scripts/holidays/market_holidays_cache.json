@@ -20,9 +20,13 @@
     "2026-11-08": "Diwali Laxmi Pujan*",
     "2026-11-10": "Diwali-Balipratipada",
     "2026-11-24": "Prakash Gurpurb Sri Guru Nanak Dev",
-    "2026-12-25": "Christmas"
+    "2026-12-25": "Christmas",
+    "2026-02-19": "Chatrapati Shivaji Maharaj Jayanti",
+    "2026-03-19": "Gudi Padwa",
+    "2026-04-01": "Annual Bank Closing",
+    "2026-08-26": "Id-E-Milad"
   },
   "source": "NSE holiday-master API",
-  "fetchedAt": 1793599201.3444533,
-  "fetchedAtIso": "2026-11-02T11:30:01+05:30"
+  "fetchedAt": 1793944801.9464617,
+  "fetchedAtIso": "2026-11-06T11:30:01+05:30"
 }
